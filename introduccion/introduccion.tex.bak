@@ -1,0 +1,40 @@
+\chapter*{Introducción}
+
+El reto de conformar equipos capaces de desarrollar proyectos de software exitosos según \cite{ana14} constituye un problema en el que interviene múltiples factores. En resolución de este problema es necesario tener en cuenta varios criterios \citep{ana15}:
+\begin{itemize}
+\item Proyectos
+\item Roles
+\item Personas
+\item Competencias genéricas 
+
+\item Competencias técnicas
+
+\item Tipos psicológicos 
+
+\item Roles de Belbin
+
+\end{itemize}	
+
+Así como las relaciones que sean necesarias entre estos conjuntos:
+\begin{itemize}
+\item Cantidad de roles por proyectos 
+\item Incompatibilidad de roles en un mismo proyecto
+\item Valor mínimo de las competencias genéricas para cumplir un rol
+\item Valor mínimo de las competencias técnicas para cumplir un rol en un proyecto
+\item Grado de adecuación de las personas a las competencias genéricas
+\item Grado de adecuación de las personas a las competencias técnicas
+\item Grado de preferencia de las personas por los roles
+\item Incompatibilidades entre las personas
+\item Grado de adecuación de las personas a los tipos psicológicos
+
+
+\item Valor de preferencia de las personas por los roles de Belbin
+\end{itemize}	
+ 
+El proceso de formación de equipos resulta complejo en medianas y grandes empresas, debido a la gran cantidad de combinaciones de asignaciones posibles entre todos los factores a tener en cuenta. Esto hace que sea necesario el uso de herramientas o sistemas informatizados que apoyen la toma de decisiones. Estas herramientas se basan en el uso de modelos matemáticos que representen el problema a resolver lo más objetivamente posible, sin embargo, para validar estos modelos y los algoritmos de solución no se dispone de datos reales y tampoco se conoce de bases de datos de pruebas a nivel internacional para este tipo de problema \cite{ana14}.
+
+En este trabajo se presenta una solución que a partir de un conjunto de datos iniciales permite generar instancias para ser utilizadas en la validación de estos modelos. A continuación se describirá la estructura del trabajo y las tareas realizadas, además se especificará, de los autores, el encargado de llevar a cabo cada una de ellas. Será utilizada la siguiente leyenda: ZGE (Zucelys Guedes Estrada) y JPS (Joaquín A.Pina Socorro).
+
+El trabajo está estructurado en tres capítulos, en el Capítulo 1 se presentan los fundamentos teóricos de la investigación, se describe el problema de conformación de equipos de proyectos de software y se enuncian los conceptos fundamentales asociados a este problema. En el Capítulo 2 se muestra la solución propuesta donde se abarca desde la gestión de los datos: conjuntos y roles de usuario (JPS), relaciones e instancias (ZGE), la generación de relaciones siguiendo distribuciones estadísticas y de instancias (ZGE), generación y evaluación de soluciones (JPS) y la carga/salva de la base de datos (JPS). Además se muestra la arquitectura del proyecto y las pautas seguidas en el diseño de la interfaz. En el Capítulo 3 se realizan las pruebas al prototipo para verificar la integridad de los datos y presenta el tratamiento de errores, además se muestra el método utilizado para el control de versiones.
+
+\pagebreak

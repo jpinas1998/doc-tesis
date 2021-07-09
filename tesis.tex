@@ -1,0 +1,106 @@
+\documentclass[11pt,letterpaper]{report}
+
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{float}
+\usepackage{makeidx}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{kpfonts}
+\usepackage{multirow}
+\usepackage{amsmath,amssymb,amsfonts,latexsym,cancel}
+%\usepackage{lscape}
+\usepackage[left=3cm,right=3cm,top=1cm,bottom=1cm]{geometry}
+\usepackage{subfigure}
+\usepackage[numbers]{natbib}
+\usepackage{url}
+\usepackage[breaklinks,colorlinks=true,linkcolor=black,citecolor=blue,urlcolor=blue]{hyperref}
+\usepackage{graphicx}
+\usepackage{makecell}
+
+%\usepackage{pdflscape}
+\usepackage{booktabs}
+
+\usepackage[paper=portrait, pagesize]{typearea}
+
+
+\usepackage{datetime}
+\makeatletter
+\newdateformat{mifecha}{La Habana, \monthname[\THEMONTH] \THEYEAR}
+\renewcommand{\monthnamespanish}[1][\month]{
+	\@orgargctr=#1\relax
+	\ifcase\@orgargctr
+	\PackageError{datetime}{Invalid Month number \the\@orgargctr}{
+		Month number should go from 1 to 12
+		}
+		\or Enero
+		\or Febrero
+		\or Marzo
+		\or Abril
+		\or Mayo
+		\or Junio
+		\or Julio
+		\or Agosto
+		\or Septiembre
+		\or Octubre
+		\or Noviembre
+		\or Diciembre
+		\else \PackageError{datetime}{Invalid Month number \the\@orgargctr}{
+			Month number should go from 1 to 12
+		}
+		\fi
+		}
+\usepackage{enumitem, hyperref}
+\usepackage[table]{xcolor}
+\usepackage{longtable}
+
+\makeatother
+
+
+\title{Adaptación del modelo de conformación de equipos de TEAMSOFT$^+$ para los problemas de béisbol y docentes.}
+
+\makeindex 
+\begin{document}
+	\renewcommand{\listtablename}{Índice de tablas}
+	\renewcommand{\tablename}{Tabla}
+	\renewcommand{\bibname}{Referencias bibliográficas}
+	\pagestyle{empty}	
+	\markboth{}{} 	
+	\thispagestyle{empty} 
+	
+	\include{portada/portada}
+	\include{resumen/resumen}
+	\include{abstrac/abstrac}
+	
+	\pagenumbering{roman}
+	\markboth{}{}
+	\pagestyle{plain}	
+	
+%	\tableofcontents	
+%	\pagebreak	
+%	
+%	\listoftables
+%	\pagebreak
+%	
+%	\listoffigures	
+%	\clearpage 
+	\pagebreak	
+	\pagenumbering{arabic}
+	
+	\addcontentsline{toc}{chapter}{Introducción}
+	\include{introduccion/introduccion}	
+	\include{cap1/cap1}
+%	\include{cap2/cap2}
+%	\include{cap3/cap3}
+%	\include{conc/conc}
+%	\include{rec/rec}
+%	\addcontentsline{toc}{chapter}{Conclusiones}
+%	\addcontentsline{toc}{chapter}{Recomendaciones}
+	\addcontentsline{toc}{chapter}{Referencias bibliográficas}
+
+\bibliography{bib_seminario}
+\bibliographystyle{IEEEtran}
+\end{document}

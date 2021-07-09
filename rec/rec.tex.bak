@@ -1,0 +1,6 @@
+\chapter*{Recomendaciones}
+Al finalizar este trabajo se realizan las siguientes recomendaciones para darle continuidad al mismo:
+\begin{enumerate}
+\item Realizar un estudio más amplio sobre distribuciones estadísticas para brindar la posibilidad de generar los datos siguiendo otras distribuciones.
+\item Incluir un algoritmo que genere solo soluciones satisfactorias, o sea que no inclumplen ninguna restricción.
+\end{enumerate}
