@@ -71,6 +71,15 @@ B.~Domenech and A.~L. Garc\'ia, ``A milp model for the teacher assignment
   Polit\'ecnica de Catalunya (UPC), Av. Diagonal 647 – floor 11, 08029,
   Barcelona (Spain), techreport, 2014.
 
+\bibitem{DISERTIC2020}
+DISERTIC and VRIC, ``Sistema de planificaci\'on de planes de resultados,''
+  \url{http://www.pandora.cujae.edu.cu}, Universidad Tecnol\'ogica de La
+  Habana, software 2.0, 2020.
+
+\bibitem{INDER2020}
+INDER, ``Sitio oficial de la serie nacional de b\'eisbol,''
+  \url{http://www.beisbolcubano.cu}, 2020.
+
 \bibitem{Institute2020}
 P.~M. Institute, \emph{A Guide to the Project Management Body of
   Knowledge}.\hskip 1em plus 0.5em minus 0.4em\relax Project Management
@@ -185,13 +194,14 @@ S.~Silverman, ``Basic fundamentals of baseball,''
 
 \bibitem{res2018}
 MES, ``Resoluci\'on no.2 reglamento de trabajo docente y metodol\'ogico,''
-  2018.
+  2018,
+  \url{https://www.gacetaoficial.gob.cu/es/resolucion-2-de-2018-de-ministerio-de-educacion-superior}.
 
 \bibitem{res2016}
-------, ``Resoluci\'on no. 85 reglamento de categor\'ias docentes,'' 2016.
+------, ``Resoluci\'on no. 85 reglamento de categor\'ias docentes,'' 2016,
+  \url{https://www.gacetaoficial.gob.cu/es/resolucion-85-de-2016-de-ministerio-de-educacion-superior}.
 
 \bibitem{Ansola2020}
-E.~S. Ansola, ``Entrevista sobre las el sistema de gesti\'on pandor,'' Nov.
-  2020.
+E.~S. Ansola, ``Entrevista sobre el sistema de gesti\'on pandora,'' Nov. 2020.
 
 \end{thebibliography}

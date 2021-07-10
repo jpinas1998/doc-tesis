@@ -958,15 +958,6 @@ Para probar las formulaciones planteadas anteriormente, se utilizarán datos fic
 
 A continuación se explica, cómo se pueden calcular las preferencias de las profesores por los roles utilizando la fórmula \ref{ec:pref-pers} y los datos de los profesores presentados en las Tablas \ref{datos-prof1} y \ref{exp-prof}. Por ejemplo, en el caso del profesor Joaquín Pina (resaltados en gris sus datos en dichas tablas), al tener diez años de experiencia o más en los roles: C, CP, S, y L, el grado de preferencia por cada uno de ellos es el mismo: 1.0. Sin embargo, su experiencia en los roles T y JA es menor de diez años, por lo que al normalizarlos, se obtienen los valores para el grado de preferencia para estos roles de $0.2$ y $0.5$. En la Tabla \ref{trans-prof} se muestran los resultados para todos los profesores cuyos datos están disponibles en las Tablas \ref{datos-prof1} y \ref{exp-prof}.
 
-%
-%\begin{center}
-%\begin{tabular}{lll}
-%	         C = $1.0$          &         CP = 1.0    &   T = $\dfrac{2}{10} = 0.2$   \\
-%	         &&\\
-%	         S = 1.0          &          L = 1.0     &  JA =$\dfrac{5}{10} = 0.5$  
-%\end{tabular}
-%\end{center}
-
 
 \begin{table}[H]
 	\centering
@@ -982,10 +973,130 @@ A continuación se explica, cómo se pueden calcular las preferencias de las pro
 	\end{tabular}
 \end{table}
 
+\section{Limitaciones de la herramienta TEAMSOFT$^+$ para la solución de los problemas de conformación de equipos de béisbol y docentes}
+
+Es necesario comprobar que la herramienta TEAMSOFT$^+$ permite la conformación de los equipos de béisbol y docentes siguiendo las adaptaciones propuestas para ambos problemas. En esta sección se le realizan algunas pruebas a la herramienta para comprobar su funcionamiento ante ambos problemas. \\
+
+Los Casos de Pruebas (CP) se realizaron con las tablas de la base de datos correspondientes a las competencias y roles vacías. Esto persigue como objetivo de simular la creación desde cero de los problemas. Como se observa en la Tabla \ref{t:casos-de-prueba-humo}, en los primeros CP se cumple lo esperado. Mientras que en el CP5, al momento que se intenta crear una nueva estructura, se presenta un error.
+
+\begin{table}[H]
+	\centering
+	\caption{Prueba de humo crear proyecto sin rol Jefe de Proyecto}\label{t:casos-de-prueba-humo}
+	\scalebox{.8}{
+		\begin{tabular}{c p{2.3cm} e{4.7cm} p{2cm} p{3cm} p{3cm}}
+			\toprule
+			\textbf{ID} & \textbf{Escenario} & \item[]\textbf{Pasos} & \textbf{Información de entrada} & \textbf{Resultado esperado} & \textbf{Resultado actual}\\ \midrule
+			
+			CP1 & Introducir roles sin que el nombre de ninguno sea Jefe de Proyecto & 
+			\item Introducir nombre
+			\item Introducir descripción
+			\item Establecer impacto
+			\item Establecer competencias
+			\item Establecer incompatibilidades
+			& \textit{Primera Base} & El rol debe insertarse sin problemas & Se cumple lo esperado\\ \hline
+			
+			CP2 & Introducir roles sin que el nombre de ninguno sea Jefe de Proyecto & 
+			\item Introducir nombre
+			\item Introducir descripción
+			\item Establecer impacto
+			\item Establecer competencias
+			\item Establecer incompatibilidades
+			& \textit{Segunda Base} & El rol debe insertarse sin problemas & Se cumple lo esperado\\ \hline
+			
+			CP3 & Introducir roles sin que el nombre de ninguno sea Jefe de Proyecto & 
+			\item Introducir nombre
+			\item Introducir descripción
+			\item Establecer impacto
+			\item Establecer competencias
+			\item Establecer incompatibilidades
+			& \textit{Capitán} & El rol debe insertarse sin problemas & Se cumple lo esperado\\ \hline
+			
+			CP4 & Crear Proyecto & 
+			\item Abrir menú problema
+			\item Introducir nombre
+			\item Establecer fecha
+			\item Seleccionar entidad
+			\item Seleccionar provincia
+			& \textit{Nuevo Problema} & Debe continuar con el proceso de creación & Se cumple lo esperado \\ \hline
+			
+			CP5 & Crear estructura del proyecto & 
+			\item Introducir nombre nuevo
+			\item Seleccionar roles
+			\item Establecer cantidad de trabajadores
+			\item \textit{Click} en: Siguiente
+			& \textit{Nueva estructura} & Mostrar mensaje creación de la estructura
+			 & Se muestra mensaje de error, informando que no hay un jefe de Proyecto entre los roles seleccionados\\ \bottomrule
+		\end{tabular}
+	}
+\end{table}
+
+Los CP que se muestran en la Tabla \ref{t:casos-de-prueba-humo2} se realizaron utilizando los datos que se entraron en los CP1 y CP2 mostrados en la Tabla \ref{t:casos-de-prueba-humo}. En este caso, queda claro que resulta necesario para crear una estructura, que exista un rol con el nombre \textit{Jefe de Proyecto} (ver Figura \ref{fig:error-jefe-proy}).
+
+\begin{table}[H]
+	\centering
+	\caption{Prueba de humo crear proyecto con rol Jefe de Proyecto}\label{t:casos-de-prueba-humo2}
+	\scalebox{.8}{
+		\begin{tabular}{c p{2.3cm} e{4.7cm} p{2cm} p{3cm} p{3cm}}
+			\toprule
+			\textbf{ID} & \textbf{Escenario} & \item[]\textbf{Pasos} & \textbf{Información de entrada} & \textbf{Resultado esperado} & \textbf{Resultado actual}\\ \midrule
+			
+			CP6 & Introducir rol con nombre Jefe de Proyecto & 
+			\item Introducir nombre
+			\item Introducir descripción
+			\item Establecer impacto
+			\item Establecer competencias
+			\item Establecer incompatibilidades
+			& \textit{Jefe de Proyecto} & El rol debe insertarse sin problemas & Se cumple lo esperado\\ \hline
+			
+			CP7 & Crear Proyecto & 
+			\item Abrir menú problema
+			\item Introducir nombre
+			\item Establecer fecha
+			\item Seleccionar entidad
+			\item Seleccionar provincia
+			& \textit{Nuevo Problema} & Debe continuar con el proceso de creación & Se cumple lo esperado \\ \hline
+			
+			CP8 & Crear estructura del proyecto con el rol Jefe de Proyecto incluido & 
+			\item Introducir nombre nuevo
+			\item Seleccionar roles
+			\item Establecer cantidad de trabajadores
+			\item \textit{Click} en: Siguiente
+			& \textit{Nueva estructura} & La estructura se debe crear correctamente & Se cumple lo esperado\\ \bottomrule
+		\end{tabular}
+	}
+\end{table}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{figuras/error-jefe-proy.png}
+	\caption{Error al crear estructura sin Jefe de Proyecto} \label{fig:error-jefe-proy}
+\end{figure}
+
+Confirmando lo que muestran los CP realizados, en la Figura \ref{fig:apariciones-jefe-proy} se muestran algunas de las apariciones de la cadena \textit{Jefe de Proyecto} en el código fuente de la herramienta.
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{figuras/string-texto-jefe-proy.png}
+	\caption{Apariciones del texto \textit{Jefe de Proyecto}} \label{fig:apariciones-jefe-proy}
+\end{figure}
+
+Específicamente para validar que una estructura sea válida, se verifica que en esta exista un rol con el nombre \textit{Jefe de Proyecto}. La Figura \ref{fig:cod-valida} muestra lo planteado.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{figuras/validate-state.png}
+	\caption{Código utilizado para validar los roles asignados al proyecto} \label{fig:cod-valida}
+\end{figure}
+
+%La existencia de una comparación explícita con el nombre del rol no se considera una buena práctica. Lo ideal sería que los roles tengan un campo que se llame líder, y que la validación se realice por este campo. Lo cual llevaría cambios en la base de datos. \\\\
+
+
 \section{Conclusiones parciales}
 
 Con la culminación de este capítulo, se arribaron a las siguientes conclusiones:
 \begin{enumerate}
 	\item Es posible aplicar el modelo de conformación de equipos de proyecto para formar equipos docentes y de béisbol. Aunque no se tuvieron en cuenta los roles de Belbin ni los tipos psicológicos de las personas.
-	\item Es necesario desarrollar un herramienta que permita aplicando fórmulas definidas importar los datos de las fuentes adecuadas.
+	\item La herramienta TEAMSOFT$^+$ presenta algunos problemas para adaptar a los problemas de béisbol y docencia.
+	\item Es necesario desarrollar una funcionalidad que permita aplicando fórmulas definidas, importar los datos de las fuentes adecuadas.
 \end{enumerate}

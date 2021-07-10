@@ -1,4 +1,4 @@
-\documentclass[11pt,letterpaper]{report}
+\documentclass[12pt,letterpaper]{report}
 
 \usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel}
@@ -12,21 +12,21 @@
 \usepackage{kpfonts}
 \usepackage{multirow}
 \usepackage{amsmath,amssymb,amsfonts,latexsym,cancel}
-%\usepackage{lscape}
-\usepackage[left=3cm,right=3cm,top=1cm,bottom=1cm]{geometry}
+\usepackage[left=3cm,right=3cm,top=2cm,bottom=2cm]{geometry}
 \usepackage{subfigure}
 \usepackage[numbers]{natbib}
 \usepackage{url}
 \usepackage[breaklinks,colorlinks=true,linkcolor=black,citecolor=blue,urlcolor=blue]{hyperref}
 \usepackage{graphicx}
 \usepackage{makecell}
-
-%\usepackage{pdflscape}
+\usepackage{enumitem, hyperref}
+\usepackage[table]{xcolor}
+\usepackage{longtable}
 \usepackage{booktabs}
 
 \usepackage[paper=portrait, pagesize]{typearea}
 
-
+% genera el mes de forma automatica
 \usepackage{datetime}
 \makeatletter
 \newdateformat{mifecha}{La Habana, \monthname[\THEMONTH] \THEYEAR}
@@ -53,9 +53,31 @@
 		}
 		\fi
 		}
-\usepackage{enumitem, hyperref}
-\usepackage[table]{xcolor}
-\usepackage{longtable}
+
+
+% permite crear listas dentro de lasa tablas
+\newcolumntype{e}[1]{%--- Enumerated cells ---
+	>{\minipage[t]{\linewidth}%
+		\NoHyper%                Hyperref adds a vertical space
+		\let\\\tabularnewline
+		\enumerate
+		\addtolength{\rightskip}{0pt plus 50pt}% for raggedright
+		\setlength{\itemsep}{-\parsep}}%
+	p{#1}%
+	<{\@finalstrut\@arstrutbox\endenumerate
+		\endNoHyper
+		\endminipage}}
+
+\newcolumntype{i}[1]{%--- Itemized cells ---
+	>{\minipage[t]{\linewidth}%
+		\let\\\tabularnewline
+		\itemize
+		\addtolength{\rightskip}{0pt plus 50pt}%
+		\setlength{\itemsep}{-\parsep}}%
+	p{#1}%
+	<{\@finalstrut\@arstrutbox\enditemize\endminipage}}
+
+
 
 \makeatother
 
@@ -63,7 +85,9 @@
 \title{Adaptación del modelo de conformación de equipos de TEAMSOFT$^+$ para los problemas de béisbol y docentes.}
 
 \makeindex 
-\begin{document}
+
+\renewcommand{\baselinestretch}{1.25}
+\begin{document}	
 	\renewcommand{\listtablename}{Índice de tablas}
 	\renewcommand{\tablename}{Tabla}
 	\renewcommand{\bibname}{Referencias bibliográficas}
@@ -79,28 +103,29 @@
 	\markboth{}{}
 	\pagestyle{plain}	
 	
-%	\tableofcontents	
-%	\pagebreak	
-%	
-%	\listoftables
-%	\pagebreak
-%	
-%	\listoffigures	
-%	\clearpage 
+	\tableofcontents	
+	\pagebreak	
+	
+	\listoftables
+	\pagebreak
+	
+	\listoffigures	
+	\clearpage 
+	
 	\pagebreak	
 	\pagenumbering{arabic}
 	
 	\addcontentsline{toc}{chapter}{Introducción}
 	\include{introduccion/introduccion}	
 	\include{cap1/cap1}
-%	\include{cap2/cap2}
-%	\include{cap3/cap3}
+	\include{cap2/cap2}
+	\include{cap3/cap3}
 %	\include{conc/conc}
 %	\include{rec/rec}
 %	\addcontentsline{toc}{chapter}{Conclusiones}
 %	\addcontentsline{toc}{chapter}{Recomendaciones}
 	\addcontentsline{toc}{chapter}{Referencias bibliográficas}
 
-\bibliography{bib_seminario}
+\bibliography{bib_tesis}
 \bibliographystyle{IEEEtran}
 \end{document}
