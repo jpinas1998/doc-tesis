@@ -21,6 +21,11 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
+\bibitem{Duran2019}
+A.~D. Enr\'iquez, ``Nueva versi\'on de la herramienta teamsoft+ para la
+  formaci\'on de m\'ultiples equipos de desarrollo de software,'' candthesis,
+  Universidad Tecnol\'ogica de La Habana, Jun. 2019.
+
 \bibitem{Mayi09}
 M.~A. Ampuero, ``Un modelo para la asignaci\'on de recursos humanos a equipos
   de proyectos de software,'' Ph.D. dissertation, Universidad Tecnol\'ogica de
@@ -39,11 +44,6 @@ A.~L. Infante~Abreu, D.~Hern\'andez, M.~Andr\'e~Ampuero, A.~Rosete~Su\'arez,
   de clases biciam,'' \emph{Revista Cubana de Ciencias Inform\'aticas}, vol.~9,
   pp. 126--140, 2015.
 
-\bibitem{Duran2019}
-A.~D. Enr\'iquez, ``Nueva versi\'on de la herramienta teamsoft+ para la
-  formaci\'on de m\'ultiples equipos de desarrollo de software,'' candthesis,
-  Universidad Tecnol\'ogica de La Habana, Jun. 2019.
-
 \bibitem{Smith1995}
 R.~E. Smith and D.~S. Christensen, ``Psychological skills as predictors of
   performance andsurvival in professional baseball,'' \emph{Journal of Sport \&
@@ -58,6 +58,11 @@ M.~V. Polyashuk, ``Some solutions for baseball manager'sproblems: Choosing a
 P.~K. Sugrue and A.~Mehrotra, ``An optimisation model to determine batting
   orderin baseball,'' \emph{Int. J. Operational Research}, vol. Vol. 2, no.
   No.1, 2007.
+
+\bibitem{res2018}
+MES, ``Resoluci\'on no.2 reglamento de trabajo docente y metodol\'ogico,''
+  2018,
+  \url{https://www.gacetaoficial.gob.cu/es/resolucion-2-de-2018-de-ministerio-de-educacion-superior}.
 
 \bibitem{Bosquez2020}
 O.~C. Bosquez, J.~H. Torruco, B.~H. Ocana, and J.~C. Reich, ``Modeling and
@@ -138,6 +143,12 @@ A.~E. Akg{\"u}n, ``Team wisdom in software development projects and its impact
   on project performance,'' \emph{International Journal of Information
   Management}, vol.~50, pp. 228--243, 2020.
 
+\bibitem{AlvaresValedes2002}
+R.~\'Alvares-Valed\'es, F.~Parre{\~n}o, and J.~M. Tamarit, ``A tabu search
+  algorithm for assigning teachers to courses,'' \emph{Sociedad de
+  Estad\'istica e Investigaci\'on Operativa}, vol.~10, no.~2, pp. 239--259,
+  2002.
+
 \bibitem{Pociask2017}
 S.~Pociask, D.~Gross, and M.-Y. Shih, ``Does team formation impact student
   performance, effort and attitudes in a college course employing collaborative
@@ -192,13 +203,8 @@ S.~Silverman, ``Basic fundamentals of baseball,''
   \url{https://www.sportsrec.com/272178-basic-fundamentals-of-baseball.html},
   Jul. 2011.
 
-\bibitem{res2018}
-MES, ``Resoluci\'on no.2 reglamento de trabajo docente y metodol\'ogico,''
-  2018,
-  \url{https://www.gacetaoficial.gob.cu/es/resolucion-2-de-2018-de-ministerio-de-educacion-superior}.
-
 \bibitem{res2016}
-------, ``Resoluci\'on no. 85 reglamento de categor\'ias docentes,'' 2016,
+MES, ``Resoluci\'on no. 85 reglamento de categor\'ias docentes,'' 2016,
   \url{https://www.gacetaoficial.gob.cu/es/resolucion-85-de-2016-de-ministerio-de-educacion-superior}.
 
 \bibitem{Ansola2020}
