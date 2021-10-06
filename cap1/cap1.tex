@@ -153,7 +153,9 @@ Para estas funciones objetivos existen restricciones, a continuación se muestra
 	categorías de roles de Belbin (acción, mentales, sociales).
 	\item En el equipo de trabajo seleccionado la preferencia por desempeñar roles de acción debe sobrepasar la preferencia por desempeñar roles mentales.
 	\item La preferencia por desempeñar roles mentales debe	sobrepasar la preferencia por los sociales.
+	\item La persona que desarrolla el rol de Jefe de Proyecto debe tener como preferido los roles de Belbin: Impulsor o Coordinador.
 	\item En el equipo al menos una persona tenga como preferido el rol de Belbin Cerebro.
+	\item La persona que desarrolla el rol Jefe de Proyecto debe ser extrovertida y planificada (subtipo E\underline{\hspace{3mm}}J) según el test de Myers Briggs.
 \end{itemize}
 
 \subsection{Ejemplo simple para el problema de formación de equipos de desarrollo de software utilizando el modelo usado en TEAMSOFT$^+$} \label{ej-sof}
@@ -398,7 +400,7 @@ Como se explicó con anterioridad, resulta necesario desarrollar herramientas in
 
 \subsection{Características de TEAMSOFT$^+$ como herramienta}
 
-TEAMSOFT$^+$ constituye un sistema para la toma de decisiones. Apoya a los directivos durante el proceso de formación de equipos de proyectos de software, resaltando la asignación del jefe de proyecto y la asignación/reasignación del equipo \citep{Mayi09}. El sistema sustenta el modelo descrito en la sección \ref{sec:modelo-teamsoft}, y además propone algunos algoritmos para su solución. En su última versión estable, se le incorporan nuevas funcionalidades. Brindándole la capacidad de solucionar el problema de formación de equipos de proyectos de software de forma multiple
+TEAMSOFT$^+$ constituye un sistema para la toma de decisiones. Apoya a los directivos durante el proceso de formación de equipos de proyectos de software, resaltando la asignación del jefe de proyecto y la asignación/reasignación del equipo \citep{Mayi09}. El sistema sustenta el modelo descrito en la sección \ref{sec:modelo-teamsoft}, y además propone algunos algoritmos para su solución. En su última versión estable, se le incorporan nuevas funcionalidades. Brindándole la capacidad de solucionar el problema de formación de múltiples equipos de proyectos de software.
 
 Existen cuatro tipos de actores fundamentales (ver Figura \ref{fig:cuteamsoft}) que interactúan con el sistema:
 \begin{itemize}
@@ -415,10 +417,10 @@ Existen cuatro tipos de actores fundamentales (ver Figura \ref{fig:cuteamsoft}) 
 %	\centering
 	\hspace{-1.5cm}
 	\includegraphics[width=1.2\textwidth]{figuras/diagrama_CUTeamSoft.png} 
-	\caption{Diagrama de Caso de Uso del Sistema de TEAMSOFT$^+$. Tomado de \cite{Duran2019}}  \label{fig:cuteamsoft}
+	\caption{Diagrama de Caso de Uso del Sistema de TEAMSOFT$^+$. Recreado a partir de \cite{Duran2019}}  \label{fig:cuteamsoft}
 \end{figure}
 
-En la Figura \ref{fig:opcines_teamsoft} se observan las opciones implementadas en la herramienta. En la etapa de \textbf{Configuración} se establece las escalas de valores en la que se miden el nivel de cumplimiento de las competencias y los roles. En la opción \textbf{Personal}, se gestionan las competencias, roles y personas. Por último, en \textbf{Proyectos}, se gestionan los proyectos y se realiza la asignación del Jefe de Proyecto junto con el resto de los integrantes del equipo de proyecto.\\
+En la Figura \ref{fig:opcines_teamsoft} se observan las opciones implementadas en la herramienta. En la etapa de \textbf{Configuración} se establece las escalas de valores en la que se miden el nivel de cumplimiento de las competencias y los roles. En la opción \textbf{Personal}, se gestionan las competencias, roles y personas. Por último, en \textbf{Proyectos}, se gestionan los proyectos y se conforma el equipo de proyecto.\\
 
 \begin{figure}[H]
 	\centering
@@ -444,7 +446,7 @@ El sistema realiza el proceso de asignación del personal en tres etapas. A cont
 
 \section{Conformación de equipos de béisbol} \label{ej-pel}
 
-La béisbol es un deporte con una amplia difusión en el continente americano y asiático, e incluso, en los últimos años se ha extendido al continente europeo. Se considera el deporte nacional en países como Cuba y Estados Unidos \cite{INEFI2020}. Dado el auge de este deporte, resulta de gran interés popular la conformación de un equipo de béisbol.\\
+El béisbol es un deporte con una amplia difusión en el continente americano y asiático, e incluso, en los últimos años se ha extendido al continente europeo. Se considera el deporte nacional en países como Cuba y Estados Unidos \cite{INEFI2020}. Dado el auge de este deporte, resulta de gran interés popular la conformación de un equipo de béisbol.\\
 
 Un equipo de béisbol está compuesto por varios jugadores. Antes de cada juego, el director del equipo tiene que elegir 10 para la alineación inicial. Cada jugador, con excepción del pícher\footnote{anglicismo aceptado por la RAE para la voz inglés pitcher} y el bateador designado, tiene que desempeñar dos tipos de roles, uno a la defensiva y otro a la ofensiva. En el caso particular del pícher, solo está presente en la alineación defensiva, mientras que el bateador designado ocupa su puesto a la ofensiva. Resulta importante resaltar que un jugador no puede jugar más de un rol del mismo tipo en una alineación. Para cada tipo de rol, existen un conjunto de características o competencias a tener en cuenta para la asignación de un jugador. Por ejemplo, según \cite{Smith1995},  las competencias genéricas a tener en cuenta son:
 
@@ -516,7 +518,7 @@ Una vez terminado el capítulo se arriban a las siguientes conclusiones:
 \begin{enumerate}
 	\item Existe un modelo definido para el problema de conformación de equipos de software que tiene propiedades generales, debido a que incluye personas, roles, competencias.
 	\item Existe una herramienta que le da soporte al modelo de conformación de equipos de software denominada TEAMSOFT$^+$.
-	\item Para los problemas de conformación de equipos docentes y de béisbol no existen modelos definidos que tengan en cuenta las competencias de las personas para ocupar los roles, las incompatibilidades entre las personas, las preferencias por los roles.
+	\item Para los problemas de conformación de equipos docentes y de béisbol no existen modelos definidos que tengan en cuenta las competencias de las personas para ocupar los roles, las incompatibilidades entre las personas y las preferencias por los roles.
 	\item Tanto el modelo como la herramienta TEAMSOFT$^+$ podrían se aplicados para formar equipos docentes y de béisbol, ya que toman en cuenta los factores a considerar en cada caso.
 \end{enumerate}
 \pagebreak

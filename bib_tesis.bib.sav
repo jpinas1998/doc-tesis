@@ -568,4 +568,14 @@ characteristics) and the relational aspects (e.g. choice associations) relevant 
   volume  = {101},
 }
 
+@Article{Corte2002,
+  author  = {Noelia Corte},
+  journal = {Revista tradum\'atica},
+  title   = {Localizaci\'on e internacionalizaci\'on de sitios web},
+  year    = {2002},
+  month   = oct,
+  volume  = {1},
+  url     = {http://www.fti.uab.es/tradumatica/revista},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}

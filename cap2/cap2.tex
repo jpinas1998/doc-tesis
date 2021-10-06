@@ -1,4 +1,4 @@
-\chapter{Modelo para conformar equipos de béisbol y docentes basado en TEAMSOFT$^+$}\label{chap:2}
+\chapter{Modelo para conformar equipos de béisbol y docentes basado en el modelo que le da soporte TEAMSOFT$^+$}\label{chap:2}
 
 En el presente capítulo se describe cómo pueden definirse los problema de conformación de equipos de béisbol y docentes empleando como base el modelo para la formación de equipos de proyectos de software soportado por la herramienta \hyperref[sec:modelo-teamsoft]{TEAMSOFT$^+.$} Esto implica que para cada problema se utilizarán o no, algunas de las relaciones propuestas en este modelo. También se describe una propuesta para obtener los valores de las competencias de las personas a partir de información que hoy se gestiona sobre ellas.
 
@@ -341,18 +341,21 @@ En la Tabla \ref{correspondencia-pel} se presenta la correspondencia entre los i
 		\multirow{4}{5.4cm}{$\boldsymbol{t_1}=batear\;con\;hombres\;en\;base $} &          CI          \\
 		                                                                        &          SH          \\
 		                                                                        &          SF          \\
-		                                                                        &         CIPA/CPA        \\ \hline
+		                                                                        &       CIPA/CPA       \\ \hline
 		\multirow{4}{5.4cm}{$\boldsymbol{t_2}=fuerza\;de\;bateo $}              &          2B          \\
 		                                                                        &          3B          \\
 		                                                                        &          HR          \\
 		                                                                        &         SLU          \\ \hline
 		$\boldsymbol{t_3}= precisi\acute{o}n\;de\;tiro $                        &     AVG (fildeo)     \\ \hline
-		\multirow{3}{5.4cm}{$\boldsymbol{t_4}= velocidad $}                     &          BR          \\
-		                                                                        &          CR          \\\hline
+		\multirow{4}{5.4cm}{$\boldsymbol{t_4}= velocidad $}                     &          BR          \\
+		                                                                        &          CR          \\
+		                                                                        &          2B          \\
+		                                                                        &          3B          \\ \hline
 		$\boldsymbol{t_5}= versatilidad $                                       &         POS          \\ \hline
-		\multirow{3}{5.4cm}{$\boldsymbol{t_6}=capacidad\;de\;embase$}           &         OBP          \\
+		\multirow{4}{5.4cm}{$\boldsymbol{t_6}=capacidad\;de\;embase$}           &         OBP          \\
 		                                                                        &          BR          \\
-		                                                                        &          SH          \\ \hline
+		                                                                        &          SH          \\
+		                                                                        &     AVG (ataque)     \\ \hline
 	\end{tabular}
 \end{table}
 
@@ -801,7 +804,7 @@ La Tabla \ref{pr-carga} refleja el valor de preferencia de las personas por cada
 	\end{tabular}
 \end{table}
 
-\subsection{Transformación de los datos}
+\subsection{Transformación de los datos}\label{sec:tran_docencia}
 
  En esta sección se propone un método para a partir de los datos almacenados en el sistema de gestión PANDORA identificar cuáles tributan al modelo descrito en la sección anterior. Las Figuras \ref{info-gen-prof} y \ref{horas-prof} son algunas capturas de pantalla del sitio funcionando, y de la información que en él se gestiona. En la Figura \ref{info-gen-prof} se hace referencia a los datos generales de los profesores, como el departamento al que pertenecen, la categoría docente, científica, entre otros. En la Figura \ref{horas-prof} se observa la carga docente acumulada de los profesores, en un año, específicamente en un semestre, expresadas en horas.
 
@@ -973,16 +976,16 @@ A continuación se explica, cómo se pueden calcular las preferencias de las pro
 	\end{tabular}
 \end{table}
 
-\section{Limitaciones de la herramienta TEAMSOFT$^+$ para la solución de los problemas de conformación de equipos de béisbol y docentes}
+\section{Limitaciones de la herramienta TEAMSOFT$^+$ para la solución de los problemas de conformación de equipos de béisbol y docentes} \label{sec:limitaciones}
 
 Es necesario comprobar que la herramienta TEAMSOFT$^+$ permite la conformación de los equipos de béisbol y docentes siguiendo las adaptaciones propuestas para ambos problemas. En esta sección se le realizan algunas pruebas a la herramienta para comprobar su funcionamiento ante ambos problemas. \\
 
-Los Casos de Pruebas (CP) se realizaron con las tablas de la base de datos correspondientes a las competencias y roles vacías. Esto persigue como objetivo de simular la creación desde cero de los problemas. Como se observa en la Tabla \ref{t:casos-de-prueba-humo}, en los primeros CP se cumple lo esperado. Mientras que en el CP5, al momento que se intenta crear una nueva estructura, se presenta un error.
+Para llevar a cabo los Casos de Pruebas (CP) se vaciaron las tablas (de la base de datos) correspondientes a las competencias y roles. Esto persigue como objetivo simular la creación desde cero en ambos problemas. Como se observa en la Tabla \ref{t:casos-de-prueba-humo}, en los primeros cuatro CP se cumple lo esperado. Mientras que en el CP5, al momento que se intenta crear una nueva estructura, se presenta un error.
 
 \begin{table}[H]
 	\centering
 	\caption{Prueba de humo crear proyecto sin rol Jefe de Proyecto}\label{t:casos-de-prueba-humo}
-	\scalebox{.8}{
+	\scalebox{.69}{
 		\begin{tabular}{c p{2.3cm} e{4.7cm} p{2cm} p{3cm} p{3cm}}
 			\toprule
 			\textbf{ID} & \textbf{Escenario} & \item[]\textbf{Pasos} & \textbf{Información de entrada} & \textbf{Resultado esperado} & \textbf{Resultado actual}\\ \midrule
@@ -1025,17 +1028,17 @@ Los Casos de Pruebas (CP) se realizaron con las tablas de la base de datos corre
 			\item Establecer cantidad de trabajadores
 			\item \textit{Click} en: Siguiente
 			& \textit{Nueva estructura} & Mostrar mensaje creación de la estructura
-			 & Se muestra mensaje de error, informando que no hay un jefe de Proyecto entre los roles seleccionados\\ \bottomrule
+			 & Se muestra mensaje de error, informando que no hay un \textbf{Jefe de Proyecto} entre los roles seleccionados\\ \bottomrule
 		\end{tabular}
 	}
 \end{table}
 
-Los CP que se muestran en la Tabla \ref{t:casos-de-prueba-humo2} se realizaron utilizando los datos que se entraron en los CP1 y CP2 mostrados en la Tabla \ref{t:casos-de-prueba-humo}. En este caso, queda claro que resulta necesario para crear una estructura, que exista un rol con el nombre \textit{Jefe de Proyecto} (ver Figura \ref{fig:error-jefe-proy}).
+Reproduciendo los dos primeros CP de la Tabla \ref{t:casos-de-prueba-humo}, se lleva a cabo los mostrados en la Tabla \ref{t:casos-de-prueba-humo2}. En este caso queda claro que resulta necesario para crear una nueva estructura, la existencia de un rol con el nombre \textit{Jefe de Proyecto} (ver Figura \ref{fig:error-jefe-proy}).
 
 \begin{table}[H]
 	\centering
 	\caption{Prueba de humo crear proyecto con rol Jefe de Proyecto}\label{t:casos-de-prueba-humo2}
-	\scalebox{.8}{
+	\scalebox{.69}{
 		\begin{tabular}{c p{2.3cm} e{4.7cm} p{2cm} p{3cm} p{3cm}}
 			\toprule
 			\textbf{ID} & \textbf{Escenario} & \item[]\textbf{Pasos} & \textbf{Información de entrada} & \textbf{Resultado esperado} & \textbf{Resultado actual}\\ \midrule
@@ -1068,12 +1071,11 @@ Los CP que se muestran en la Tabla \ref{t:casos-de-prueba-humo2} se realizaron u
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\textwidth]{figuras/error-jefe-proy.png}
+	\includegraphics[width=0.9\textwidth]{figuras/error-jefe-proy.png}
 	\caption{Error al crear estructura sin Jefe de Proyecto} \label{fig:error-jefe-proy}
 \end{figure}
 
-Confirmando lo que muestran los CP realizados, en la Figura \ref{fig:apariciones-jefe-proy} se muestran algunas de las apariciones de la cadena \textit{Jefe de Proyecto} en el código fuente de la herramienta.
-
+Confirmando los CP realizados, la Figura \ref{fig:apariciones-jefe-proy} muestra alguna de las apariciones de la cadena \textit{Jefe de Proyecto} en el código fuente de la herramienta.
 
 \begin{figure}[H]
 	\centering
@@ -1081,16 +1083,19 @@ Confirmando lo que muestran los CP realizados, en la Figura \ref{fig:apariciones
 	\caption{Apariciones del texto \textit{Jefe de Proyecto}} \label{fig:apariciones-jefe-proy}
 \end{figure}
 
-Específicamente para validar que una estructura sea válida, se verifica que en esta exista un rol con el nombre \textit{Jefe de Proyecto}. La Figura \ref{fig:cod-valida} muestra lo planteado.
+Específicamente, a la hora de validar una estructura, se verifica que en esta exista un rol con el nombre: \textit{Jefe de Proyecto}. La Figura \ref{fig:cod-valida} muestra lo planteado.
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{figuras/validate-state.png}
-	\caption{Código utilizado para validar los roles asignados al proyecto} \label{fig:cod-valida}
+	\caption{Código utilizado para validar la presencia del rol Jefe de Proyecto} \label{fig:cod-valida}
 \end{figure}
 
-%La existencia de una comparación explícita con el nombre del rol no se considera una buena práctica. Lo ideal sería que los roles tengan un campo que se llame líder, y que la validación se realice por este campo. Lo cual llevaría cambios en la base de datos. \\\\
+Otro aspecto a resaltar es la entrada de datos. En el sistema, este proceso solo se puede realizar de forma manual. Y cuando existen muchas personas a incorporar, se puede considerar como un proceso largo y tedioso. En adición, el sistema no se encuentra preparado para especificar que se va a trabajar con un tipo de problema en particular. Entonces, las ecuaciones propuestas para el cálculo de las competencias $t_4$ (\ref{ec:embase}) y $t_5$ (\ref{ec:pos}) correspondientes al problema del béisbol, no se podrán modelar en el sistema. \\\\
 
+Las personas tienen generalmente cierta experiencia trabajando. Por ejemplo, un recién graduado tiene menos experiencia como profesional que una persona que lleva trabajando 10 años en la industria. Esta última se ha enfrentado a múltiples problemas y debe saber cómo solucionarlos debido a su experiencia. Este atributo no se encuentra modelado actualmente en TEAMSOFT$^+$. \\\\
+
+La internacionalización de un sitio web consiste en identificar toda la información cambiante en función del idioma de preferencia del usuario. TEAMSOFT$^+$ tiene presente esta característica. Sin embargo, no está funcional. Esto no afecta al proceso de formación de equipos, pero sigue siendo una limitación.
 
 \section{Conclusiones parciales}
 
@@ -1098,5 +1103,5 @@ Con la culminación de este capítulo, se arribaron a las siguientes conclusione
 \begin{enumerate}
 	\item Es posible aplicar el modelo de conformación de equipos de proyecto para formar equipos docentes y de béisbol. Aunque no se tuvieron en cuenta los roles de Belbin ni los tipos psicológicos de las personas.
 	\item La herramienta TEAMSOFT$^+$ presenta algunos problemas para adaptar a los problemas de béisbol y docencia.
-	\item Es necesario desarrollar una funcionalidad que permita aplicando fórmulas definidas, importar los datos de las fuentes adecuadas.
+	\item Es necesario desarrollar una funcionalidad que permita aplicando fórmulas definidas, importar los datos de fuentes adecuadas.
 \end{enumerate}

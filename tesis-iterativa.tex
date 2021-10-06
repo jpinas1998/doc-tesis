@@ -23,6 +23,7 @@
 \usepackage[table]{xcolor}
 \usepackage{longtable}
 \usepackage{booktabs}
+\usepackage{appendix}
 
 \usepackage[paper=portrait, pagesize]{typearea}
 
@@ -86,7 +87,7 @@
 
 \makeindex 
 
-\renewcommand{\baselinestretch}{1.25}
+\renewcommand{\baselinestretch}{1.2}
 \begin{document}	
 	\renewcommand{\listtablename}{Índice de tablas}
 	\renewcommand{\tablename}{Tabla}
@@ -125,7 +126,10 @@
 %	\addcontentsline{toc}{chapter}{Conclusiones}
 %	\addcontentsline{toc}{chapter}{Recomendaciones}
 	\addcontentsline{toc}{chapter}{Referencias bibliográficas}
-
-\bibliography{bib_tesis}
-\bibliographystyle{IEEEtran}
+	
+	\bibliography{bib_tesis}
+	\bibliographystyle{IEEEtran}
+	
+	\addcontentsline{toc}{chapter}{Anexo}
+	\include{anexo/anexo}
 \end{document}
