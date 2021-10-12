@@ -1,192 +1,14 @@
-\chapter{Diseño de la solución propuesta} \label{chap:3}
+\chapter{Validación de la solución}\label{chap:3}
 
-Este capítulo tiene como objetivo, describir la propuesta para la importación de los datos provenientes de un fichero, en datos que gestiona la herramienta TEAMSOFT$^+$. Para lograr esto, se muestran los artefactos de ingeniería de software necesarios para entender su funcionamiento, como son: diagrama de casos de uso del sistema y diagrama de paquetes. Además se realiza la validación de la solución propuesta.
+En este capítulo se realizará la validación del correcto funcionamiento de la funcionalidad implementada. Además, a partir de los datos importados y transformados, se demostrará que se pueden formar equipos factibles.
 
-\section{Artefactos de ingeniería de software}
+\subsection{Importación de los datos de los docentes}\label{sec:impo_docencia}
+A continuación se describe el proceso de importación para el caso específico del problema de la docencia. Para iniciar este proceso se seleccionó el fichero que se muestra en el Anexo \ref{fig:fichero-docencia}. La Tabla \ref{table:importar-fichero-docencia} describe brevemente su contenido.\\
 
-En esta sección se muestran los artefactos de ingeniería de software necesarios para entender y explicar el funcionamiento de la funcionalidad de importar el fichero.
-
-\subsection{Diagrama de casos de uso}
-
-La funcionalidad a incorporar se relaciona con la inserción de nuevas personas personas, competencias y roles. Es por este motivo que se decide que el responsable de llevarlas a cabo sea el rol \textbf{Gestor de recursos humanos}. Debido a la gran número de CU que posee el sistema, se decide mostrar solamente los aquellos que fueron modificados o creados por el autor. En la Figura \ref{fig:CU_nuevo} se muestra el diagrama el diagrama de CU correspondiente. El color verde corresponde a los CU no modificados, el amarillo a los modificados y el color rojo corresponde a los CU incorporados.
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{figuras/diagrama_CUTeamSoftImportar.png}
-	\caption{Ampliación de diagrama de CU} \label{fig:CU_nuevo}
-\end{figure}
-	
-\subsection{Descripción de alto nivel de los casos de uso}
-En esta sección se describen cada uno de los casos de uso relacionadas con la funcionalidad a implementar. En cada uno se explican elementos tales como: el nombre, la descripción y los casos de uso relacionados.\\\\
-
-La Tabla \ref{table:descripcion-alto-nivel-importar} muestra la descripción de alto nivel del CU Importar Personas.
-
-\begin{table}[H]
-	\centering
-	\caption{Descripción de alto nivel del CU Importar Persona} \label{table:descripcion-alto-nivel-importar}
-	\begin{tabular}{ | l | p{10cm} |}
-		\toprule
-		Nombre & Importar Personas \\ \midrule
-		Descripción & Este es el CU principal del la funcionalidad propuesta. Para importar las personas el usuario debe seleccionar la opción de importar, luego el sistema le muestra una ventana donde debe localizar el archivo que desea importar. Si el fichero posee las características correctas se procede a leer el fichero. Además debe seleccionar (o crear) un grupo al cual asociar las personas a importar.\\ \hline
-		CU relacionados & Asociar atributos de las personas, Asociar atributos de las competencias, Asociar atributos de los roles.\\ \bottomrule
-	\end{tabular}
-\end{table}
-
-La Tabla \ref{table:descripcion-alto-nivel-atr-pers} muestra la descripción de alto nivel del CU Asociar atributos de las personas.
-
-\begin{table}[H]
-	\centering
-	\caption{Descripción de alto nivel del CU Asociar atributos de las personas} \label{table:descripcion-alto-nivel-atr-pers}
-	\begin{tabular}{ | l | p{10cm} |}
-		\toprule
-		Nombre          & Asociar atributos de las personas                                                                                                                                                \\ \midrule
-		Descripción     & En este CU el usuario debe asociar de los atributos del fichero seleccionado, qué elementos corresponden con la experiencia y el nombre de las personas. \\ \hline
-		CU relacionados &  \\ \bottomrule
-	\end{tabular}
-\end{table}
-
-La Tabla \ref{table:descripcion-alto-nivel-atr-comp} muestra la descripción de alto nivel del CU Asociar atributos de las competencias.
-
-\begin{table}[H]
-	\centering
-	\caption{Descripción de alto nivel del CU Asociar atributos de las competencias} \label{table:descripcion-alto-nivel-atr-comp}
-	\scalebox{0.97}{
-	\begin{tabular}{ | l | p{10cm} |}
-		\toprule
-		Nombre          & Asociar atributos de las competencias                                                                                                                                                \\ \midrule
-		Descripción     & En este CU el usuario debe asociar a los atributos del fichero que tengan relación con las competencias. Debe especificar todas las competencias que se pueden calcular utilizando este atributo. \\ \hline
-		CU relacionados &   Configurar competencias, Importar competencias \\ \bottomrule
-	\end{tabular}
-}
-\end{table}
-
-
-La Tabla \ref{table:descripcion-alto-nivel-conf-comp} muestra la descripción de alto nivel del CU Configurar competencias.
-
-\begin{table}[H]
-	\centering
-	\caption{Descripción de alto nivel del CU Configurar competencias} \label{table:descripcion-alto-nivel-conf-comp}
-	\scalebox{0.97}{
-	\begin{tabular}{ | l | p{10cm} |}
-		\toprule
-		Nombre          & Configurar competencias                                                                                                                               \\ \midrule
-		Descripción     & En este CU el usuario debe configurar los valores de los atributos relacionados con las competencias. Para esto el usuario debe establecerle a aquellos atributos que contienen campos de texto un valor entre 0 y 1. Un proceso similar debe realizar con aquellos atributos que tienen relación con las mismas competencias. Mientras que para aquellos atributos que almacenan valores numéricos, debe seleccionar el mayor valor presente en el fichero. \\ \hline
-		CU relacionados &  \\ \bottomrule
-	\end{tabular}
-}
-\end{table}
-
-La Tabla \ref{table:descripcion-alto-nivel-imp-comp} muestra la descripción de alto nivel del CU Importar competencias.
-
-\begin{table}[H]
-	\centering
-	\caption{Descripción de alto nivel del CU Configurar competencias} \label{table:descripcion-alto-nivel-imp-comp}
-	\scalebox{0.97}{
-	\begin{tabular}{ | l | p{10cm} |}
-		\toprule
-		Nombre          & Importar competencias                                                                                                                          \\ \midrule
-		Descripción     &  Para importar las competencias el usuario debe seleccionar la opción de importar, luego el sistema le muestra una ventana donde debe localizar el archivo que desea importar. Si el fichero posee las características correctas se procede a leer el fichero.\\ \hline
-		CU relacionados &  \\ \bottomrule
-	\end{tabular}
-}
-\end{table}
-
-La Tabla \ref{table:descripcion-alto-nivel-atr-role} muestra la descripción de alto nivel del CU Asociar atributos de los roles.
-
-\begin{table}[H]
-	\centering
-	\caption{Descripción de alto nivel del CU Asociar atributos de los roles} \label{table:descripcion-alto-nivel-atr-role}
-	\scalebox{0.97}{
-		\begin{tabular}{ | l | p{10cm} |}
-			\toprule
-			Nombre          & Asociar atributos de los roles                                                                                                                              \\ \midrule
-			Descripción     & En este CU el usuario debe asociar aquellos atributos del fichero que tengan relación con los roles. Debe especificar para cada atributo seleccionado el rol que le corresponde. \\ \hline
-			CU relacionados & Importar roles \\ \bottomrule
-		\end{tabular}
-	}
-\end{table}
-
-
-La Tabla \ref{table:descripcion-alto-nivel-imp-role} muestra la descripción de alto nivel del CU Importar roles.
-
-\begin{table}[H]
-	\centering
-	\caption{Descripción de alto nivel del CU Importar roles} \label{table:descripcion-alto-nivel-imp-role}
-	\scalebox{0.97}{
-		\begin{tabular}{ | l | p{10cm} |}
-			\toprule
-			Nombre          & Importar competencias                                                                                                                          \\ \midrule
-			Descripción     &  Para importar los roles el usuario debe seleccionar la opción de importar, luego el sistema le muestra una ventana donde debe localizar el archivo que desea importar. Si el fichero posee las características correctas se procede a leer el fichero.\\ \hline
-			CU relacionados &  \\ \bottomrule
-		\end{tabular}
-	}
-\end{table}
-
-La Tabla \ref{table:descripcion-alto-nivel-gestion-personas} muestra la descripción de alto nivel del CU Gestionar personas. Este CU como muestra la Figura \ref{fig:CU_nuevo} fue modificado por el autor. La modificación viene dada a partir de una de las limitaciones detectadas en la sección \ref{sec:limitaciones}. El autor añade un nuevo campo a las personas. Este campo consiste en la experiencia profesional de los trabajadores.
-
-\begin{table}[H]
-	\centering
-	\caption{Descripción de alto nivel del CU Gestionar personas} \label{table:descripcion-alto-nivel-gestion-personas}
-	\scalebox{0.97}{
-		\begin{tabular}{ | l | p{10cm} |}
-			\toprule
-			Nombre          & Gestionar personas \\ \midrule
-			Descripción     & En este CU el usuario se encarga de crear, modificar, eliminar personas           \\ \hline
-			CU relacionados &  \\ \bottomrule
-		\end{tabular}
-	}
-\end{table}
-
-\subsection{Diagrama de estructuración en capas}
-
-TEAMSOFT$^+$ utiliza un arquitectura por capas basado en reutilización. En la Figura \ref{fig:diagrama-paquetes} se muestran los paquetes, subsistemas e interfaces que componen dicha arquitectura con distintos niveles de reutilización. En esta figura, los paquetes que se encuentran coloreados en amarillo fueron modificados por el autor, mientras que los coloreados en verde se mantienen sin modificación.
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=.7\textwidth]{figuras/diagrama-paquetes.png}
-	\caption{Diagrama de estructuración en capas basado en reutilización} \label{fig:diagrama-paquetes}
-\end{figure}
-
-A continuación se explican aquellos paquetes modificados por el autor:
-\begin{description}
-	\item[Presentación:] Paquete que contiene las páginas XHTML (\textit{Facelets}) y las plantillas (\textit{Templates}) correspondientes a las mismas.
-	\item[Lógica de Negocio:] Paquete que contiene las clases que implementan la lógica del negocio. Este paquete agrupa los controladores, objetos java planos (\textit{POJO} por sus siglas en inglés) útiles, y las clases relacionadas con la solución al modelo de formación de múltiples equipos con la biblioteca BICIAM. 
-	\item[Acceso a Datos:] Paquete que contiene las clases para el acceso a datos. Dentro de este se encuentran las \textit{Entity} (clase java con anotaciones, que representa una tabla en la BD), y los modelos (una clase abstracta que define los métodos comunes de creación, actualización y eliminación, y una implementación de esta clase por cada \textit{Entity}) 
-\end{description}
-
-\section{Validación del proceso de importación propuesto}
-En esta sección se comprueba el correcto funcionamiento de las nuevas funcionalidades incorporadas a la herramienta TEAMSOFT$^+$ vinculadas con el proceso de importación de personas. En la Figura \ref{fig:diagrama-flujo-importar} se presenta el diagrama de flujo asociado a este proceso. 
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{figuras/diagramas-teamsoft-Flujo-Importar.png}
-	\caption{Diagrama de flujo importar} \label{fig:diagrama-flujo-importar}
-\end{figure}
-
-El proceso comienza cuando el usuario \textbf{selecciona un fichero} a importar. Este fichero tiene que cumplir las características que se listan en la Tabla \ref{table:especificaciones-fichero}. Este formato permite que la información almacenada en el fichero se adapte a diferentes tipos de problemas.
-
-\begin{table}[H]
-	\centering
-	\caption{Especificaciones del fichero a importar}\label{table:especificaciones-fichero}
-	\begin{tabular} {l | p{10cm}}
-		\toprule
-		Formato & Valores separados por comas o \textit{CSV} por sus siglas en inglés (\textit{.csv}) \\ \midrule
-		Composición & Cada columna representa un atributo de las personas. Mientras que cada fila representa los valores de las personas en cada atributo. \\ \hline
-		Campos obligatorios & La experiencia y el nombre de las personas \\ \hline
-		Campos adicionales & Todos los atributos relacionados con el problema en cuestión \\ \hline 
-		Restricciones & El tipo de dato de cada columna tiene que ser homogéneo \\ \bottomrule
-	\end{tabular}
-\end{table}
-
-En el paso entrar nombre del grupo de personas el usuario selecciona de los grupos disponibles, a cuál de ellos incorporar las personas a importar. En caso de no existir el grupo deseado, este se crea al finalizar el proceso, justo antes de insertar a las personas. A continuación es necesario asociar las características de las personas disponibles en el fichero de entrada a los atributos de las personas definidos, para esto deben coincidir los tipos de datos. De forma similar, se definen los atributos del fichero a partir de los cuáles se calculan los valores de las competencias utilizando las ecuaciones definidas en las secciones \ref{sec:tran_pel} y \ref{sec:tran_docencia}. En el siguiente paso es necesario establecer los pesos asociados a cada una de las categorías de las competencias. Existen diferentes criterios para determinar estos pesos, en función del tipo de dato de los atributos en el fichero de entrada que influyen en la competencia definidos en el paso anterior. Antes de finalizar el proceso, se mapean los atributos del fichero con los roles correspondientes. En este momento es posible comprobar las configuraciones realizadas, y decidir entonces finalizar el proceso de importación o modificar alguno de los pasos anteriores. \\
-A continuación se ejemplifican los pasos anteriores para los casos de los problemas de béisbol y docencia abordados en el presente trabajo.
-
-\subsection{Importación de los datos de los docentes}
-A continuación se describe el proceso de importación para el caso específico del problema de la docencia. Para iniciar este proceso se seleccionó el fichero que se muestra en el Anexo \ref{fig:fichero-docencia}. La Tabla \ref{table:importar-fichero-docencia} describe brevemente su contenido.
-
-\begin{table}[H]
+\begin{table}
 	\centering
 	\caption{Explicación contenido fichero docencia}\label{table:importar-fichero-docencia}
+%	\scalebox{.9}{
 	\begin{tabular} {l | p{10cm}}
 		\toprule
 		\textbf{Atributo} & \textbf{Descripción} \\ \midrule
@@ -204,20 +26,579 @@ A continuación se describe el proceso de importación para el caso específico 
 		tall & Experiencia del profesor trabajando en el rol de taller \\ \hline\\
 		jefeasig & Experiencia del profesor trabajando en el rol de Líder\\ \bottomrule
 	\end{tabular}
+%}
 \end{table}
 
-En este caso el fichero contiene a los profesores (para un total de 16) del departamento de Inteligencia Computacional de la Facultad de Ingeniería Informática. Posteriormente se procede a selecciona como grupo de personas \textbf{profesores IC}. Este grupo no existía con antelación, por lo que se creará al iniciar la importación de las personas. El Anexo \ref{fig:cargar-fichero-docencia} muestra cómo queda la pantalla después de lo explicado. Como siguiente paso, se realiza el mapeo entre los atributos del fichero y las características de las personas. Para esto, se seleccionan los atributos del fichero: \textbf{nombre}, \textbf{exp} y se relacionan con \textbf{Nombre} y \textbf{Experiencia} correspondientemente (ver Anexo \ref{fig:mapeo_atr_pers_doc}). Después, se procede a asociar los atributos del fichero con las competencias y, realizar la configuración correspondiente (ver Anexos \ref{fig:}
+En este ejemplo el fichero contiene 16 profesores pertenecientes a la disciplina docente: Inteligencia Computacional de la Facultad de Ingeniería Informática. Estos profesores se insertan en un nuevo grupo: \textbf{profesores IC}. En el Anexo \ref{fig:cargar-fichero-docencia} se presenta el resultado de este paso. A continuación se mapean los atributos del fichero y las características de las personas. En el ejemplo se seleccionan los atributos del fichero: \textbf{nombre}, \textbf{exp} y se asocian con las características de las personas: \textbf{Nombre} y \textbf{Experiencia} (ver Anexo \ref{fig:mapeo_atr_pers}).\\
 
-\subsection{Importación de los datos de  béisbol}
+En la Tabla \ref{table:mapeo_competencias_docencia} se ejemplifica la variante utilizada para realizar el mapeo de los atributos del fichero con las competencias. A partir de este mapeo es necesario definir el peso correspondiente a cada una de las categorías establecidas para las competencias. 
 
+
+\begin{table}[H]
+	\centering
+	\caption{Mapeo atributos del fichero con las competencias}\label{table:mapeo_competencias_docencia}
+%	\scalebox{.9}{
+	\begin{tabular} {l | l}
+		\toprule
+		\textbf{Atributo fichero} & \textbf{Competencia} \\ \midrule
+		cd & Categoría Docente \\ \hline
+		cc & Grado científico \\ \hline
+		trabdoc & Trabajo docente \\ \hline
+		trabmet & Trabajo metodológico \\ \hline
+		trabinv & Trabajo investigativo \\ \bottomrule
+	\end{tabular}
+%}
+\end{table}
+
+En este caso, el formato de los atributos asociados es de tipo texto, por lo que hay que se asignar directamente el valor del peso de cada uno de ellos, teniendo que cumplir la condición de que la suma de todos ellos sea igual a uno. En la Tabla \ref{table:config_competencias_docencia} se muestra la asignación de los pesos para el atributo \textbf{cd}; las configuraciones para el resto de los atributos se pueden consultar en los Anexos \ref{fig:conf_comp_cc_docencia}, \ref{fig:conf_comp_doc_docencia} y \ref{fig:conf_comp_inv_docencia}.
+
+\begin{table}[H]
+	\centering
+	\caption{Configuración del atributo cd}\label{table:config_competencias_docencia}
+%	\scalebox{.9}{
+	\begin{tabular} {l | l}
+		\toprule
+		\textbf{Valor del atributo} & \textbf{Peso} \\ \midrule
+		Titular & 0.4 \\ \hline
+		Auxiliar & 0.3 \\ \hline
+		Instructor & 0.1 \\ \hline
+		Asistente & 0.15 \\ \hline
+		Instructor recién graduado & 0.05  \\ \hline		
+		\textbf{Suma} & \textbf{1} \\ \bottomrule
+	\end{tabular}
+%}
+\end{table}
+
+Para asociar los atributos del fichero a los roles, se siguieron las configuraciones establecidas en la Tabla \ref{table:mapeo_roles_docencia}.
+
+\begin{table}[H]
+	\centering
+	\caption{Mapeo de los atributos con los roles}\label{table:mapeo_roles_docencia}
+%	\scalebox{.9}{
+	\begin{tabular} {l | l}
+		\toprule
+		\textbf{Valor del atributo} & \textbf{Peso} \\ \midrule
+		jefeasig & Líder \\ \hline
+		tall & Taller \\ \hline
+		lab & Laboratorio \\ \hline
+		sem & Seminario \\ \hline
+		cpractica & Clase Práctica  \\ \hline		
+		conf & Conferencia \\ \bottomrule
+	\end{tabular}
+%}
+\end{table}
+
+El sistema permite que las configuraciones anteriores puedan se editadas en el último paso justo antes de realizar la importación de las personas (ver Anexo \ref{fig:verificar_datos_docencia}). Al finalizar el proceso, se muestra un mensaje informando al usuario el resultado de la importación (ver Anexo \ref{fig:resultados_docencia}). El resultado final de la importación se puede consultar en el Anexo \ref{fig:lista_profesores_docencia}. Los datos de un profesor en particular, en este caso el profesor Milton, pueden ser consultados en los Anexos \ref{fig:comp_genericas_docencia}, \ref{fig:comp_tecnicas_docencia}, \ref{fig:pref_roles_docencia}.
+
+\subsection{Importación de los datos de  béisbol} \label{sec:impo_beisbol}
+A continuación se describe el proceso de importación para el caso específico del problema del béisbol. Para iniciar este proceso se seleccionó el fichero que se muestra en el Anexo \ref{fig:fichero-beisbol}. Este fichero almacena los atributos obligatorios de las personas como son la experiencia y el nombre de cada uno. En adición se almacenan las estadísticas de las personas para los indicadores definidos en la Tabla \ref{correspondencia-pel}, así como los años de experiencia en cada rol.\\
+
+En este ejemplo el fichero contiene 24 jugadores pertenecientes al equipo de la Serie Nacional de Matanzas. Estos jugadores se insertan en un nuevo grupo: \textbf{staff matanzas}. En el Anexo \ref{fig:cargar-fichero-docencia} se presenta el resultado de este paso. A continuación se mapean los atributos del fichero y las características de los jugadores. En el ejemplo se seleccionan los atributos del fichero: \textbf{nombre}, \textbf{exp} y se asocian con las características de las personas: \textbf{Nombre} y \textbf{Experiencia} (ver Anexo \ref{fig:mapeo_atr_pers}). En la Tabla \ref{table:mapeo_competencias_beisbol} se ejemplifica la variante utilizada para realizar el mapeo de los atributos del fichero con las competencias. A partir de este mapeo se logra definir a partir de qué atributos se van a calcular las competencias. \\
+
+\begin{table}[H]
+	\centering
+	\caption{Mapeo de atributos del fichero con las competencias}\label{table:mapeo_competencias_beisbol}
+%	\scalebox{.9}{
+		\begin{tabular} {l | p{6cm}}
+			\toprule
+			\textbf{Atributo fichero} & \textbf{Competencia} \\ \midrule
+			ci & batear con hombres en base \\ \hline
+			 sh&   batear con hombres en base, capacidad de embase \\ \hline
+			sf &  batear con hombres en base \\ \hline
+			cipa &   batear con hombres en base\\ \hline
+			dobles &  fuerza de bateo, velocidad \\ \hline
+			triples & fuerza de bateo, velocidad  \\ \hline
+			hr &   fuerza de bateo\\ \hline
+			slu &   fuerza de bateo\\ \hline
+			obp & capacidad de embase  \\ \hline
+			avgO & capacidad de embase   \\ \hline
+			avgD & precisión de tiro \\ \hline
+			br &  velocidad, capacidad de embase \\ \hline
+			cr &   velocidad \\ \bottomrule
+		\end{tabular}
+%	}
+\end{table}
+
+En este caso, existen más de un atributo que tiene relación con una competencia, por lo que hay que asignar directamente el valor del peso de cada uno de ellos, teniendo que cumplir la condición de que la suma de todos ellos sea igual a uno. \\
+
+En la Tabla \ref{table:config_competencias} se muestra la asignación de los pesos para la competencia \textbf{batear con hombres en base}; las configuraciones para el resto de las competencias se pueden consultar en los Anexos \ref{fig:conf_comp_ce_beisbol}, \ref{fig:conf_comp_fb_beisbol} y \ref{fig:conf_comp_v_beisbol}. Además, todos los atributos seleccionados que tienen relación con las competencias son del tipo numérico. Por lo que hay que definir el máximo valor a tener en cuenta para cada uno de ellos. Por defecto, el sistema busca en el fichero de entrada, el máximo valor para cada atributo.
+
+\begin{table}[H]
+	\centering
+	\caption{Configuración de la competencia  \textbf{batear con hombres en base}}\label{table:config_competencias}
+	\scalebox{.9}{
+		\begin{tabular} {l | l}
+			\toprule
+			\textbf{Atributo} & \textbf{Peso} \\ \midrule
+				ci & 0.4 \\ \hline
+				sh & 0.2 \\ \hline
+				sf & 0.1 \\ \hline
+				cipa & 0.3 \\ \hline
+			\textbf{Suma} & \textbf{1} \\ \bottomrule
+		\end{tabular}
+	}
+\end{table}
+
+Para asociar los atributos del fichero a los roles, se siguieron las configuraciones establecidas en la Tabla \ref{mapeo-tipo-roles}. Como casos especiales (porque no son roles ofensivos o defensivos), los atributos \textit{banco} y \textit{capitan} se mapean con sus correspondientes \textit{Banco} y \textit{Líder}.
+
+\begin{table}[H]
+	\centering
+	\caption{Mapeo de los atributos por tipo de rol}\label{mapeo-tipo-roles}
+%	\scalebox{0.95}{
+		\begin{tabular}{l l l l}
+			\toprule
+			\textbf{Atributo} & \textbf{Roles defensivos} & \textbf{Atributo} & \textbf{Roles Ofensivos} \\ \midrule
+			c                 & catcher                   & b1                & primer bate              \\
+			primeraB          & primera base              & b2                & segundo bate             \\
+			segundaB          & segunda base              & b3                & tercer bate              \\
+			ss                & campo corto               & b4                & cuarto bate              \\
+			terceraB          & tercera base              & b5                & quinto bate              \\
+			lf                & jardinero izquierdo       & b6                & sexto bate               \\
+			cf                & jardinero central         & b7                & séptimo bate             \\
+			rf                & jardinero derecho         & b8                & octavo bate              \\
+			bd                & bateador designado        & b9                & noveno bate              \\ \bottomrule
+		\end{tabular}
+%	}
+\end{table}
+
+
+El sistema permite que las configuraciones anteriores puedan se editadas en el último paso justo antes de realizar la importación de las personas (ver Anexo \ref{fig:verificar_datos_beisbol}). Al finalizar el proceso, se muestra un mensaje informando al usuario el resultado de la importación (ver Anexo \ref{fig:resultados_beisbol}). El resultado final de la importación se puede consultar en el Anexo \ref{fig:lista_jugadores_beisbol}. Los datos de un jugador en particular, en este caso el jugador Santoya, pueden ser consultados en los Anexos \ref{fig:comp_genericas_beisbol}, \ref{fig:comp_tecnicas_beisbol}, \ref{fig:pref_roles_beisbol}.
 
 
 \section{Generación de soluciones a los problemas de docencia y béisbol}
+En esta sección se realizaran los experimentos asociados a ambos problemas con los datos de la importación de las personas mencionados en las secciones \ref{sec:impo_docencia} y \ref{sec:impo_beisbol}. Para comprobar la efectividad de las soluciones propuestas con TEAMSOFT$^+$ a ambos modelos se realizan un conjunto de experimentos teniendo en cuenta las características propias de cada problema, el uso de diferentes FO y algoritmos de solución.
 
 \subsection{Solución al problema de docencia}
+El problema de la docencia tiene algunos aspectos particulares: 
+\begin{itemize}
+	\setlength\itemsep{-0.5em}
+	\item No existen incompatibilidades definidas entre los roles.
+	\item Los profesores pueden estar asignados a más de una asignatura, siempre y cuando quede tiempo disponible.
+	\item En ocasiones, se necesita que la persona que desempeña el rol Líder ocupe otro rol dentro de la misma asignatura.
+\end{itemize}
 
+Es importante volver a recalcar que en este problema, las asignaturas a impartir, se consideran como proyectos. Además, a decisión del autor, se decide utilizar los datos de los profesores asociados a la disciplina Inteligencia Computacional. La Tabla \ref{table:nivel-pers-comp} refleja los niveles de los profesores en cada competencia calculados a partir de la importación. Solo se presentan los primeros cinco, el resto puede ser consultado en el Anexo \ref{table:nivel-pers-comp2}.\\
+
+\vspace{-1cm}
+\begin{table}[H]
+	\centering
+	%	\hspace{-4cm}
+	\caption{Nivel de los profesores por competencias: Trabajo docente (TD), Trabajo metodológico (TM), Trabajo investigativo (TI), Categoría docente (CD) y Grado científico (GC)}\label{table:nivel-pers-comp}
+	\scalebox{.95}{
+		\begin{tabular}{l l l l l l }
+			\toprule
+			\multirow{2}{2.5cm}{\textbf{Profesor}} &                 \multicolumn{5}{c}{\textbf{Competencias}}                   \\ \cline{2-6}
+			& \textbf{TD} & \textbf{TM}   & \textbf{TI}   & \textbf{CD}   & \textbf{GC}   \\ \midrule
+			Raisa Socorro                          & Experto   & Experto & En desarrollo & Experto & Experto  \\ \hline
+			Alejandro Rosete                       & Experto   & Experto& Experto     & Experto       & Experto     \\ \hline
+			Maylin                          & Experto   & Experto & Experto & Experto & Experto     \\ \hline
+			Luis                          & En avance   & En desarrollo & En desarrollo & En partida & En desarrollo    \\ \hline
+			Camila                         & Experto    & Experto  & Experto  & En partida &   En desarrollo  \\ \hline
+			...                                    & ...         & ...           & ...           & ...           & ...          \\ \bottomrule
+		\end{tabular}
+	}
+\end{table}
+
+
+También calculado a partir de los datos del fichero, se obtiene la experiencia de las personas por los roles.  La Tabla \ref{table:pref-pers-roles-doc} refleja con una $X$ la preferencia de la persona $p_i$ por el rol $r_i$.
+
+
+\begin{table}[H]
+	\centering
+	%	\hspace{-2cm}
+	\caption{Preferencia de las personas por los roles: Líder (L), Conferencia (C), Clase práctica (CP), Seminario (S), Laboratorio (LB) y Taller (T)}\label{table:pref-pers-roles-doc}
+	%	\scalebox{.87}{
+	\begin{tabular}{l c c c c c c }
+		\toprule
+		\multirow{2}{2.5cm}{\textbf{Profesor}} &                                              \multicolumn{6}{c}{\textbf{Roles}}                                               \\ \cline{2-7}
+		& \textbf{L} & \textbf{C} & \textbf{CP} & \textbf{S} & \textbf{LB} & \textbf{T} \\ \midrule
+		Raisa Socorro                          & X              & X                    & X                       &                    &  \\ \hline
+		Alejandro Rosete                       & X              & X                    & X                       & X                  &  \\ \hline
+		Maylin                                 & X              & X                    & X                       & X                  &  \\ \hline
+		Luis                                   &                &                      &                         &                    &  \\ \hline
+		Camila                                 &                &                      &                         &                    &  \\ \hline
+		...                                    & ...            & ...                  & ...                     & ...                & ...                  & ...             \\ \bottomrule
+	\end{tabular}
+	%}
+\end{table}
+
+
+%-----------------------------------empiezan los proyectos-------------------
+
+Las asignaturas Matemática Discreta (MD), Inteligencia Artificial (IA) y Metodología de la Investigación (MI) serán los proyectos a solucionar. Se escogen estas asignaturas debido a que todas se imparten en el mismo semestre.  Para configurar un proyecto es necesario primero definir los roles que lo conforman, la cantidad de personas que se necesitan para desempeñar cada rol y, la carga que le conlleva al trabajador desempeñarlo. Las Tabla \ref{table:asig_rol} muestra las configuraciones establecidas para cada una de las asignaturas seleccionadas. 
+
+\begin{table}[H]
+	\centering
+	\caption{Configuración de los roles para cada una de las asignaturas} \label{table:asig_rol}
+		\scalebox{.95}{
+	\begin{tabular}{ | l | c | c | c | c | c | c |}
+		\toprule
+		\multirow{3}{3cm}{\textbf{Rol}} &                                         \multicolumn{6}{c|}{\textbf{Asignatura}}                                         \\
+		\cmidrule{2-7}                  &    \multicolumn{2}{c|}{\textbf{MD}}    &    \multicolumn{2}{c|}{\textbf{IA}}    &    \multicolumn{2}{c|}{\textbf{MI}}    \\
+		\cmidrule{2-7}                  & \textbf{No. personas} & \textbf{Carga} & \textbf{No. personas} & \textbf{Carga} & \textbf{No. personas} & \textbf{Carga} \\ \midrule
+		Líder                           & 1                     & media          & 1                     & media          & 1                     & media          \\ \hline
+		Conferencia                     & 1                     & media          & 1                     & media          & 1                     & baja           \\ \hline
+		Seminario                       & 3                     & baja           & --                    & --             & 1                     & baja           \\ \hline
+		Clase Práctica                  & --                    & --             & 2                     & media          & --                    & --             \\ \bottomrule
+	\end{tabular}
+	}
+\end{table}
+
+%----------------------------terminan los proyectos-----------------------------------
+
+Una vez establecidos los roles, la cantidad de personas y la carga para cada rol, es necesario definir las competencias necesarias para que una persona pueda desempeñar cada rol. En este caso, para cada asignatura se decidió establecer a los roles de Líder y Conferencia, todas las competencias con el máximo nivel: Experto. Un ejemplo de esta configuración se puede consultar en el Anexo \ref{fig:conf-roles-comp-asignatura}. \\ 
+
+TEAMSOFT$^+$ permite diferentes configuraciones a tener en cuenta para formar los equipos. Las soluciones que se presentan en esta sección se obtienen utilizando múltiples equipos (tres asignaturas), con el método de que conforma los equipos de forma simultánea, asignando primero a los jefe de asignaturas (Líder). Se utiliza la nueva restricción  incorporada a la herramienta, la cual establece que el Líder del proyecto tiene que desempeñar otro rol dentro del mismo (el jefe de asignatura tiene que impartir esta asignatura).\\
+
+\subsubsection{Experimetos utilizando todas las FO}
+
+Para construir la solución se realizan 1000 iteraciones los diferentes existentes métodos de solución disponibles en TEAMSOFT$^+$, con una función multiobjetivo que tiene en cuenta los siguientes criterios:
+\begin{enumerate}
+	\setlength\itemsep{0em}
+	\item Maximizar competencias (C)
+	\item Balancear la carga de trabajo entre equipos (BCT)
+	\item Maximizar intereses de las personas por los roles (P)
+\end{enumerate}
+
+La solución inicial se construye utilizando el método propuesto en el Capítulo \ref{chap:2} que garantiza una solución inicial que cumpla la restricción de que el jefe de asignatura imparta la asignatura en cualquiera de sus roles. Además, se emplea un operador de mutación que sustituye a un profesor en una asignatura por otro cualquiera , en todos los roles que desempeña en esa asignatura. \\
+
+En la Tabla \ref{table:resultados-docencia} se muestran los resultados obtenidos después de diez corridas utilizando los algoritmos disponibles en TEAMSOFT$^+$. La mejor solución se señala en gris. Como se puede observar, la mejor solución teniendo en cuenta las tres FO se obtiene a partir de la aplicación del algoritmo EC.
+
+\begin{table}[H]
+	\centering
+	\caption{Resultado de la evaluación de los algoritmos: Escalador de colinas (EC), Escalador de colinas con reinicio (ECR), Búsqueda aleatoria (BA) y Búsqueda Tabú (BT) en las FO} \label{table:resultados-docencia}
+	\begin{tabular}{|c | c | c| c | c |c |c | c| c| c | c| c|c |}
+		\toprule
+		\multirow{3}{1cm}{\textbf{No.}} &                            \multicolumn{3}{c|}{\textbf{EC}}                             & \multicolumn{3}{c|}{\textbf{ECR}} & \multicolumn{3}{c|}{\textbf{BA}} & \multicolumn{3}{c|}{\textbf{BT}} \\
+		   \cmidrule{2-13}     & \textbf{C}                        & \textbf{P}                        & \textbf{BCT}                      & \textbf{C}    & \textbf{P}    & \textbf{BCT}        & \textbf{C}    & \textbf{P}    & \textbf{BCT}       & \textbf{C}      & \textbf{P}    &   \textbf{BCT}   \\ \midrule
+		          1            & 0.97                     & 0.83                     & 1.00                     & 0.97 & 0.83 & 1.00       & 0.97 & 0.83 & 0.62      & 0.96   & 0.91 &  1.00   \\ \hline
+		          2            & 0.98                     & 0.83                     & 0.83                     & 0.98 & 0.91 & 1.00       & 0.96 & 0.83 & 0.58      & 0.97   & 0.91 &  1.00   \\ \hline
+		          3            & 0.97                     & 1.00                     & 1.00                     & 0.97 & 0.91 & 1.00       & 0.97 & 0.83 & 0.79      & 0.9875 & 0.83 &  0.83   \\ \hline
+		          4            & 0.97                     & 1.00                     & 1.00                     & 0.96 & 1.00 & 1.00       & 0.95 & 0.91 & 1.00      & 0.94   & 0.91 &  1.00   \\ \hline
+		          5            & \cellcolor{gray!30} 0.98 & \cellcolor{gray!30} 1.00 & \cellcolor{gray!30}1.00  & 0.97 & 0.75 & 1.00       & 0.96 & 0.91 & 1.00      & 0.975  & 0.75 &  1.00   \\ \hline
+		          6            & 0.98                     & 0.91                     & 1.00                     & 0.95 & 1.00 & 1.00       & 0.96 & 0.75 & 1.00      & 0.9833 & 0.83 &  0.83   \\ \hline
+		          7            & 0.95                     & 0.83                     & 1.00                     & 0.98 & 0.83 & 0.83       & 0.97 & 0.83 & 0.79      & 0.9375 & 0.91 &  1.00   \\ \hline
+		          8            & 0.97                     & 0.93                     & 1.00                     & 0.98 & 0.75 & 0.83       & 0.95 & 1.00 & 1.00      & 0.98   & 0.91 &  1.00   \\ \hline
+		          9            &  0.97  &  1.00 &  1.00 & 0.95 & 0.75 & 1.00       & 0.98 & 0.83 & 1.00      & 0.95   & 0.91 &  1.00   \\ \hline
+		          10           & 0.97                     & 0.91                     & 0.8333                   & 0.97 & 0.91 & 1.00       & 0.98 & 0.83 & 1.00      & 0.98   & 0.75 &  1.00   \\ \bottomrule
+	\end{tabular}
+\end{table}
+
+La Tabla \ref{table:asingnacion-doc} muestra la asignación de los profesores a los roles en las asignaturas realizada por la mejor solución encontrada.
+
+\begin{table}[H]
+	\centering
+	\caption{Asignación con mejor puntuación por el algoritmo EC} \label{table:asingnacion-doc}
+	\begin{tabular}{l p{3.3cm} l l}
+		\toprule
+		\textbf{Rol}                               & \textbf{MD}                    & \textbf{IA}                    & \textbf{MI}                        \\ \midrule
+		Líder                             & Alejandro Rosete      & Milton                & Maylin                    \\ \hline
+		Conferencia                       & Maylin                & Milton                & Alejandro Rosete          \\ \hline
+		\multirow{2}{3cm}{Clase Práctica} & \multirow{2}{2cm}{--} & Alfredo               & \multirow{2}{2cm}{--}     \\
+		                                  &                       & Nayma                 &  \\ \hline
+		\multirow{3}{2cm}{Seminario}      & Alejandro Rosete      & \multirow{3}{2cm}{--} & \multirow{3}{2cm}{Maylin} \\
+		                                  & Alfredo               &                       &  \\
+		                                  & Milton                &                       &  \\ \bottomrule
+	\end{tabular}
+\end{table}
+ 
+La Tabla \ref{table:asignacion-jefe-departamento} muestra la asignación de los profesores a las asignaturas realizada por el jefe de departamento.
+
+ \begin{table}[H]
+ 	\centering
+ 	\caption{Asignación realizada por el jefe de departamento} \label{table:asignacion-jefe-departamento}
+ 	\begin{tabular}{l p{3.3cm} l l}
+ 		\toprule
+ 		\textbf{Rol}                      & \textbf{MD}           & \textbf{IA}           & \textbf{MI}              \\ \midrule
+ 		Líder                             & Alejandro Rosete      & Maylin                & Maylin                   \\ \hline
+ 		Conferencia                       & Alejandro Rosete      & Maylin                & Maylin                   \\ \hline
+ 		\multirow{2}{3cm}{Clase Práctica} & \multirow{2}{2cm}{--} & Eduardo               & \multirow{2}{2cm}{--}    \\
+ 		                                  &                       & Anabel                &  \\ \hline
+ 		\multirow{3}{2cm}{Seminario}      & Wenny                 & \multirow{3}{2cm}{--} & \multirow{3}{2cm}{Vilma} \\
+ 		                                  & David                 &                       &  \\
+ 		                                  & Alejandro Rosete      &                       &  \\ \bottomrule
+ 	\end{tabular}
+ \end{table}
+  
+En ambas soluciones se cumplen los niveles mínimos requeridos en las competencias para desempeñar  los roles. También se cumple que el Líder tiene que formar parte del claustro de profesores de la asignatura. Por último, la carga docente en cada caso no excede el límite. Es importante resaltar que en el caso de la solución realizada por el jefe de departamento, se tienen en cuenta las preferencias de las personas por las asignaturas, lo cual no se tuvo en cuenta en la solución propuesta en los algoritmos.
+ 
 \subsection{Solución al problema de  béisbol}
 
+En el caso del béisbol tiene características que lo diferencian tanto del problema de la docencia el de equipos de proyectos de software. Estas particularidades consisten en: 
+\begin{itemize}
+	\setlength\itemsep{0em}
+	\item 144 incompatibilidades entre los roles a desempeñar por los jugadores.
+	\item Los jugadores tienen que ocupar como mínimo dos roles.
+	\item Los jugadores pueden ocupar como máximo tres roles.
+\end{itemize}
 
+Además, a decisión del autor, se decide utilizar los datos de los jugadores del equipo de Matanzas de la Serie Nacional. La Tabla \ref{table:nivel-jugadores-comp} refleja los niveles de los jugadores en cada competencia calculados a partir de la importación. Solo se presentan los primeros cinco, el resto puede ser consultado en el Anexo \ref{table:nivel-jugadores-comp2}.\\
 
+\begin{table}[H]
+	\centering
+	%	\hspace{-4cm}
+	\caption{Nivel de los jugadores en las competencias: Batear con hombres en base (B), Fuerza de bateo (F), Precisión de tiro (P), Capacidad de embase (E) y Velocidad (V)}\label{table:nivel-jugadores-comp}
+	\scalebox{.95}{
+		\begin{tabular}{l l l l l l }
+			\toprule
+			\multirow{2}{2.5cm}{\textbf{Jugador}} &                 \multicolumn{5}{c}{\textbf{Competencias}}                  \\ \cline{2-6}
+			                                      & \textbf{B}    & \textbf{F}    & \textbf{P} & \textbf{E}    & \textbf{V}    \\ \midrule
+			Yurisbel Gracial                      & En partida    & En desarrollo & Experto    & En desarrollo & En partida    \\ \hline
+			Jefferson Delgado                     & En avance     & En desarrollo & Experto    & En avance     & En desarrollo \\ \hline
+			Ariel Sánchez                         & En avance     & En desarrollo & Experto    & En avance     & En partida    \\ \hline
+			Yasiel Santoya                        & En desarrollo & En desarrollo & Experto    & En desarrollo & En partida    \\ \hline
+			Andrys Pérez                          & En desarrollo & En partida    & Experto    & En desarrollo & En partida    \\ \hline
+			...                                   & ...           & ...           & ...        & ...           & ...           \\ \bottomrule
+		\end{tabular}
+	}
+\end{table}
+
+En la Tabla \ref{table:pref-pers-roles-pel} se muestran las preferencias de los jugadores por los roles. Estos datos son el resultado de la importación del fichero de entrada. Como se puede observar, los jugadores solo tienen algunos roles asociados. La ausencia de un rol significa que no es de su preferencia. Teniendo en cuenta el número de jugadores del equipo solo se muestran los cinco primeros, el resto puede ser consultado en el Anexo \ref{table:pref-pers-roles-pel2}.
+
+\begin{table}[H]
+	\centering
+	%	\hspace{-4cm}
+	\caption{Preferencia de los jugadores por los roles}\label{table:pref-pers-roles-pel}
+%	\scalebox{.95}{
+		\begin{tabular}{l l }
+			\toprule
+			\textbf{Jugador}  & \textbf{Roles}             \\ \midrule
+			Yurisbel Gracial  & B3, B4, 3B        \\ \hline
+			Jefferson Delgado & 3B                \\ \hline
+			Ariel Sánchez     & B3, LF            \\ \hline
+			Yasiel Santoya    & B3, B4, 1B, Líder \\ \hline
+			Andrys Pérez      & B8, B9, C         \\ \hline
+			...               & ...               \\ \bottomrule
+		\end{tabular}
+%	}
+\end{table}
+
+Para configurar un equipo es necesario primero definir los roles que lo conforman, la cantidad de personas que se necesitan para desempeñar cada rol y, la carga que implica al jugador su desempeño. Los roles asociados a este problema fueron definidos en el Capítulo \ref{chap:2}, así como la cantidad de jugadores necesarios para desempeñar cada uno. La carga de trabajo asociada a un rol no es relevante, debido a que solo se va a formar un equipo. Una vez establecidos los roles y la cantidad de jugadores por rol, es necesario definir las competencias necesarias para que un jugador pueda desempeñar cada rol. Todas estas configuraciones se pueden consultar en los Anexos \ref{fig:conf-equipo-pelota1}, \ref{fig:conf-equipo-pelota2}, \ref{fig:conf-equipo-pelota3}, \ref{fig:conf-equipo-pelota4}. \\
+
+TEAMSOFT$^+$ permite diferentes configuraciones a tener en cuenta para formar los equipos. Las soluciones que se presentan en esta sección se obtienen utilizando un solo equipo, con el método: Formar equipos de uno en uno, con la variante de no asignar primero al Líder. Se utiliza una nueva restricción  incorporada a la herramienta, la cual establece que los miembros del equipo tienen que ocupar todos al menos $n$ roles, siendo en este caso $n=2$, ocupando un rol a la ofensiva y otro a la defensiva. Esto último se garantiza por las incompatibilidades establecidas entre los roles. Además, se establece tres roles como cantidad máxima a ocupar por una persona. Esto se debe a que el Líder además de ocupar su rol, puede ocupar también un rol a la defensiva y a la ofensiva.
+
+\subsubsection{Experimetos utilizando todas las FO}
+
+Para construir la solución se realizan 1000 iteraciones los diferentes existentes métodos de solución disponibles en TEAMSOFT$^+$, con una función multiobjetivo que tiene en cuenta los siguientes criterios:
+\begin{enumerate}
+	\setlength\itemsep{0em}
+	\item Maximizar competencias (C)
+	\item Maximizar preferencias de las personas por los roles (P)
+\end{enumerate}
+
+Además, se establece la restricción de que no pueden existir incompatibilidades entre los roles ocupados por los jugadores. La solución inicial se construye utilizando el método propuesto en el Capítulo \ref{chap:2} que garantiza una solución inicial que cumpla la restricción de que una persona tiene que estar asignada como mínimo a dos roles. Se emplea un operador de mutación que sustituye a un jugador por otro cualquiera en todos los roles que desempeña en el equipo. \\
+
+En la Tabla \ref{table:resultados-beisbol} se muestran los resultados obtenidos después de diez corridas utilizando los algoritmos disponibles en TEAMSOFT$^+$. La mejor solución se señala en gris. Como se puede observar, la mejor solución teniendo en cuenta las tres FO se obtiene a partir de la aplicación del algoritmo ECR.
+
+\begin{table}[H]
+	\centering
+	\caption{Resultado de la evaluación de los algoritmos: Escalador de colinas (EC), Escalador de colinas con reinicio (ECR), Búsqueda aleatoria (BA) y Búsqueda Tabú (BT) en las FO} \label{table:resultados-beisbol}
+	\begin{tabular}{| c | c | c| c | c | c | c | c | c |}
+		\toprule
+		\multirow{2}{1cm}{\textbf{No.}} & \multicolumn{2}{c|}{\textbf{EC}} &          \multicolumn{2}{c|}{\textbf{ECR}}          & \multicolumn{2}{c|}{\textbf{BA}} & \multicolumn{2}{c|}{\textbf{BT}} \\
+		\cmidrule{2-9}                  & \textbf{C} & \textbf{P}          & \textbf{C}               & \textbf{P}               & \textbf{C} & \textbf{P}          & \textbf{C} & \textbf{P}          \\ \midrule
+		1                               & 0.44       & 0.36                & 0.43                     & 0.47                     & 0.43       & 0.36                & 0.44       & 0.42                \\ \hline
+		2                               & 0.44       & 0.31                & 0.45                     & 0.26                     & 0.42       & 0.47                & 0.42       & 0.68                \\ \hline
+		3                               & 0.43       & 0.47                & 0.45                     & 0.42                     & 0.42       & 0.52                & 0.42       & 0.52                \\ \hline
+		4                               & 0.44       & 0.47                & 0.42                     & 0.58                     & 0.43       & 0.36                & 0.44       & 0.36                \\ \hline
+		5                               & 0.44       & 0.52                & 0.42                     & 0.52                     & 0.41       & 0.57                & 0.43       & 0.63                \\ \hline
+		6                               & 0.41       & 0.36                & 0.43                     & 0.42                     & 0.44       & 0.26                & 0.43       & 0.52                \\ \hline
+		7                               & 0.44       & 0.31                & 0.44                     & 0.26                     & 0.45       & 0.31                & 0.41       & 0.57                \\ \hline
+		8                               & 0.42       & 0.47                & 0.43                     & 0.42                     & 0.44       & 0.15                & 0.42       & 0.52                \\ \hline
+		9                               & 0.4        & 0.47                & \cellcolor{gray!30} 0.43 & \cellcolor{gray!30} 0.68 & 0.41       & 0.47                & 0.43       & 0.63                \\ \hline
+		10                              & 0.43       & 0.58                & 0.42                     & 0.63                     & 0.45       & 0.47                & 0.42       & 0.52                \\ \bottomrule
+	\end{tabular}
+\end{table}
+
+En general, los valores obtenidos por la FO del las Tablas \ref{table:asignacion-pelota-def} y \ref{table:asignacion-pelota-of} muestran las asignaciones realizadas por el \textit{Manager} y la mejor solución encontrada para los roles defensivos y ofensivos respectivamente. Las propuestas coincidentes son resaltadas en gris. 
+
+\begin{table}[H]
+	\centering
+	\caption{Resultado de la asignación de la mejor solución encontrada para los roles defensivos}\label{table:asignacion-pelota-def}
+		\scalebox{0.95}{
+	\begin{tabular}{l l l }
+		\toprule
+		\textbf{Rol}         & \textbf{Alineación del \textit{Manager}} & \textbf{Alineación del algoritmo} \\ \midrule
+		\rowcolor{gray!30} C & Andrys Pérez                             & Andrys Pérez                      \\
+		\rowcolor{gray!30}1B & Yariel Duque                             & Yariel Duque                      \\
+		\rowcolor{gray!30}2B & Aníbal Medina                            & Aníbal Medina                     \\
+		\rowcolor{gray!30}SS & Erisbel Arruebaruena                     & Erisbel Arruebaruena              \\
+		3B                   & Yadil Mujica                             & Sandy Menocal                     \\
+		\rowcolor{gray!30}LF & Ariel Sánchez                            & Ariel Sánchez                     \\
+		\rowcolor{gray!30}CF & Eduardo Blanco                           & Eduardo Blanco                    \\
+		RF                   & Yadir Drake                              & Willian Campillo                  \\
+		\rowcolor{gray!30}BD & Javier Camero                            & Javier Camero                     \\ \bottomrule
+	\end{tabular}
+		}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\caption{Resultado de la asignación de la mejor solución encontrada para los roles ofensivos}\label{table:asignacion-pelota-of}
+	%	\scalebox{0.95}{
+	\begin{tabular}{l l l }
+		\toprule
+		\textbf{Rol}          & \textbf{Alineación del \textit{manager}} & \textbf{Alineación del algoritmo} \\ \midrule
+		\rowcolor{gray!30}B1  & Aníbal Medina                            & Aníbal Medina                     \\
+		B2                    & Yadil Mujica                             & Willian Campillo                  \\
+		B3                    & Ariel Sánchez                            & Javier Camero                     \\
+		B4                    & Javier Camero                            & Eduardo Blanco                    \\
+		B5                    & Yadir Drake                              & Ariel Sánchez                     \\
+		B6                    & Yariel Duque                             & Sandy Menocal                     \\
+		\rowcolor{gray!30}	B7 & Erisbel Arruebaruena                     & Erisbel Arruebaruena              \\
+		\rowcolor{gray!30}	B8 & Andrys Pérez                             & Andrys Pérez                      \\
+		B9                    & Eduardo Blanco                           & Yariel Duque                      \\ \bottomrule
+	\end{tabular}
+	%	}
+\end{table}
+
+En la Tabla \ref{table:resultados-beisbol} se evidencia que la FO que tiene en cuenta las preferencias de las jugadores por los roles, tiene mayor peso que la de las competencias. También, en las Tablas \ref{table:asignacion-pelota-def}  y \ref{table:asignacion-pelota-of} resulta evidente una mayor coincidencia entre la alineación defensiva propuesta por el \textit{manager} y la mejor solución propuesta por el algoritmo. Mientras que en la alineación defensiva existe una menor coincidencia. En este caso, no se modelaron de manera adecuada las preferencias de las personas por los roles ofensivos, ya que los datos de los indicadores utilizados en el fichero de entrada para obtener estas preferencias, no se encontraban disponibles. A pesar de lo antes mencionado, la asignación de los jugadores realizada por el algoritmo que no coinciden con la alineación del \textit{manager} pueden jugar ese rol sin ningún problema debido a que poseen las competencias para hacerlo.
+
+\section{Limitaciones de la herramienta TEAMSOFT$^+$ para la solución de los problemas de formación de equipos de béisbol y docentes} \label{sec:limitaciones}
+
+Es necesario comprobar que la herramienta TEAMSOFT$^+$ permite la formación de los equipos de béisbol y docentes siguiendo las adaptaciones propuestas para ambos problemas. En esta sección se le realizan algunas pruebas a la herramienta para comprobar su funcionamiento ante ambos problemas. \\
+
+Para llevar a cabo los Casos de Pruebas (CP) se vaciaron las tablas (de la base de datos) correspondientes a las competencias y roles. Esto persigue como objetivo simular la creación desde cero en ambos problemas. Como se observa en la Tabla \ref{t:casos-de-prueba-humo}, en los primeros cuatro CP se cumple lo esperado. Mientras que en el CP5, al momento que se intenta crear una nueva estructura, se presenta un error.
+
+\begin{table}[H]
+	\centering
+	\caption{Prueba de humo crear equipo sin rol Jefe de equipo}\label{t:casos-de-prueba-humo}
+	\scalebox{.68}{
+		\begin{tabular}{c p{2.3cm} e{4.7cm} e{5cm} p{3cm} p{3cm}}
+			\toprule
+			\textbf{ID} & \textbf{Escenario}                                               & \item[]\textbf{Pasos}                                                                                                                                       & \item[]\textbf{Información de entrada}                                    & \textbf{Resultado esperado}               & \textbf{Resultado actual}                                                                                     \\ \midrule
+			CP1     & Introducir roles sin que el nombre de ninguno sea Jefe de equipo & \item Introducir nombre
+			\item Introducir descripción
+			\item Establecer impacto
+			\item Establecer competencias
+			\item Establecer incompatibilidades & \item Primera Base 
+			\item Jugador de cuadro
+			\item 0.0
+			\item Trabajo bajo presión (nivel: en partida, importancia: alguna medida)
+			\item Ninguna
+			& El rol debe insertarse sin problemas      & Se cumple lo esperado                                                                                         \\ \hline
+			CP2     & Introducir roles sin que el nombre de ninguno sea Jefe de equipo & \item Introducir nombre
+			\item Introducir descripción
+			\item Establecer impacto
+			\item Establecer competencias
+			\item Establecer incompatibilidades & \item Segunda Base                                             
+			\item Jugador de cuadro
+			\item 0.0
+			\item Trabajo bajo presión (nivel: en partida, importancia: alguna medida)
+			\item Ninguna
+			& El rol debe insertarse sin problemas      & Se cumple lo esperado                                                                                         \\ \hline
+			CP3     & Introducir roles sin que el nombre de ninguno sea Jefe de equipo & \item Introducir nombre
+			\item Introducir descripción
+			\item Establecer impacto
+			\item Establecer competencias
+			\item Establecer incompatibilidades & \item Capitán       
+			\item Líder del equipo
+			\item 0.0
+			\item Trabajo bajo presión (nivel: en partida, importancia: alguna medida)
+			\item Ninguna
+			& El rol debe insertarse sin problemas      & Se cumple lo esperado                                                                                         \\ \hline
+			CP4     & Crear Proyecto                                                   & \item Abrir menú problema
+			\item Introducir nombre
+			\item Establecer fecha
+			\item Seleccionar entidad
+			\item Seleccionar provincia                  & \item Nuevo Problema 
+			\item 12/10/2021
+			\item Inder
+			\item La Habana
+			& Debe continuar con el proceso de creación & Se cumple lo esperado                                                                                         \\ \hline
+			CP5     & Crear estructura del proyecto                                    & \item Introducir nombre nuevo
+			\item Seleccionar roles
+			\item Establecer cantidad de trabajadores
+			\item \textit{Click} en: Siguiente                 & \item Nueva estructura
+			\item Primera base, Segunda Base, Capitán
+			\item uno por cada rol                                         
+			
+			& Mostrar mensaje creación de la estructura & Se muestra mensaje de error, informando que no hay un \textbf{Jefe de Proyecto} entre los roles seleccionados \\ \bottomrule
+		\end{tabular}
+	}
+\end{table}
+
+Reproduciendo los dos primeros CP de la Tabla \ref{t:casos-de-prueba-humo}, se lleva a cabo los mostrados en la Tabla \ref{t:casos-de-prueba-humo2}. En este caso queda claro que resulta necesario para crear una nueva estructura, la existencia de un rol con el nombre \textit{Jefe de Proyecto} (ver Figura \ref{fig:error-jefe-proy}).
+
+\begin{table}[H]
+	\centering
+	\caption{Prueba de humo crear proyecto con rol Jefe de Proyecto}\label{t:casos-de-prueba-humo2}
+	\scalebox{.69}{
+		\begin{tabular}{c p{2.3cm} e{4.7cm} e{4cm} p{3cm} p{3cm}}
+			\toprule
+			\textbf{ID} & \textbf{Escenario} & \item[]\textbf{Pasos} & \item[]\textbf{Información de entrada} & \textbf{Resultado esperado} & \textbf{Resultado actual}\\ \midrule
+			
+			CP6 & Introducir rol con nombre Jefe de Proyecto & 
+			\item Introducir nombre
+			\item Introducir descripción
+			\item Establecer impacto
+			\item Establecer competencias
+			\item Establecer incompatibilidades
+			& \item Jefe de Proyecto 
+			\item Líder del equipo
+			\item 0.0
+			\item Trabajo bajo presión (nivel: en partida, importancia: alguna medida)
+			\item Ninguna
+			
+			& El rol debe insertarse sin problemas & Se cumple lo esperado\\ \hline
+			
+			CP7 & Crear Proyecto & 
+			\item Abrir menú problema
+			\item Introducir nombre
+			\item Establecer fecha
+			\item Seleccionar entidad
+			\item Seleccionar provincia
+			& \item Nuevo Problema 
+			\item 12/10/2021
+			\item Inder
+			\item La Habana & Debe continuar con el proceso de creación & Se cumple lo esperado \\ \hline
+			
+			CP8 & Crear estructura del proyecto con el rol Jefe de Proyecto incluido & 
+			\item Introducir nombre nuevo
+			\item Seleccionar roles
+			\item Establecer cantidad de trabajadores
+			\item \textit{Click} en: Siguiente
+			& \item Nueva estructura
+			\item Primera base, Segunda Base, Jefe de Proyecto
+			\item uno por cada rol  
+			& La estructura se debe crear correctamente & Se cumple lo esperado\\ \bottomrule
+		\end{tabular}
+	}
+\end{table}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{figuras/error-jefe-proy.png}
+	\caption{Error al crear estructura sin Jefe de Proyecto} \label{fig:error-jefe-proy}
+\end{figure}
+
+Confirmando los CP realizados, la Figura \ref{fig:apariciones-jefe-proy} muestra alguna de las apariciones de la cadena \textit{Jefe de Proyecto} en el código fuente de la herramienta.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{figuras/string-texto-jefe-proy.png}
+	\caption{Apariciones del texto \textit{Jefe de Proyecto}} \label{fig:apariciones-jefe-proy}
+\end{figure}
+
+Específicamente, a la hora de validar una estructura, se verifica que en esta exista un rol con el nombre: \textit{Jefe de Proyecto}. La Figura \ref{fig:cod-valida} muestra lo planteado.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{figuras/validate-state.png}
+	\caption{Código utilizado para validar la presencia del rol Jefe de Proyecto} \label{fig:cod-valida}
+\end{figure}
+
+Otro aspecto a resaltar es la entrada de datos. En el sistema, este proceso solo se puede realizar de forma manual. Y cuando existen muchas personas a incorporar, se puede considerar como un proceso largo y tedioso. En adición, el sistema no se encuentra preparado para especificar que se va a trabajar con un tipo de problema en particular. Entonces, las ecuaciones propuestas para el cálculo de las competencias $t_4$ (\ref{ec:embase}) y $t_5$ (\ref{ec:pos}) correspondientes al problema del béisbol, no se podrán modelar en el sistema. \\
+
+Las personas tienen generalmente cierta experiencia trabajando. Por ejemplo, un recién graduado tiene menos experiencia como profesional que una persona que lleva trabajando 10 años en la industria. Esta última se ha enfrentado a múltiples problemas y debe saber cómo solucionarlos debido a su experiencia. Este atributo no se encuentra modelado actualmente en TEAMSOFT$^+$. \\
+
+La internacionalización de un sitio web consiste en identificar toda la información cambiante en función del idioma de preferencia del usuario. TEAMSOFT$^+$ tiene presente esta característica. Sin embargo, no está funcional. Esto no afecta al proceso de formación de equipos, pero sigue siendo una limitación.
+
+\section{Conclusiones}
+Con la culminación de este capítulo, se arribaron a las siguientes conclusiones:
+\begin{enumerate}
+	\item Se verifica que el proceso de importación de los datos se realice de manera correcta.
+	\item Los equipos de profesores formados, a pesar de ser buenos equipos, no se acercan a la realidad.
+	\item A pesar que el problema del béisbol, se generaron soluciones factibles, acercándose en gran medida a las alineaciones reales.
+\end{enumerate}
 

@@ -9,7 +9,8 @@
 \usepackage{makeidx}
 \usepackage{graphicx}
 \usepackage{color}
-\usepackage{kpfonts}
+%\usepackage{kpfonts} % change font
+%\usepackage{mathptmx} % change font
 \usepackage{multirow}
 \usepackage{amsmath,amssymb,amsfonts,latexsym,cancel}
 \usepackage[left=3cm,right=3cm,top=2cm,bottom=2cm]{geometry}
@@ -24,6 +25,9 @@
 \usepackage{longtable}
 \usepackage{booktabs}
 \usepackage{appendix}
+\usepackage{rotating}
+\usepackage[spanish,onelanguage,ruled,vlined,lined,resetcount]{algorithm2e}
+\SetKw{Break}{finalizar ciclo;}
 
 \usepackage[paper=portrait, pagesize]{typearea}
 
@@ -77,13 +81,19 @@
 		\setlength{\itemsep}{-\parsep}}%
 	p{#1}%
 	<{\@finalstrut\@arstrutbox\enditemize\endminipage}}
-
-
-
 \makeatother
 
+% esto es para que funcionen los anexos incluyendo la ñ
+\makeatletter \renewcommand*{\numberline}[1]{% 
+	\hb@xt@\@tempdima{% 
+		#1% 
+		\protected@edef\@temp@num{#1}% 
+		\ifx\@temp@num\@empty\else .\fi \hfil }% 
+	} \makeatother
 
-\title{Adaptación del modelo de conformación de equipos de TEAMSOFT$^+$ para los problemas de béisbol y docentes.}
+
+
+\title{Adaptación del modelo de formación de equipos de TEAMSOFT$^+$ para los problemas de béisbol y docentes.}
 
 \makeindex 
 
@@ -111,7 +121,7 @@
 	\pagebreak
 	
 	\listoffigures	
-	\clearpage 
+ 	\clearpage 
 	
 	\pagebreak	
 	\pagenumbering{arabic}
@@ -121,10 +131,10 @@
 	\include{cap1/cap1}
 	\include{cap2/cap2}
 	\include{cap3/cap3}
-%	\include{conc/conc}
-%	\include{rec/rec}
-%	\addcontentsline{toc}{chapter}{Conclusiones}
-%	\addcontentsline{toc}{chapter}{Recomendaciones}
+	\include{conc/conc}
+	\include{rec/rec}
+	\addcontentsline{toc}{chapter}{Conclusiones}
+	\addcontentsline{toc}{chapter}{Recomendaciones}
 	\addcontentsline{toc}{chapter}{Referencias bibliográficas}
 	
 	\bibliography{bib_tesis}

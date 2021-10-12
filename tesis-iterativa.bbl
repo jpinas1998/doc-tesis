@@ -22,14 +22,18 @@
 \BIBdecl
 
 \bibitem{Duran2019}
-A.~D. Enr\'iquez, ``Nueva versi\'on de la herramienta teamsoft+ para la
-  formaci\'on de m\'ultiples equipos de desarrollo de software,'' candthesis,
-  Universidad Tecnol\'ogica de La Habana, Jun. 2019.
+A.~Dur\'an~Enr\'iquez, ``Nueva versi\'on de la herramienta teamsoft+ para la
+  formaci\'on de m\'ultiples equipos de desarrollo de software,'' Tesis de
+  Pregrado, Universidad Tecnol\'ogica de La Habana, Jun. 2019.
+
+\bibitem{INDER2020}
+INDER, ``Sitio oficial de la serie nacional de b\'eisbol,''
+  \url{http://www.beisbolcubano.cu}, 2020.
 
 \bibitem{Mayi09}
-M.~A. Ampuero, ``Un modelo para la asignaci\'on de recursos humanos a equipos
-  de proyectos de software,'' Ph.D. dissertation, Universidad Tecnol\'ogica de
-  La Habana, Jos\'e Antonio Echeverr\'ia, 2009.
+M.~Andr\'e~Ampuero, ``Un modelo para la asignaci\'on de recursos humanos a
+  equipos de proyectos de software,'' Tesis Doctoral, Universidad Tecnol\'ogica
+  de La Habana, Jos\'e Antonio Echeverr\'ia, 2009.
 
 \bibitem{ana14}
 A.~L. Infante~Abreu, M.~Andr\'e~Ampuero, A.~Rosete~Su\'arez, and L.~Rampersaud,
@@ -65,12 +69,12 @@ MES, ``Resoluci\'on no.2 reglamento de trabajo docente y metodol\'ogico,''
   \url{https://www.gacetaoficial.gob.cu/es/resolucion-2-de-2018-de-ministerio-de-educacion-superior}.
 
 \bibitem{Bosquez2020}
-O.~C. Bosquez, J.~H. Torruco, B.~H. Ocana, and J.~C. Reich, ``Modeling and
-  solving a latin american university course timetabling problem instance,''
-  \emph{MDPI}, 2020.
+O.~Ch\'avez~Bosquez, J.~Hern\'andez~Torruco, B.~Hern\'andez~Ocana, and
+  J.~Canul~Reich, ``Modeling and solving a latin american university course
+  timetabling problem instance,'' \emph{MDPI}, 2020.
 
 \bibitem{Domenech2014}
-B.~Domenech and A.~L. Garc\'ia, ``A milp model for the teacher assignment
+B.~Domenech and A.~Lusa~Garc\'ia, ``A milp model for the teacher assignment
   problem considering teachers preferences,'' Department of Management (DOE);
   Institute of Industrial and Control Engineering (IOC) Universitat
   Polit\'ecnica de Catalunya (UPC), Av. Diagonal 647 – floor 11, 08029,
@@ -80,15 +84,6 @@ B.~Domenech and A.~L. Garc\'ia, ``A milp model for the teacher assignment
 DISERTIC and VRIC, ``Sistema de planificaci\'on de planes de resultados,''
   \url{http://www.pandora.cujae.edu.cu}, Universidad Tecnol\'ogica de La
   Habana, software 2.0, 2020.
-
-\bibitem{INDER2020}
-INDER, ``Sitio oficial de la serie nacional de b\'eisbol,''
-  \url{http://www.beisbolcubano.cu}, 2020.
-
-\bibitem{Institute2020}
-P.~M. Institute, \emph{A Guide to the Project Management Body of
-  Knowledge}.\hskip 1em plus 0.5em minus 0.4em\relax Project Management
-  Institute Inc., 2020.
 
 \bibitem{63}
 W.~Humphrey, ``Introduction to the team software proccess,'' in \emph{SEI
@@ -162,9 +157,15 @@ J.~Kittur and M.~Salunke, ``Mixed learning styles: A strategy for team
 
 \bibitem{Felder}
 \BIBentryALTinterwordspacing
-R.~M. Felder and B.~A. Soloman, ``Index of learning styles questionnaire,''
+R.~M.~Felder and B.~A.~Soloman, ``Index of learning styles questionnaire,''
   2020. [Online]. Available:
   \url{https://www.webtools.ncsu.edu/learningstyles/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{WBSC2021}
+\BIBentryALTinterwordspacing
+WBSC, ``Wbsc rankings,'' Oct. 2021, [Online; accessed 11. Oct. 2021]. [Online].
+  Available: \url{https://rankings.wbsc.org/es/list/baseball/men/europe}
 \BIBentrySTDinterwordspacing
 
 \bibitem{Burney2012}
@@ -189,6 +190,11 @@ Z.~Jiawei, Y.~P. S, and L.~Yuanhua, ``Enterprise employee training via project
   team formation,'' in \emph{Proceedings of the Tenth ACM International
   Conference on Web Search and Data Mining}, 2017, pp. 3--12.
 
+\bibitem{GonzalezChaveco2021}
+T.~González~Chaveco, C.~Porras~Nodarse, and A.~Rosete~Suárez, ``Nodos knime
+  para ajustar modelos usando la biblioteca de clases biciam,'' \emph{Revista
+  cubana de transformaci\'on digital}, 2021.
+
 \bibitem{INEFI2020}
 INEFI, ``B\'eisbol,'' \url{https://inefi.gob.do/beisbol}, Dec. 2020, [Online;
   accessed 23. Dic. 2020].
@@ -208,13 +214,7 @@ MES, ``Resoluci\'on no. 85 reglamento de categor\'ias docentes,'' 2016,
   \url{https://www.gacetaoficial.gob.cu/es/resolucion-85-de-2016-de-ministerio-de-educacion-superior}.
 
 \bibitem{Ansola2020}
-E.~S. Ansola, ``Entrevista sobre el sistema de gesti\'on pandora,'' Nov. 2020.
-
-\bibitem{Corte2002}
-\BIBentryALTinterwordspacing
-N.~Corte, ``Localizaci\'on e internacionalizaci\'on de sitios web,''
-  \emph{Revista tradum\'atica}, vol.~1, Oct. 2002. [Online]. Available:
-  \url{http://www.fti.uab.es/tradumatica/revista}
-\BIBentrySTDinterwordspacing
+E.~S\'anchez~Ansola, ``Entrevista sobre el sistema de gesti\'on pandora,'' Nov.
+  2020.
 
 \end{thebibliography}
