@@ -7,13 +7,13 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=.8\textwidth]{figuras/fichero-docencia.png}
-	\caption{Fichero importar docencia} \label{fig:fichero-docencia}
+	\caption{Fichero a importar para el contexto Formación de equipos de profesores para impartir docencia} \label{fig:fichero-docencia}
 \end{figure}
 
 \begin{figure}[H]
 
 	\includegraphics[width=\textwidth]{figuras/fichero-beisbol.png}
-	\caption{Fichero importar béisbol} \label{fig:fichero-beisbol}
+	\caption{Fichero a importar para el contexto Formación de un equipo de béisbol} \label{fig:fichero-beisbol}
 \end{figure}
 
 
@@ -184,25 +184,25 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{figuras/conf-roles-comp-asignatura.png}
-	\caption{Configuración de las competenicas para todas las asignaturas} \label{fig:conf-roles-comp-asignatura}
+	\caption{Configuración de las competencias para todas las asignaturas} \label{fig:conf-roles-comp-asignatura}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{figuras/beisbol_conf_comp_rol1.png}
-	\caption{Configuración de las competencias en los roles (béisbol)} \label{fig:conf-roles-comp-pelota}
+	\caption{Configuración de las competencias en los roles 1ra parte (béisbol)} \label{fig:conf-roles-comp-pelota}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{figuras/beisbol_conf_comp_rol2.png}
-	\caption{Configuración de las competencias en los roles (béisbol)} \label{fig:conf-roles-comp-pelota1}
+	\caption{Configuración de las competencias en los roles 2da parte (béisbol)} \label{fig:conf-roles-comp-pelota1}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{figuras/beisbol_conf_comp_rol3.png}
-	\caption{Configuración de las competencias en los roles (béisbol)} \label{fig:conf-roles-comp-pelota2}
+	\caption{Configuración de las competencias en los roles 3ra parte (béisbol)} \label{fig:conf-roles-comp-pelota2}
 \end{figure}
 
 
@@ -236,7 +236,7 @@
 	\centering
 	%	\hspace{-4cm}
 	\caption{Nivel de los jugadores en las competencias: Batear con hombres en base (B), Fuerza de bateo (F), Precisión de tiro (P), Capacidad de embase (E) y Velocidad (V)}\label{table:nivel-jugadores-comp2}
-	\scalebox{.6}{
+	\scalebox{.97}{
 		\begin{tabular}{ p{2.6cm} c c c c c }
 			\toprule
 			\multirow{2}{2.5cm}{\textbf{Jugador}} &                 \multicolumn{5}{c}{\textbf{Competencias}}                  \\ \cline{2-6}
@@ -263,6 +263,13 @@
 		\end{tabular}
 	}
 \end{table}
+
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[width=.9\textwidth]{figuras/importancia_competencias.png}
+%	\caption{Niveles de importancia para las competencias en un rol} \label{fig:nivel-importancia}
+%\end{figure}
+
 
 \chapter{Preferencia de las personas por los roles}
 
@@ -344,190 +351,17 @@
 	\caption{Diagrama físico de la base de datos de TEAMSOFT$^+$} \label{fig:diagrama-bd}
 \end{figure}
 
+\chapter{Solución de los problemas}
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.5\textwidth]{figuras/docencia_solucion.png}
+	\caption{Captura de pantalla que muestra la solución al problema de la docencia} \label{fig:solucion-docencia}
+\end{figure}
 
-\chapter{Algoritmos incorporados}
-
-
-\begin{algorithm}[H]
-	\caption{Restricción que verifica que una persona no pueda desempeñar menos roles que los definidos}
-	%	\SetKwProg{Sol}{Restricci}{}{}
-	\label{alg:rest-min-roles}
-	%\Sol{($projects$)}{
-	\KwIn {$state$ \tcp*[l]{estado que contiene los proyectos a verificar}
-		\hspace{1.7cm}        $minRoles$ \tcp*[l]{Número obligatorio de roles a desempeñar} }
-	\KwOut {$isRight$ \tcp*[l]{si todos los proyectos cumplen con la restricción}}
-	%\LinesNumbered
-	$projects = state$.getCode()\;
-	$isRight = true$\;
-	\ForEach{$project \in projects$}
-	{$projectRoles = project$.getRols() \tcp*[l]{roles del proyecto}
-		\ForEach{$rol \in projectRoles$}
-		{
-			$roleWorkers = rol$.getWorkers() \tcp*[l]{personas asociadas al rol}
-			\ForEach{$worker \in roleWorkers$}
-			{
-				\If{$project$.getCantOccurenceWorker($worker$) $< minRoles$}{
-					$isRight = false$ \tcp*[l]{no cumple con la restricción}
-					\Break
-				}
-			}
-			\If{$!isRight$} \Break
-		}
-		\If{$!isRight$} \Break
-	}
-	\Return $isRight$
-	%}
-\end{algorithm}
-
-\clearpage
-
-\begin{algorithm}[H]
-	\caption{Restricción que verifica que el Líder del equipo ocupa otro rol como mínimo en el mismo equipo}
-	\label{alg:restr-lider-rol}
-	\KwIn {$state$ \tcp*[l]{estado que contiene los proyectos a verificar}}
-	\KwOut {$isRight$ \tcp*[l]{si todos los proyectos cumplen con la restricción}}
-	%\LinesNumbered
-	$projects = state$.getCode()\;
-	$isBossAssignedMoreThanOnce = false$\;
-	\ForEach{$project \in projects$}
-	{
-		$isBossAssignedMoreThanOnce = false$\;
-		$projectRoles = project$.getRols() \tcp*[l]{roles del proyecto}
-		$roleBoss = project$.getProjectBoss()\;
-		$projectRoles$.remove($roleBoss$)\;
-		\ForEach{$rol \in projectRoles$}
-		{
-			$roleWorkers = rol$.getWorkers() \tcp*[l]{personas asociadas al rol}
-			\ForEach{$worker \in roleWorkers$}
-			{
-				\If{$worker$.equals($roleBoss$.getWorkers().get(0))}{ \tcp*[l]{si el worker actual es igual al líder}
-					$isBossAssignedMoreThanOnce = true$ \tcp*[l]{si cumple la restricción}
-					\Break
-				}
-			}
-			\If{$isBossAssignedMoreThanOnce$} \Break
-		}
-		\If{$!isBossAssignedMoreThanOnce$} \Break
-	}
-	\Return $isBossAssignedMoreThanOnce$
-	%}
-\end{algorithm}
-\clearpage
-\begin{algorithm}[H]
-	\caption{Asignar personas de forma aleatoria a los roles, estableciendo que el líder juega más de un rol en los equipos}
-	\label{alg:const-lider-rol}
-	%\Sol{($projects$)}{
-	\KwIn {$projects$ \tcp*[l]{Lista de proyectos sin asignación inicial}
-		\hspace{1.7cm}        $limitPersonTries$ \tcp*[l]{Número de intentos de poner una persona en un rol} }
-	\KwOut {$projects$ \tcp*[l]{Lista de proyectos con asignación inicial}}
-	%\LinesNumbered
-	\ForEach{$project \in projects$}
-	{$rols = project$.getRols() \tcp*[l]{roles del proyecto}
-		$boss = project$.getProjectBoss()\;
-		$rols$.remove($boss$)\;
-		\ForEach{$rol \in rols$}
-		{$needs=rol$.getNeedWorked()\tcp*[l]{trabajadores necesarios en el rol}
-			$count = 0$\;
-			\While{$(needs > 0) \And (count < limitPersonTries)$}
-			{
-				$chosenPerson=$randomPersons()\tcp*[l]{seleccionar aleatoriamente una persona}
-				\If{checkIndividualRestrictions($chosePerson,rol$)}
-				{$rol=$.getWorkers().add(chosenPerson)\tcp*[l]{se añade si cumple las restricciones}
-					$needs--$\;}
-				\Else
-				{
-					$count++$\;}
-			}
-		}
-		$rol$ = getRandomRol($rols$)\tcp*[l]{selecciona un Rol aleatoriamente}
-		$worker$=getRandomWorker($rol$.getWorkers())\tcp*[l]{selecciona aleatoriamente un trabajador asignado a ese Rol}
-		$boss$.getWorkers().add($worker$)\tcp*[l]{A ese trabajador se asigna el rol de Líder}
-		$rols$.add($boss$)\;
-	}
-	%}
-\end{algorithm}
-\clearpage
-\newgeometry{left=1.5cm,right=1.5cm,top=1cm,bottom=1cm} 
-\scalebox{.92}{
-\begin{algorithm}[H]
-	\caption{Asignar personas aleatoriamente a roles con la restricción de 2 roles mínimos.}
-	%  \SetKwProg{Sol}{SolucionInicial2}{}{}
-	\label{alg:2}
-	%  %\Sol{($projects$)}{
-	\KwIn {$projects$ \tcp*[l]{Lista de proyectos sin asignación inicial}
-		\hspace{1.7cm}$limitPersonTries$ \tcp*[l]{Intentos de poner una persona en un rol} 
-		%\hspace{1.7cm} $minRolePerson$  \tcp*[l]{Número mínimo de roles que desempeña una persona en un proyecto}
-	}
-	\KwOut {$projects$ \tcp*[l]{Lista de proyectos con asignación inicial}}
-	%\LinesNumbered
-	$allWorkers=$getWorkerAvailable()\tcp*[l]{Obtener trabajadores disponibles} 
-	\ForEach{$project \in projects$}
-	{$rols = project$.GetRols() \tcp*[l]{roles del proyecto}
-		$assignedWorkers = {}$\tcp*[l]{ workers asignados con el número mínimo de roles}
-		$assignedRoleWorkers= {}$\tcp*[l]{ roles con todos los trabajadores asignados}
-		$existWorkers = true$ \tcp*[l]{existen trabajadores disponibles}
-		$existCompatibleRole = true$ \tcp*[l]{existen roles compatibles disponibles}
-		\tcc{mientras existan disponibilides}		
-		\While{$\mbox{\rm existAvailableRoles}(allProjectRoles,assignedRoleWorkers) \And existWorkers$} {
-			\tcc{selecciona aleatoriamente un trabajador disponible}
-			$workerToAssign =$ getRandomNotAssignedWorker($allWorkers$, $assignedWorkers$)\;
-			\If{ $workerToAssign \neq null$} 
-			{\tcc{existe un trabajador disponible}
-				$roleToAssign = $getRandomAvailableRole($allProjectRoles$, $assignedRoleWorkers$\tcp*[l]{rol con trabajadores por asignar}
-				$compatibleRole =$ getRandomCompatibleRole($rols$, $roleToAssign$, $assignedRoleWorkers$)\tcp*[l]{roles compatibles con $roleToAssign$ no asignados}
-				\If{$compatibleRole \neq null$} { 
-					\tcc{si hay rol compatible asigna el worker a los roles}
-					$roleToAssign.$getWorkers().add($workerToAssign$)\;
-					$compatibleRole.$getWorkers().add($workerToAssign$)\;
-					$assignedWorkers.$add($workerToAssign$)\tcp*[l]{worker asignado}
-					\tcc*{los roles satisfacen su demanda de trabajadores})
-					\If {$roleToAssign.$getWorkers().size() =$roleToAssign.$getNeededWorkers()}{ 
-						$assignedRoleWorkers.$add(roleToAssign)\;}
-					\If{$compatibleRole.$getWorkers().size() == $compatibleRole.$getNeededWorkers()} {
-						$assignedRoleWorkers.$add($compatibleRole$)\;
-					}
-				} 
-				\Else{$existCompatibleRole = false$\;
-				}
-			} 
-			\Else{$existWorkers = false$\;}
-		}
-		
-		\If{$existWorkers \And existCompatibleRole$} {
-			$projectBoss=rol$.getProjectBoss()\;
-			
-			$boss=$getRandomPerson($assignedWorkers$)\;
-			$projectBoss$.getWorkers().add($boss$);
-		}
-	}
-\end{algorithm}
-}
-\restoregeometry 
-\begin{algorithm}[H]
-	\caption{Operador de sustitución}
-	\label{alg:operador-sustitucion}
-	\KwIn {$projects$ \tcp*[l]{listado de equipos} \hspace{1.7cm} $codificacion$ \tcp*[l]{configuración del problema}
-	}
-	\KwOut {lista de proyectos actualizada}
-	$randomProject = getRandomProject(projects)$  \tcp*[l]{obtener equipo aleatorio}
-	$allProjectRoles = randomProject$.getRoleWorkers()  \tcp*[l]{escoger un rol aleatorio}
-	$allWorkers = codification$.getSearchArea()  \tcp*[l]{workers disponibles}
-	
-	\If{$!allProjectRoles.isEmpty()$}{ 
-		$randomRole = getRandomRole(allProjectRoles)$ \;
-		$randomWorkerOfSelectedRole = getRandomWorkerByRole(randomRole)$\;
-		$workerToSwap=getRandomWorker(allWorkers)$ \;
-		\ForEach{$roleWorker \in allProjectRoles$}
-		{
-			\ForEach{$worker \in roleWorker.getWorkers()$}
-			{
-				\If{$worker$.equals($randomWorkerOfSelectedRole$)}{
-					$roleWorker$.getWorkers().replace(worker, randomWorkerOfSelectedRole)			\;			
-				}			
-			}	
-		}
-	}
-\end{algorithm}
-}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.5\textwidth]{figuras/beisbol_solucion.png}
+	\caption{Captura de pantalla que muestra la solución al problema de béisbol} \label{fig:solucion-beisbol}
+\end{figure}
 

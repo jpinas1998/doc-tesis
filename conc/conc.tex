@@ -2,6 +2,21 @@
 %Al finalizar este trabajo podemos afirmar que se cumplieron los objetivos trazados al inicio del mismo y se arribaron a las siguientes conclusiones:
 Al finalizar este trabajo se arriban a las siguientes conclusiones:
 \begin{enumerate}
-	\item A través del análisis del estado del arte sobre la formación de equipos se identificó que los modelos relacionados con los temas de béisbol y docencia no tienen en cuenta factores que contribuyan a la asignación de las personas a los roles del equipo. Por ejemplo, las competencias necesarias para cumplir los roles, las preferencias de las personas por los roles, las incompatibilidades entre las personas, entre otros.
-	\item Se comprobó que es posible adaptar el modelo existente soportado en TEAMSOFT$^+$ a los problemas de béisbol y docencia incorporando nuevas restricciones y métodos para la construcción inicial de la solución.
+	\item A través del análisis del estado del arte sobre la formación de equipos se identificó que los modelos relacionados con los temas de béisbol y docencia no se toman en cuenta algunos factores que resultan importantes en este contextos como son: las competencias necesarias para cumplir los roles, las preferencias de las personas por los roles, las incompatibilidades entre las personas, entre otros.
+
+	\item Al incorporar a la herramienta la funcionalidad de importación de datos facilita incorporar de forma rápida los datos almacenados en ficheros externos para dar solución al problemas de formación de equipos.
+
+	\item La herramienta TEAMSOFT$^+$ presenta algunas limitaciones para adaptar los problemas de béisbol y docencia. En el caso del béisbol no se tiene en cuenta que un jugador tiene que jugar dos posiciones compatibles entre sí (una ofensiva y otra defensiva). Mientras que para el caso de la docencia no se tiene en cuenta que en algunas ocasiones el Líder debe formar parte del claustro de la asignatura.
+
+	\item La restricción \textit{BossNeedToBeAssignedToAnotherRole} y la construcción de la solución inicial que asegura que el Líder del equipo ocupe otro rol, permite obtener soluciones factibles usando el modelo de formación de  equipos múltiples para formar equipos docentes.
+
+	\item La restricción \textit{MinimumRoles} y la construcción de la solución inicial que asegura que todos los jugadores (excepto el Líder) jueguen dos roles dentro del equipo, permite obtener soluciones factibles usando el modelo de formación de equipos múltiples para formar equipos de béisbol.
+
+	\item Las propuestas obtenidas para los equipos docentes cumplen con todas las restricciones establecidas que exige el problema. Sin embargo, los equipos difieren de los formados por el jefe de departamento (de forma manual) ya que no se modeló el factor de preferencia de los profesores por las asignaturas.
+	
+	\item A pesar del gran número de restricciones y roles a cubrir presentes en la formación de equipos de béisbol, se generaron soluciones factibles. Aunque no hubo coincidencia total con las alineaciones registradas por el \textit{manager} del equipo, todos los asignados cumplen con las competencias para ocupar estas posiciones, y algunos se han desempeñado en estas posiciones con anterioridad.
+
+	\item Tanto las competencias como los indicadores empleados para determinar el cumplimiento de las mismas, deben ser refinadas por un experto en cada tema, de modo que se refleje mejor los aspectos a tener en cuenta al formar estos equipos. La herramienta permite establecer esta configuración.
+	
+	
 \end{enumerate}

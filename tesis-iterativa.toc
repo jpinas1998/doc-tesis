@@ -1,68 +1,66 @@
 \babel@toc {spanish}{}
 \contentsline {chapter}{Introducci\IeC {\'o}n}{1}{chapter*.5}
 \contentsline {chapter}{\numberline {1}Marco te\IeC {\'o}rico referencial de la investigaci\IeC {\'o}n}{5}{chapter.1}
-\contentsline {section}{\numberline {1.1}Marco te\IeC {\'o}rico referencial de la investigaci\IeC {\'o}n}{5}{section.1.1}
-\contentsline {subsection}{\numberline {1.1.1}Conceptos fundamentales}{5}{subsection.1.1.1}
-\contentsline {subsection}{\numberline {1.1.2}Formaci\IeC {\'o}n de equipos de proyectos de software}{6}{subsection.1.1.2}
-\contentsline {subsection}{\numberline {1.1.3}Formaci\IeC {\'o}n de equipos en \IeC {\'a}mbitos docentes}{8}{subsection.1.1.3}
-\contentsline {subsection}{\numberline {1.1.4}Formaci\IeC {\'o}n de equipos de deportes}{9}{subsection.1.1.4}
-\contentsline {subsection}{\numberline {1.1.5}Formaci\IeC {\'o}n de equipos en diferentes \IeC {\'a}reas}{10}{subsection.1.1.5}
-\contentsline {section}{\numberline {1.2}An\IeC {\'a}lisis de los factores del modelo y la herramienta que le da soporte para la formaci\IeC {\'o}n de m\IeC {\'u}ltiples equipos}{12}{section.1.2}
+\contentsline {section}{\numberline {1.1}Elementos b\IeC {\'a}sicos asociados a la formaci\IeC {\'o}n de equipos en diferentes \IeC {\'a}mbitos}{5}{section.1.1}
+\contentsline {subsection}{\numberline {1.1.1}Conceptos fundamentales}{6}{subsection.1.1.1}
+\contentsline {subsection}{\numberline {1.1.2}Investigaciones relacionadas con equipos de proyectos de software}{7}{subsection.1.1.2}
+\contentsline {subsection}{\numberline {1.1.3}Investigaciones relacionadas con la formaci\IeC {\'o}n de equipos docentes}{8}{subsection.1.1.3}
+\contentsline {subsection}{\numberline {1.1.4}Investigaciones relacionadas con la formaci\IeC {\'o}n de equipos deportivos}{10}{subsection.1.1.4}
+\contentsline {subsection}{\numberline {1.1.5}Investigaciones relacionadas con la formaci\IeC {\'o}n de equipos en diferentes \IeC {\'a}reas}{11}{subsection.1.1.5}
+\contentsline {section}{\numberline {1.2}Modelo de formaci\IeC {\'o}n de m\IeC {\'u}ltiples equipos. An\IeC {\'a}lisis de los factores considerados y de la herramienta que le brinda soporte.}{12}{section.1.2}
 \contentsline {subsection}{\numberline {1.2.1}Modelo de formaci\IeC {\'o}n de m\IeC {\'u}ltiples equipos}{12}{subsection.1.2.1}
 \contentsline {subsubsection}{Conjuntos}{12}{section*.7}
-\contentsline {subsubsection}{Relaciones}{12}{section*.8}
+\contentsline {subsubsection}{Relaciones}{13}{section*.8}
 \contentsline {subsection}{\numberline {1.2.2}Ejemplo simple para el problema de formaci\IeC {\'o}n de equipos de desarrollo de software utilizando el modelo usado en TEAMSOFT$^+$}{15}{subsection.1.2.2}
-\contentsline {subsubsection}{Conjuntos}{15}{section*.9}
+\contentsline {subsubsection}{Conjuntos}{16}{section*.9}
 \contentsline {subsubsection}{Relaciones}{16}{section*.10}
-\contentsline {subsection}{\numberline {1.2.3}Caracter\IeC {\'\i }sticas de TEAMSOFT$^+$ como herramienta}{20}{subsection.1.2.3}
-\contentsline {section}{\numberline {1.3}Formaci\IeC {\'o}n de equipos de b\IeC {\'e}isbol}{27}{section.1.3}
-\contentsline {section}{\numberline {1.4}Formaci\IeC {\'o}n de equipos docentes}{29}{section.1.4}
+\contentsline {subsection}{\numberline {1.2.3}Caracterizaci\IeC {\'o}n de la herramienta TEAMSOFT$^+$}{21}{subsection.1.2.3}
+\contentsline {section}{\numberline {1.3}Descripci\IeC {\'o}n del problema del b\IeC {\'e}isbol}{27}{section.1.3}
+\contentsline {section}{\numberline {1.4}Descripci\IeC {\'o}n del problema de formaci\IeC {\'o}n de equipos docentes}{29}{section.1.4}
 \contentsline {section}{\numberline {1.5}Conclusiones parciales}{31}{section.1.5}
-\contentsline {chapter}{\numberline {2}Modelo para formar equipos de b\IeC {\'e}isbol y docentes basado en el modelo al que le da soporte TEAMSOFT$^+$}{32}{chapter.2}
+\contentsline {chapter}{\numberline {2}Factibilidad de aplicar TEAMSOFT$^+$ en equipos docentes y de b\IeC {\'e}isbol}{32}{chapter.2}
 \contentsline {section}{\numberline {2.1}Ejemplo simple para el problema de formaci\IeC {\'o}n de equipos de b\IeC {\'e}isbol}{32}{section.2.1}
 \contentsline {subsection}{\numberline {2.1.1}Conjuntos que intervienen en la modelaci\IeC {\'o}n}{33}{subsection.2.1.1}
 \contentsline {subsection}{\numberline {2.1.2}Elementos generales}{34}{subsection.2.1.2}
 \contentsline {subsection}{\numberline {2.1.3}Elementos espec\IeC {\'\i }ficos}{36}{subsection.2.1.3}
 \contentsline {subsection}{\numberline {2.1.4}Transformaci\IeC {\'o}n de los datos}{39}{subsection.2.1.4}
 \contentsline {section}{\numberline {2.2}Ejemplo simple para el problema de formaci\IeC {\'o}n de equipos docentes}{47}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Conjuntos que intervienen en la modelaci\IeC {\'o}n}{48}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.1}Conjuntos que intervienen en la modelaci\IeC {\'o}n}{47}{subsection.2.2.1}
 \contentsline {subsection}{\numberline {2.2.2}Elementos generales}{48}{subsection.2.2.2}
-\contentsline {subsection}{\numberline {2.2.3}Elementos espec\IeC {\'\i }ficos}{50}{subsection.2.2.3}
-\contentsline {subsection}{\numberline {2.2.4}Transformaci\IeC {\'o}n de los datos}{53}{subsection.2.2.4}
-\contentsline {section}{\numberline {2.3}Dise\IeC {\~n}o de la soluci\IeC {\'o}n propuesta}{58}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Proceso de importaci\IeC {\'o}n propuesto}{58}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}Artefactos de ingenier\IeC {\'\i }a de software}{60}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.2.3}Elementos espec\IeC {\'\i }ficos}{49}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.4}Transformaci\IeC {\'o}n de los datos}{52}{subsection.2.2.4}
+\contentsline {section}{\numberline {2.3}Dise\IeC {\~n}o de la soluci\IeC {\'o}n propuesta}{57}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Proceso propuesto para importar datos desde la herramienta TEAMSOFT$^+$}{57}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Descripci\IeC {\'o}n del dise\IeC {\~n}o de la soluci\IeC {\'o}n propuesta}{60}{subsection.2.3.2}
 \contentsline {subsubsection}{Diagrama de casos de uso}{60}{section*.11}
 \contentsline {subsubsection}{Descripci\IeC {\'o}n de alto nivel de los casos de uso}{61}{section*.12}
-\contentsline {section}{\numberline {2.4}Conclusiones parciales}{67}{section.2.4}
-\contentsline {chapter}{\numberline {3}Validaci\IeC {\'o}n de la soluci\IeC {\'o}n}{68}{chapter.3}
-\contentsline {subsection}{\numberline {3.0.1}Importaci\IeC {\'o}n de los datos de los docentes}{68}{subsection.3.0.1}
-\contentsline {subsection}{\numberline {3.0.2}Importaci\IeC {\'o}n de los datos de b\IeC {\'e}isbol}{71}{subsection.3.0.2}
-\contentsline {section}{\numberline {3.1}Generaci\IeC {\'o}n de soluciones a los problemas de docencia y b\IeC {\'e}isbol}{74}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Soluci\IeC {\'o}n al problema de docencia}{74}{subsection.3.1.1}
-\contentsline {subsubsection}{Experimetos utilizando todas las FO}{76}{section*.13}
-\contentsline {subsection}{\numberline {3.1.2}Soluci\IeC {\'o}n al problema de b\IeC {\'e}isbol}{78}{subsection.3.1.2}
-\contentsline {subsubsection}{Experimetos utilizando todas las FO}{80}{section*.14}
-\contentsline {section}{\numberline {3.2}Limitaciones de la herramienta TEAMSOFT$^+$ para la soluci\IeC {\'o}n de los problemas de formaci\IeC {\'o}n de equipos de b\IeC {\'e}isbol y docentes}{82}{section.3.2}
-\contentsline {section}{\numberline {3.3}Conclusiones}{86}{section.3.3}
-\contentsline {chapter}{Conclusiones}{90}{Item.93}
-\contentsline {chapter}{Recomendaciones}{90}{Item.93}
-\contentsline {chapter}{Referencias bibliogr\IeC {\'a}ficas}{90}{Item.93}
-\contentsline {chapter}{Anexo}{93}{chapter*.17}
-\contentsline {chapter}{\numberline {A}Ejemplo de fichero para la importaci\IeC {\'o}n de datos}{94}{appendix.Alph1}
-\contentsline {chapter}{\numberline {B}Pantalla de seleccionar el fichero y establecer grupo}{95}{appendix.Alph2}
-\contentsline {chapter}{\numberline {C}Pantalla mapeo datos de las personas}{97}{appendix.Alph3}
-\contentsline {chapter}{\numberline {D}Pantalla configuraci\IeC {\'o}n competencias}{98}{appendix.Alph4}
-\contentsline {chapter}{\numberline {E}Pantalla verificar datos}{101}{appendix.Alph5}
-\contentsline {chapter}{\numberline {F}Pantalla mensaje informaci\IeC {\'o}n}{103}{appendix.Alph6}
-\contentsline {chapter}{\numberline {G}Pantalla lista de personas importadas}{104}{appendix.Alph7}
-\contentsline {chapter}{\numberline {H}Pantalla competencias gen\IeC {\'e}ricas de una persona}{106}{appendix.Alph8}
-\contentsline {chapter}{\numberline {I}Pantalla competencias t\IeC {\'e}cnicas de una persona}{108}{appendix.Alph9}
-\contentsline {chapter}{\numberline {J}Pantalla preferencia por los roles de una persona}{110}{appendix.Alph10}
-\contentsline {chapter}{\numberline {K}Pantalla de configuraci\IeC {\'o}n de la importaci\IeC {\'o}n}{112}{appendix.Alph11}
-\contentsline {chapter}{\numberline {L}Configuraci\IeC {\'o}n de las competencias requridas en los proyectos}{113}{appendix.Alph12}
-\contentsline {chapter}{\numberline {M}Nivel de las personas en las competencias}{115}{appendix.Alph13}
-\contentsline {chapter}{\numberline {N}Preferencia de las personas por los roles}{117}{appendix.Alph14}
-\contentsline {chapter}{\numberline {\~N}Configuraci\IeC {\'o}n de un proyecto de b\IeC {\'e}isbol}{119}{appendix.Alph15}
-\contentsline {chapter}{\numberline {O}Diagrama f\IeC {\'\i }sico de la base de datos}{122}{appendix.Alph16}
-\contentsline {chapter}{\numberline {P}Algoritmos incorporados}{123}{appendix.Alph17}
+\contentsline {section}{\numberline {2.4}Conclusiones parciales}{71}{section.2.4}
+\contentsline {chapter}{\numberline {3}Validaci\IeC {\'o}n de la soluci\IeC {\'o}n}{73}{chapter.3}
+\contentsline {section}{\numberline {3.1}Importaci\IeC {\'o}n de los datos de los docentes}{73}{section.3.1}
+\contentsline {section}{\numberline {3.2}Importaci\IeC {\'o}n de los datos de b\IeC {\'e}isbol}{75}{section.3.2}
+\contentsline {section}{\numberline {3.3}Limitaciones de la herramienta TEAMSOFT$^+$ para la soluci\IeC {\'o}n de los problemas de formaci\IeC {\'o}n de equipos de b\IeC {\'e}isbol y docentes}{77}{section.3.3}
+\contentsline {section}{\numberline {3.4}Generaci\IeC {\'o}n de soluciones en los problemas de docencia y b\IeC {\'e}isbol}{81}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Soluci\IeC {\'o}n al problema de docencia}{82}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Soluci\IeC {\'o}n al problema de b\IeC {\'e}isbol}{86}{subsection.3.4.2}
+\contentsline {section}{\numberline {3.5}Conclusiones}{91}{section.3.5}
+\contentsline {chapter}{Conclusiones}{96}{Item.117}
+\contentsline {chapter}{Recomendaciones}{96}{Item.117}
+\contentsline {chapter}{Referencias bibliogr\IeC {\'a}ficas}{96}{Item.117}
+\contentsline {chapter}{Anexo}{99}{chapter*.15}
+\contentsline {chapter}{\numberline {A}Ejemplo de fichero para la importaci\IeC {\'o}n de datos}{100}{appendix.Alph1}
+\contentsline {chapter}{\numberline {B}Pantalla de seleccionar el fichero y establecer grupo}{102}{appendix.Alph2}
+\contentsline {chapter}{\numberline {C}Pantalla mapeo datos de las personas}{104}{appendix.Alph3}
+\contentsline {chapter}{\numberline {D}Pantalla configuraci\IeC {\'o}n competencias}{105}{appendix.Alph4}
+\contentsline {chapter}{\numberline {E}Pantalla verificar datos}{108}{appendix.Alph5}
+\contentsline {chapter}{\numberline {F}Pantalla mensaje informaci\IeC {\'o}n}{110}{appendix.Alph6}
+\contentsline {chapter}{\numberline {G}Pantalla lista de personas importadas}{111}{appendix.Alph7}
+\contentsline {chapter}{\numberline {H}Pantalla competencias gen\IeC {\'e}ricas de una persona}{113}{appendix.Alph8}
+\contentsline {chapter}{\numberline {I}Pantalla competencias t\IeC {\'e}cnicas de una persona}{115}{appendix.Alph9}
+\contentsline {chapter}{\numberline {J}Pantalla preferencia por los roles de una persona}{117}{appendix.Alph10}
+\contentsline {chapter}{\numberline {K}Pantalla de configuraci\IeC {\'o}n de la importaci\IeC {\'o}n}{119}{appendix.Alph11}
+\contentsline {chapter}{\numberline {L}Configuraci\IeC {\'o}n de las competencias requridas en los proyectos}{120}{appendix.Alph12}
+\contentsline {chapter}{\numberline {M}Nivel de las personas en las competencias}{122}{appendix.Alph13}
+\contentsline {chapter}{\numberline {N}Preferencia de las personas por los roles}{124}{appendix.Alph14}
+\contentsline {chapter}{\numberline {\~N}Configuraci\IeC {\'o}n de un proyecto de b\IeC {\'e}isbol}{126}{appendix.Alph15}
+\contentsline {chapter}{\numberline {O}Diagrama f\IeC {\'\i }sico de la base de datos}{129}{appendix.Alph16}
+\contentsline {chapter}{\numberline {P}Soluci\IeC {\'o}n de los problemas}{130}{appendix.Alph17}

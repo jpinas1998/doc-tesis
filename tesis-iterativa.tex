@@ -17,7 +17,7 @@
 \usepackage{subfigure}
 \usepackage[numbers]{natbib}
 \usepackage{url}
-\usepackage[breaklinks,colorlinks=true,linkcolor=black,citecolor=blue,urlcolor=blue]{hyperref}
+\usepackage[breaklinks,colorlinks=true,linkcolor=black,citecolor=blue,urlcolor=black]{hyperref}
 \usepackage{graphicx}
 \usepackage{makecell}
 \usepackage{enumitem, hyperref}
@@ -28,8 +28,10 @@
 \usepackage{rotating}
 \usepackage[spanish,onelanguage,ruled,vlined,lined,resetcount]{algorithm2e}
 \SetKw{Break}{finalizar ciclo;}
-
 \usepackage[paper=portrait, pagesize]{typearea}
+\usepackage{fancyhdr} % para poner el título en cada capitulo
+%\usepackage{rotating} % para rotar las paginas
+\usepackage{pdflscape}
 
 % genera el mes de forma automatica
 \usepackage{datetime}
@@ -92,6 +94,18 @@
 	} \makeatother
 
 
+\newenvironment{dedication}
+{\clearpage           % we want a new page
+	\thispagestyle{empty}% no header and footer
+	\vspace*{\stretch{.5}}% some space at the top 
+	\itshape             % the text is in italics
+	\raggedleft          % flush to the right margin
+}
+{\par % end the paragraph
+	\vspace{\stretch{3}} % space at bottom is three times that at the top
+	\clearpage           % finish off the page
+}
+
 
 \title{Adaptación del modelo de formación de equipos de TEAMSOFT$^+$ para los problemas de béisbol y docentes.}
 
@@ -102,11 +116,22 @@
 	\renewcommand{\listtablename}{Índice de tablas}
 	\renewcommand{\tablename}{Tabla}
 	\renewcommand{\bibname}{Referencias bibliográficas}
+	
+%	esto es para que las listas anidadas salgan con numeros
+	\renewcommand{\labelenumii}{\arabic{enumi}.\arabic{enumii}}
+	\renewcommand{\labelenumiii}{\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}}
+	\renewcommand{\labelenumiv}{\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}.\arabic{enumiv}}
+	
+	
+	
 	\pagestyle{empty}	
 	\markboth{}{} 	
 	\thispagestyle{empty} 
 	
-	\include{portada/portada}
+ 	\include{portada/portada}
+	\include{dec_autoria/dec_autoria}
+	\include{dedicatoria/dedicatoria}
+	\include{agradecimientos/agradecimientos}
 	\include{resumen/resumen}
 	\include{abstrac/abstrac}
 	
@@ -127,7 +152,22 @@
 	\pagenumbering{arabic}
 	
 	\addcontentsline{toc}{chapter}{Introducción}
+	\pagestyle{fancy} 
+	
+	\fancyhf{}
+	\lhead[\thepage]{\leftmark}
+	\rhead[\rightmark]{\thepage}	
+	\fancyhf{}
+	\lhead[\thepage]{\textbf{Introducción}}
+	\rhead[\textbf{Introducción}]{\thepage}
+	
 	\include{introduccion/introduccion}	
+	
+	\fancyhf{}
+	\lhead[\thepage]{\leftmark}
+	\rhead[\rightmark]{\thepage}
+	\renewcommand{\chaptermark}[1]{\markboth{\textbf{\chaptername \thechapter. #1}}{}}
+	
 	\include{cap1/cap1}
 	\include{cap2/cap2}
 	\include{cap3/cap3}

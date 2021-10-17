@@ -1,21 +1,22 @@
-\chapter{Modelo para formar equipos de béisbol y docentes basado en el modelo al que le da soporte TEAMSOFT$^+$}\label{chap:2}
+\chapter[Factibilidad de aplicar TEAMSOFT$^+$ en equipos docentes y de béisbol]{Análisis de la factibilidad de aplicar la herramienta TEAMSOFT$^+$ y el modelo al cual le brinda soporte en la formación de equipos de docencia y de béisbol}\label{chap:2}
 
 En el presente capítulo se describe cómo pueden definirse los problema de formación de equipos de béisbol y docentes empleando como base el modelo para la formación de equipos de proyectos de software soportado por la herramienta \hyperref[sec:modelo-teamsoft]{TEAMSOFT$^+.$} Esto implica que para cada problema se utilizarán o no, algunas de las relaciones propuestas en este modelo. También se describe una propuesta para obtener los valores de las competencias de las personas a partir de información que hoy se gestiona sobre ellas.
 
 \section{Ejemplo simple para el problema de formación de equipos de béisbol}\label{ejemplo-pel}
 
-Partiendo del modelo de formación de equipos de software, descrito en la sección \ref{sec:modelo-teamsoft}, se ejemplificará con una instancia, una aproximación del problema de formación de equipos de béisbol. Se recomienda el análisis futuro de otros roles como el emergente o los roles asociados al picheo como abridores o relevistas que tienen otra complejidad.
+Partiendo del modelo de formación de equipos de software, descrito en la Sección \ref{sec:modelo-teamsoft}, se ejemplificará con una instancia, una aproximación del problema de formación de equipos de béisbol. Se recomienda el análisis futuro de otros roles como el emergente o los roles asociados al picheo como abridores o relevistas que tienen otra complejidad.
 
 \subsection{Conjuntos que intervienen en la modelación}\label{sec:conjuntos}
-Un equipo está compuesto por una nómina de jugadores, generalmente más de 20, entre los cuales se escoge la alineación regular. Esta alineación se compone de 10 jugadores que tienen que jugar 18 roles. Estos roles están divididos en dos categorías o tipos (ver Tabla \ref{tipo-roles}).
-
+{\color{red}
+Un equipo está compuesto por una nómina de jugadores, generalmente más de 20, entre los cuales se escoge la alineación regular. Esta alineación se compone de 9  jugadores (excluyendo al pícher) que tienen que jugar 18 roles. Además, los mismos jugadores asignados a roles defensivos tienen que estar asignados a roles ofensivos. Estos roles están divididos en dos categorías o tipos (ver Tabla \ref{tipo-roles}).
+}
 \begin{table}[H]
 	\centering
-	\caption{Tipos de Roles}\label{tipo-roles}
+	\caption{Tipos de roles}\label{tipo-roles}
 	\scalebox{0.95}{
 	\begin{tabular}{l	 c}
 		\toprule[1.7pt]
-		\textbf{Roles defensivos} & \textbf{Roles Ofensivos} \\ \midrule
+		\textbf{Roles defensivos} & \textbf{Roles ofensivos} \\ \midrule
 		      receptor (C)        & 1$^{er}$ bate (B1)       \\
 		      1ra base (1B)       & 2$^{do}$ bate (B2)       \\
 		      2da base (2B)       & 3$^{er}$ bate (B3)       \\
@@ -44,11 +45,11 @@ Un equipo está compuesto por una nómina de jugadores, generalmente más de 20,
 \end{itemize}
 
 
-Las relaciones se van a dividir en dos secciones. La primera sección trata los aspectos genéricos del problema, que no cambian en función de los integrantes, o del equipo. La segunda sección va a un nivel más específico, que está en dependencia de las personas a asignar. Los valores asignados en la sección \ref{asp-gen-pel} son todos a consideración del autor, y además, son configurables.
+Las relaciones se van a dividir en dos secciones. La primera sección trata los aspectos genéricos del problema, que no cambian en función de los integrantes, o del equipo. La segunda sección va a un nivel más específico, que está en dependencia de las personas a asignar. Los valores asignados en la Sección \ref{asp-gen-pel} son todos a consideración del autor, y además configurables.
 
 \subsection{Elementos generales} \label{asp-gen-pel}
 
-En las Tablas \ref{mcgd-pel} y \ref{mcgo-pel} se muestran los valores mínimos necesarios que las personas deben tener en las competencias genéricas para desempeñar cada rol. Por ejemplo, para poder jugar el rol $C$ es necesario que la persona tenga como mínimo un valor en la competencia genérica $g_1$ de 0.8. 
+En las Tablas \ref{mcgd-pel} y \ref{mcgo-pel} se muestran los valores mínimos necesarios que las personas deben tener en las competencias genéricas para desempeñar cada rol a la defensiva y a la ofensiva, respectivamente. Por ejemplo, para poder jugar el rol $C$ es necesario que la persona tenga como mínimo un valor en la competencia genérica $g_1$ de 0.8. 
 
  
 \begin{table}[H]
@@ -122,7 +123,7 @@ Los roles ofensivos no necesitan tener habilidades defensivas, como es el caso d
 
 %----------------nuevo----------------
 
-Anteriormente se explicó que en un equipo de pelota, cada jugador ocupa dos roles, uno a la defensiva y otro a la ofensiva. La Tabla \ref{cmrpp-pel} muestra lo planteado.
+Anteriormente se explicó que en un equipo de béisbol, cada jugador ocupa dos roles (excepto el pícher y el bateador designado), uno a la defensiva y otro a la ofensiva. La Tabla \ref{cmrpp-pel} muestra lo planteado.
 \begin{table}[H]
 	\centering
 	\caption{Cantidad máxima de roles por persona a jugar en un equipo de béisbol }\label{cmrpp-pel}
@@ -135,7 +136,7 @@ Anteriormente se explicó que en un equipo de pelota, cada jugador ocupa dos rol
 
 %-----------------------------------
 
-Las incompatibilidades entre los roles como ya se mencionaba, está dada por el tipo de rol. Todos los roles ofensivos (por ejemplo, B1, B2, B3) tienen incompatibilidades entre ellos, y son compatibles con los defensivos (por ejemplo, C, 3B, CF). Sucede lo mismo con los roles defensivos: son incompatibles entre ellos y compatibles con los ofensivos. Por cuestión de una mejor calidad en la visualización de los datos, en la Tabla \ref{ier1-pel} solo se pone un subconjunto de los roles.
+Las incompatibilidades entre los roles como ya se mencionaba, está dada por el tipo de rol. Todos los roles ofensivos (por ejemplo, B1, B2, B3) tienen incompatibilidades entre ellos, y son compatibles con los defensivos (por ejemplo, C, 3B, CF). Sucede lo mismo con los roles defensivos: son incompatibles entre ellos y compatibles con los ofensivos. Debido a la número tan alto de incompatibilidades (144\footnote{Son 18 roles, 9 por cada tipo, cada uno es incompatible con los 8 del mismo, por tanto $8*18=144$}), en la Tabla \ref{ier1-pel} solo se pone un subconjunto de los roles.
 \begin{table}[H]
 	\centering
 	\caption{Incompatibilidades entre roles}\label{ier1-pel}
@@ -149,14 +150,14 @@ Las incompatibilidades entre los roles como ya se mencionaba, está dada por el 
 		$3B$			&  0  &  0  &  0  &  1  &  0  &  1 \\ \hline
 		$CF$ 			&  0  &  0  &  0  &  1  &  1  &  0 \\ \hline
 	\end{tabular}
-\end{table}
+ \end{table}
 
 
 La cantidad de personas necesarias para jugar un rol en una alineación siempre será una sola, sin importar el tipo de rol, y el equipo.\\
 
 \subsection{Elementos específicos} \label{asp-espec-pel}
 
-Después de ver los aspectos generales del modelo, es necesario instanciar tanto las personas como el equipo en cuestión, para lograr un ejemplo completo. Todos los valores otorgados en esta sección son ficticios. Más adelante, en la sección \ref{sec:tran_pel} se hace una propuesta para la obtención de estos datos a partir de fuentes externas.
+Después de ver los aspectos generales del modelo, es necesario instanciar tanto las personas como el equipo en cuestión, para lograr un ejemplo completo. Todos los valores otorgados en esta sección son ficticios. Más adelante, en la Sección \ref{sec:tran_pel} se hace una propuesta para la obtención de estos datos a partir de fuentes externas.
 
 \begin{itemize}
 	\item $P=\{p_1=frank, p_2=rudy, p_3=carlos, p_4=alexander, p_5=juan, p_6=yurisbel, p_7=jos\acute{e},p_8=pedro,p_9=pepe, p_{10}=camilo, p_{11}=oscar, p_{12}=roberto, p_{13}=enrique, p_{14}=yasel, p_{15}=dayron\}$: Conjunto de personas, $p = 1...|P|$, $|P|=15$.
@@ -165,7 +166,7 @@ Después de ver los aspectos generales del modelo, es necesario instanciar tanto
 \end{itemize}
 
 En la Tabla \ref{iep-pel} se muestra un posible ejemplo de las incompatibilidades entre los jugadores del equipo Industriales (generado de forma aleatoria sin ninguna base real). Es importante destacar que la relación de incompatibilidad no tiene que ser la misma en ambos sentidos, por ejemplo $p_1$  es totalmente incompatible con $p_2$, mientras que $p_2$ es compatible con $p_1$.
-
+		
 \begin{table}[H]
 	\centering
 	\caption{Incompatibilidades entre personas del equipo $Industriales$}\label{iep-pel}
@@ -187,7 +188,7 @@ En la Tabla \ref{iep-pel} se muestra un posible ejemplo de las incompatibilidade
 
 %---------------------inicio--------------
 
-Las personas tienen un valor de preferencia por cada rol. Por ejemplo, en la Tabla \ref{prd-pel} se puede decir que la persona $ p_3 $ tiene poca preferencia por el rol $ 3B $ y un valor de preferencia alto por el rol $ C $.
+Las personas tienen un valor de preferencia por desempeñar cada rol. Por ejemplo, en la Tabla \ref{prd-pel} se puede decir que la persona $ p_3 $ tiene poca preferencia por el rol $ 3B $, mientras que en la Tabla \ref{pro-pel} un valor de preferencia alto por el rol $B1$.
 \begin{table}[H]
 	\centering
 	\caption{Preferencias de las personas por los roles defensivos}\label{prd-pel}
@@ -209,6 +210,7 @@ Las personas tienen un valor de preferencia por cada rol. Por ejemplo, en la Tab
 \begin{table}[H]
 	\centering
 	\caption{Preferencias de las personas por los roles ofensivos}\label{pro-pel}
+	\scalebox{.9}{
 	\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
 		\hline
 		$F_r(p,r)$ & $B1$& $B2$ & $B3$ & $B4$ & $B5$ & $B6$ & $B7$ & $B8$  & $B9$   \\ \hline
@@ -222,6 +224,7 @@ Las personas tienen un valor de preferencia por cada rol. Por ejemplo, en la Tab
 		$p_8$  	& 0.5 & 0.6 & 0.4 & 0.7 & 0.5 & 0.3 & 0.7 & 0.8 & 0.3 \\ \hline
 		$p_9$ 	& 0.7 & 0.4 & 0.9 & 0.2 & 0.2 & 0.5 & 0.3 & 0.5 & 0.0 \\ \hline
 	\end{tabular}
+}
 \end{table}
 
 %-----------------------fin-------------------------
@@ -230,7 +233,7 @@ En las Tablas \ref{pcg-pel} y \ref{pct-pel} se muestra el nivel que poseen las p
 
 \begin{table}[H]
 	\centering
-	\caption{Valor de las personas en las competencias genéricas}\label{pcg-pel}
+	\caption{Nivel de las personas en las competencias genéricas}\label{pcg-pel}
 	\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|}
 		\hline
 		\thead{$F_g(g,p)$} & $p_1$ & $p_2$ & $p_3$ & $p_4$ & $p_5$ & $p_6$ & $p_7$ & $p_8$ & $p_9$ \\ \hline  
@@ -247,7 +250,7 @@ En las Tablas \ref{pcg-pel} y \ref{pct-pel} se muestra el nivel que poseen las p
 
 \begin{table}[H]
 	\centering
-	\caption{Valor de las personas en las competencias técnicas}\label{pct-pel}
+	\caption{Nivel de las personas en las competencias técnicas}\label{pct-pel}
 	\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|}
 		\hline
 		\thead{$F_g(t,p)$}                   & $p_1$ & $p_2$ & $p_3$ & $p_4$ & $p_5$ & $p_6$ & $p_7$ & $p_8$ & $p_9$ \\ \hline
@@ -260,20 +263,20 @@ En las Tablas \ref{pcg-pel} y \ref{pct-pel} se muestra el nivel que poseen las p
 	\end{tabular}
 \end{table}
 
-La carga de trabajo empleada en el modelo de TEAMSOFT$^+$ no se utiliza, debido a que los jugadores de pelota no pueden estar en varios equipos de béisbol al mismo tiempo.
+La carga de trabajo empleada en el modelo de TEAMSOFT$^+$ no se utiliza, debido a que los jugadores de béisbol no pueden estar en varios equipos de béisbol al mismo tiempo.
 
 %\begin{minipage}{12cm}
 %\begin{landscape}
 
 \subsection{Transformación de los datos}\label{sec:tran_pel}
-
-Para llevar a la práctica el modelo descrito en la sección \ref{ejemplo-pel}, es necesario instanciar los conjuntos y relaciones con datos reales del problema. En el caso del problema de béisbol se utilizarán los datos disponibles en el \href{www.beisbolcubano.cu}{sitio web} de la serie nacional cubana (ver Figura \ref{info-pelota}).\\
-
-Mediante la opción de descargas brindada por el portal web, se obtienen estos datos. A continuación se describe brevemente cada indicador agrupado en dos categorías:\\
+{\color{red}
+Para llevar a la práctica el modelo descrito en la Sección \ref{ejemplo-pel}, es necesario instanciar los conjuntos y relaciones con datos reales del problema. En el béisbol como en otros deportes existen indicadores para medir el desempeño de los jugadores. En Cuba, el \href{www.beisbolcubano.cu}{sitio web} de la Serie Nacional registra los indicadores más utilizados en este deporte para cuantificar el desempeño de los jugadores cubanos. Los datos utilizados en este trabajo fueron descargados de este sitio. Los indicadores son utilizados para determinar el nivel de un jugador en las competencias técnicas definidas por cada posición en este deporte. A continuación se describe brevemente cada indicador agrupado en dos categorías: bateo y fildeo.\\
+}
 
 \large{\textbf{Bateo}:}
 \normalsize
 \begin{itemize}
+		\setlength\itemsep{0em}
 	\item \textbf{CB}: comparecencias al bate. Todas las veces que el bateador se dispone a batear.
 	\item \textbf{VB}: veces al bate ($ CB - (SF + SH + DB + BB)$).
 	\item \textbf{C}: carreras anotadas por el jugador.
@@ -303,6 +306,7 @@ Mediante la opción de descargas brindada por el portal web, se obtienen estos d
 \large{\textbf{Fildeo}:}
 \normalsize
 \begin{itemize}
+		\setlength\itemsep{0em}
 	\item \textbf{E}: errores cometidos.
 	\item \textbf{TL}: total de lances. Cuando un jugador a la defensa lanza la pelota de una base a otra. 
 	\item \textbf{AVE}: promedio de lances ($E/TL$).
@@ -313,24 +317,30 @@ Mediante la opción de descargas brindada por el portal web, se obtienen estos d
 	\item \textbf{POS}: posiciones jugadas por el pelotero.
 \end{itemize}
 
+En la Figura \ref{info-pelota} se muestran los datos de estos indicadores descargados del sitio web para los peloteros del equipo de Industriales.
+
+%\newgeometry{left=1.5cm,right=1.5cm,top=2cm,bottom=.5cm} 
+
 \newpage
 \KOMAoptions{paper=landscape, pagesize}
 \recalctypearea
-\begin{figure} [H]
-  \hspace{-2.7cm}  
-%	\centering
-	\includegraphics[width=1.3\textwidth]{figuras/informacionPelota.png}
-	\caption{Información almacenada de los peloteros en el sitio web beisbolcubano \cite{INDER2020}}\label{info-pelota}
-\end{figure}
+\null\vfill
+\pagestyle{plain}
 
-%\end{landscape}
-%\end{minipage}
-%\vspace{0.5cm}
+\begin{figure} [H]
+	\hspace{-2.6cm}  
+%		\centering
+	\includegraphics[width=1.25\textwidth]{figuras/informacionPelota.png}
+	\caption[Información almacenada de los peloteros en el sitio web beisbolcubano.]{Información almacenada de los peloteros en el sitio web beisbolcubano \cite{INDER2020}}\label{info-pelota}
+\end{figure}
+\vfill\null
 \newpage
 \KOMAoptions{paper=portrait, pagesize}
 \recalctypearea
+\pagestyle{fancy} 
 
-En la Tabla \ref{correspondencia-pel} se presenta la correspondencia entre los indicadores y las competencias técnicas definidas en la sección \ref{compt-pel}. Además de estos indicadores, también existen otros que se pudiesen tener en cuenta, por ejemplo en la \textit{Major Ligue Baseball} (MLB) se maneja la velocidad de \textit{sprint} (SV) expresada en pies/segundos.
+
+En la Tabla \ref{correspondencia-pel} se presenta la correspondencia entre los indicadores y las competencias técnicas definidas en la Sección \ref{compt-pel}. Además de estos indicadores, también existen otros que se pudiesen tener en cuenta, por ejemplo en la \textit{Major Ligue Baseball} (MLB) se maneja la velocidad de \textit{sprint} (SV) expresada en pies/segundos.
 
 \begin{table} [H]
 	\centering
@@ -338,21 +348,21 @@ En la Tabla \ref{correspondencia-pel} se presenta la correspondencia entre los i
 	\begin{tabular}{|l|c|}
 		\hline
 		\textbf{Competencias Técnicas}                                          & \textbf{Indicadores} \\ \hline
-		\multirow{4}{5.4cm}{$\boldsymbol{t_1}=batear\;con\;hombres\;en\;base $} &          CI          \\
+		\multirow{4}{6.3cm}{$\boldsymbol{t_1}=batear\;con\;hombres\;en\;base $} &          CI          \\
 		                                                                        &          SH          \\
 		                                                                        &          SF          \\
 		                                                                        &       CIPA/CPA       \\ \hline
-		\multirow{4}{5.4cm}{$\boldsymbol{t_2}=fuerza\;de\;bateo $}              &          2B          \\
+		\multirow{4}{6.3cm}{$\boldsymbol{t_2}=fuerza\;de\;bateo $}              &          2B          \\
 		                                                                        &          3B          \\
 		                                                                        &          HR          \\
 		                                                                        &         SLU          \\ \hline
 		$\boldsymbol{t_3}= precisi\acute{o}n\;de\;tiro $                        &     AVG (fildeo)     \\ \hline
-		\multirow{4}{5.4cm}{$\boldsymbol{t_4}= velocidad $}                     &          BR          \\
+		\multirow{4}{6.3cm}{$\boldsymbol{t_4}= velocidad $}                     &          BR          \\
 		                                                                        &          CR          \\
 		                                                                        &          2B          \\
 		                                                                        &          3B          \\ \hline
 		$\boldsymbol{t_5}= versatilidad $                                       &         POS          \\ \hline
-		\multirow{4}{5.4cm}{$\boldsymbol{t_6}=capacidad\;de\;embase$}           &         OBP          \\
+		\multirow{4}{6.3cm}{$\boldsymbol{t_6}=capacidad\;de\;embase$}           &         OBP          \\
 		                                                                        &          BR          \\
 		                                                                        &          SH          \\
 		                                                                        &     AVG (ataque)     \\ \hline
@@ -372,7 +382,7 @@ t_i = \sum_{j=1}^{n_i} c_{ij}*\dfrac{I_j}{R_j} i \neq 4, 5 &&
 %\vspace{0.5cm}
 Donde:
 \begin{itemize}
-	\item $ c_j $ coeficiente que indica el porcentaje asignado al indicador $I_j$.
+	\item $ c_j $ coeficiente que indica el peso asignado al indicador $I_j$.
 	\item $I_j$ indicador que influye en la competencia técnica $t_i$ .
 	\item $ R_j $ máximo valor registrado en el equipo para el indicador $ I_j $.
 	\item $n_i$ es el número de indicadores que influyen en la competencia técnica $t_i$.
@@ -409,16 +419,16 @@ Donde:
 	\item $E$ años de experiencia como jugador de béisbol.\\
 \end{itemize}
 
-Utilizando las formulaciones planteadas, en las Tablas \ref{estadistica-of} y \ref{estadistica-def}  se puede ver un ejemplo de la información necesaria de los peloteros, obtenida del sitio beisbolcubano \cite{INDER2020} para la temporada clasificatoria de la 60 Serie Nacional. La última fila de las Tablas \ref{estadistica-of} y \ref{estadistica-def} se corresponde con el mayor registro del equipo para cada estadístico. Esta hace referencia al indicador \hyperref[r-sub-j]{$R_j$}, necesario para obtener el valor del jugador en las competencias técnicas. La Tabla \ref{transf-pel} muestra cómo quedaría la normalización a partir de la información de la tablas antes mencionadas. A partir de una revisión de la información histórica manejada en el sitio, se obtuvieron los años de experiencia totales de cada jugador. La información utilizada en las Tablas \ref{exp-of}, \ref{exp-def} es ficticia, debido a que no se posee la base de datos, y sin esta, no es posible obtener esa información. Como resultado de la normalización de los años de experiencia jugando cada rol, se construyen las Tablas \ref{pref-rol-of-pel} y \ref{pref-rol-def-pel}, que expresan el grado de preferencia de los jugadores por los roles.
+Utilizando las formulaciones planteadas, en las Tablas \ref{estadistica-of} y \ref{estadistica-def}  se puede ver un ejemplo de la información necesaria de los peloteros, obtenida del sitio beisbolcubano \cite{INDER2020} para la temporada clasificatoria de la 60 Serie Nacional. La última fila de las Tablas \ref{estadistica-of} y \ref{estadistica-def} se corresponde con el mayor registro del equipo para cada estadístico. Esta hace referencia al indicador \hyperref[r-sub-j]{$R_j$}, necesario para obtener el valor del jugador en las competencias técnicas. A partir de una revisión de la información histórica manejada en el sitio, se obtuvieron los años de experiencia totales de cada jugador. 
 
 %-------------------------ESTADISTICAS
 \begin{table}[H]
 	\centering
-	\caption{Estadísticas ofensivas de la 60 serie nacional}\label{estadistica-of}
+	\caption{Estadísticas ofensivas de la 60 Serie Nacional}\label{estadistica-of}
 %	\hspace{-2.2cm}
 	\begin{tabular}{l c c c c c c c c c }
 		\toprule[1.7pt]
-		Jugador          & CI & SH & SF & CIPA & 2B & 3B & HR & SLU  & OBP                    \\ \midrule
+		\textbf{Jugador}          & \textbf{CI} & \textbf{SH} & \textbf{SF} & \textbf{CIPA} & \textbf{2B} & \textbf{3B} & \textbf{HR} & \textbf{SLU}  & \textbf{OBP}                    \\ \midrule
 		Frank Camilo    & 8  & 4  & 0  & 6    & 2  & 1  & 1  & .438 & .415 \\
 		Roberto Acevedo & 3  & 1  & 1  & 3    & 0  & 0  & 0  & .258 & .338  \\
 		\rowcolor{gray!30} Lisbán Correa   & 47 & 0  & 2  & 22   & 6  & 0  & 16 & .662 & .401  \\ \midrule
@@ -430,7 +440,7 @@ Utilizando las formulaciones planteadas, en las Tablas \ref{estadistica-of} y \r
 
 \begin{table}[H]
 		\centering
-	\caption{Estadísticas defensivas de la 60 serie nacional}\label{estadistica-def}
+	\caption{Estadísticas defensivas de la 60 Serie Nacional}\label{estadistica-def}
 %	\hspace{-2.2cm}
 		\begin{tabular}{l c c c c}
 			\toprule[1.7pt]
@@ -445,7 +455,7 @@ Utilizando las formulaciones planteadas, en las Tablas \ref{estadistica-of} y \r
 	
 \end{table}
 
-A continuación se explica, cómo se pueden calcular los valores de los jugadores para cada competencia técnica utilizando las fórmulas \ref{ec:compt}, \ref{ec:embase}, \ref{ec:pos} y los datos de los jugadores presentados en las Tablas \ref{estadistica-of} y \ref{estadistica-def}. Utilizando al jugador Lisbán Correa (resaltado sus datos en dichas tablas) como ejemplo, se realizan las siguientes operaciones:
+A continuación se explica, cómo se pueden calcular los valores de los jugadores para cada competencia técnica utilizando las Fórmulas \ref{ec:compt}, \ref{ec:embase}, \ref{ec:pos} y los datos de los jugadores presentados en las Tablas \ref{estadistica-of} y \ref{estadistica-def}. Utilizando al jugador Lisbán Correa (resaltado sus datos en dichas tablas) como ejemplo, se realizan las siguientes operaciones:
 
 \begin{tabular}{l}
 	\\
@@ -459,7 +469,7 @@ A continuación se explica, cómo se pueden calcular los valores de los jugadore
 	\\
 	$t_5 = \dfrac{2}{9} = 0.23$ \\
 	\\
-	$t_6 = 0.7 * \dfrac{401}{545} + 0.15 * \dfrac{0}{8} + 0.15 * \dfrac{0}{8} = 0.58$
+	$t_6 = 0.7 * \dfrac{401}{545} + 0.15 * \dfrac{0}{8} + 0.15 * \dfrac{0}{8} = 0.58$\\\\
 \end{tabular}
 
 %\begin{center}
@@ -471,12 +481,16 @@ A continuación se explica, cómo se pueden calcular los valores de los jugadore
 %\end{center}
 
 %----------------------------RESULTADOS
+
+La Tabla \ref{transf-pel} muestra cómo queda la normalización a partir de la información de las Tablas \ref{estadistica-of} y \ref{estadistica-def}. 
+
 \begin{table} [H]
 	\centering
-	\caption{Resultado de la transformación de las competencias técnicas de los jugadores} \label{transf-pel}
+	\caption{Nivel de las competencias técnicas de los jugadores calculado a partir de los indicadores} \label{transf-pel}
+	\scalebox{.95}{
 	\begin{tabular}{l | c c >{\columncolor{gray!30}}c }
 		\toprule[1.7pt]
-		Competencias técnicas                & Frank Camilo & Roberto Acevedo & Lisbán Correa \\ \midrule
+		\textbf{Competencias técnicas}                & Frank Camilo & Roberto Acevedo & Lisbán Correa \\ \midrule
 		$t_1=batear\;con\;hombres\;en\;base$ & 0.28         & 0.16            & 0.9           \\
 		$t_2=fuerza\;de\;bateo$              & 0.55         & 0.12            & 0.68          \\
 		$t_3= precisi\acute{o}n\;de\;tiro$   & 1.0          & 0.94            & 0.98          \\
@@ -484,26 +498,28 @@ A continuación se explica, cómo se pueden calcular los valores de los jugadore
 		$t_5=versatilidad$                   & 0.12         & 0.67            & 0.23          \\
 		$t_6=capacidad\;de\;embase$          & 0.23         & 0.37            & 0.58          \\ \bottomrule[1pt]
 	\end{tabular}
+	}
 \end{table}
 
 
 %------------------------PREFERENCIA
-
+La información utilizada en las Tablas \ref{exp-of} y \ref{exp-def} es ficticia, debido a que no se posee la base de datos, y sin esta, no es posible obtener esa información. Como resultado de la normalización de los años de experiencia jugando cada rol, se construyen las Tablas \ref{pref-rol-of-pel} y \ref{pref-rol-def-pel}, que expresan el grado de preferencia de los jugadores por los roles.
 
 \begin{table}[H]
 		\centering
 	\caption{Años de experiencia de los jugadores en los roles ofensivos}\label{exp-of}
 %	\hspace{-2.2cm}
+\scalebox{.95}{
 		\begin{tabular}{l | c c c c c c c c c c}
 			\toprule[1.7pt]
-			\multicolumn{1}{l}{Personas}   &    \multicolumn{9}{c}{Roles ofensivos}    &  \\ \cline{1-10}
+			\multicolumn{1}{l}{\textbf{Personas}}   &    \multicolumn{9}{c}{\textbf{Roles ofensivos}}    &  \\ \cline{1-10}
 			                                                              & B1 & B2 & B3 & B4 & B5 & B6 & B7 & B8 & B9 &  \\ \cline{2-10}
 			Frank Camilo                                                 & 0  & 0  & 0  & 0  & 2  & 6  & 10 & 4  & 16 &  \\
 			Roberto Acevedo                                              & 1  & 0  & 0  & 0  & 0  & 1  & 2  & 3  & 5  &  \\
 			Lisbán Correa                                                & 0  & 6  & 10 & 8  & 3  & 2  & 0  & 0  & 15 &  \\
 			\bottomrule[1pt]                              
 		\end{tabular}
-	
+	}
 \end{table}
 
 
@@ -513,7 +529,7 @@ A continuación se explica, cómo se pueden calcular los valores de los jugadore
 
 	\begin{tabular}{l | c c c c c c c c c }
 		\toprule[1.7pt]
-		\multicolumn{1}{l}{Personas} &    \multicolumn{9}{c}{Roles defensivos}  \\ \cline{1-10}
+		\multicolumn{1}{l}{\textbf{Personas}} &    \multicolumn{9}{c}{\textbf{Roles defensivos}}  \\ \cline{1-10}
 		                                                           & C  & 1B & 2B & SS & 3B & LF & CF & RF & BD \\ \cline{2-10}
 		Frank Camilo                                               & 16 & 0  & 0  & 0  & 0  & 0  & 0  & 0  & 0                           \\
 		Roberto Acevedo                                            & 2  & 0  & 2  & 2  & 1  & 4  & 4  & 4  & 0                            \\
@@ -531,7 +547,7 @@ A continuación se explica, cómo se pueden calcular los valores de los jugadore
 %	\hspace{-2.1cm}
 	\begin{tabular}{l | c c c c c c c c c}
 		\toprule[1.7pt]
-		\multicolumn{1}{l}{Personas} &         \multicolumn{9}{c}{Roles ofensivos}         \\ \midrule
+		\multicolumn{1}{l}{\textbf{Personas}} &         \multicolumn{9}{c}{\textbf{Roles ofensivos}}         \\ \midrule
 		                                                           & B1  & B2  & B3  & B4  & B5  & B6  & B7  & B8  & B9  \\ \cline{2-10}
 		Frank Camilo                                               & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 & 0.1 & 0.4 & 0.6 & 0.2 \\
 		Roberto Acevedo                                            & 0.2 & 0.2 & 0.0 & 0.0 & 0.0 & 0.0 & 0.2 & 0.4 & 0.6 \\
@@ -545,7 +561,7 @@ A continuación se explica, cómo se pueden calcular los valores de los jugadore
 	\caption{Preferencia de las personas por los roles defensivos}\label{pref-rol-def-pel}
 		\begin{tabular}{l | c c c c c c c c c }
 			\toprule[1.7pt]
-			\multicolumn{1}{l}{Personas} &        \multicolumn{9}{c}{Roles defensivos}            \\ \midrule
+			\multicolumn{1}{l}{\textbf{Personas}} &        \multicolumn{9}{c}{\textbf{Roles defensivos}}            \\ \midrule
 			& C   & 1B  & 2B  & SS  & 3B  & LF  & CF  & RF  & BD    \\ \cline{2-10}
 			Frank Camilo                                               & 1.0 & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 & 0.0  \\
 			Roberto Acevedo                                            & 0.0 & 0.0 & 0.4 & 0.4 & 0.2 & 0.8 & 0.8 & 0.8 & 0.0  \\
@@ -557,15 +573,15 @@ A continuación se explica, cómo se pueden calcular los valores de los jugadore
 %--------------------------RESULTADOS
 
 
-\section{Ejemplo simple para el problema de formación de equipos docentes}
+\section{Ejemplo simple para el problema de formación de equipos docentes} \label{sec:ejemplo-doc}
 
-Con el objetivo de adaptar el problema de formación de equipos docentes al modelo descrito en la sección \ref{sec:modelo-teamsoft}, se muestra mediante un ejemplo, una instancia específica de este problema. A los roles definidos en \ref{ej-carga} se le incorpora el jefe de asignatura (JA), debido a que es un rol importante a tener en cuenta en los equipos docentes. Las asignaturas utilizadas en el ejemplo forman parte del plan de estudio $E$ de la carrera de Ingeniería Informática en la Universidad Tecnológica de La Habana "José Antonio Echeverría" (CUJAE), correspondientes a la disciplina Inteligencia Computacional, estas son: Razonamiento Aproximado (RA) e Inteligencia Artificial (IA).
+Con el objetivo de adaptar el problema de formación de equipos docentes al modelo descrito en la Sección \ref{sec:modelo-teamsoft}, se muestra mediante un ejemplo, una instancia específica de este problema. A los roles definidos en la Sección \ref{ej-carga} se le incorpora el jefe de asignatura (JA), debido a que es un rol importante a tener en cuenta en los equipos docentes. Las asignaturas utilizadas en el ejemplo forman parte del plan de estudio $E$ de la carrera de Ingeniería Informática en la Universidad Tecnológica de La Habana ``José Antonio Echeverría" (CUJAE), correspondientes a la disciplina Inteligencia Computacional, estas son: Razonamiento Aproximado (RA) e Inteligencia Artificial (IA).
 
 \subsection{Conjuntos que intervienen en la modelación} \label{conjuntos-docente}
 \begin{itemize}
 	\item $P=\{p_1, p_2\ldots\}$: Conjunto de personas, $p = 1\ldots |P|$.
 	
-	\item $T=\{t_1=categor\acute{\i}a\;docente, t_2=grado\;cient\acute{\i}fico, t_3=a\tilde{n}os\;experiencia, t_4=trabajo\;docente, \\t_5=trabajo\;metodol\acute{o}gico, t_6= trabajo\;investigativo\}$: Conjunto de competencias técnicas, $t= 1.. |T|$, $|T|=6$.
+	\item $T=\{t_1=categor\acute{\i}a\;docente, t_2=grado\;cient\acute{\i}fico, t_3=a\tilde{n}os\;experiencia, t_4=trabajo\;docente, t_5=trabajo\;metodol\acute{o}gico, t_6= trabajo\;investigativo\}$: Conjunto de competencias técnicas, $t= 1.. |T|$, $|T|=6$.
 	
 	\item $G=\{g_1=liderazgo
 	, g_2=habilidades\;comunicativas,$ $g_3=pensamiento\;conceptual \footnote{Según \cite{Mayi09} es la habilidad para explicar situaciones o resolver problemas. Desarrollar conceptos nuevos que no resultan obvios para los demás. Hacer que las situaciones o ideas complejas estén claras, sean simples y comprensibles.}, \\ g_4=responsabilidad\}$: Conjunto de competencias genéricas, $g = 1\ldots|G|,\;|G|=4$.
@@ -594,8 +610,7 @@ En la Tabla \ref{mcg-carga} se observan los valores necesarios para que una pers
 	\end{tabular}
 \end{table}
 
-En las Tablas \ref{mct1-carga} y \ref{mct2-carga} el valor mínimo que debe tener cada persona en cada una de las competencias requeridas para desempeñar los diferentes roles en la asignatura $y_1$. Como se observa para desempeñar el rol de profesor de conferencia en la asignatura $y_1$, debe tener como mínimo en la competencia técnica $t_2$ 0.8, en cambio para desempeñar ese mismo rol en la asignatura $y_2$ solo debe tener 0.6. Esto se debe a que en dependencia de la asignatura, los valores necesarios en las competencias técnicas
-varían.
+En las Tablas \ref{mct1-carga} y \ref{mct2-carga} se muestra el valor mínimo que debe tener cada persona en cada una de las competencias requeridas para desempeñar los diferentes roles en la asignatura $y_1$. Como se observa para desempeñar el rol de profesor de conferencia en la asignatura $y_1$, debe tener como mínimo en la competencia técnica $t_2$ 0.8, en cambio para desempeñar ese mismo rol en la asignatura $y_2$ solo debe tener 0.6. Esto se debe a que en dependencia de la asignatura, los valores necesarios en las competencias técnicas pueden variar.
 
 \begin{table}[H]
 	\centering
@@ -614,7 +629,7 @@ varían.
 
 \begin{table}[H]
 	\centering
-	\caption{Mínimos de las competencias técnicas para jugar roles en la asignatura $y_2$}\label{mct2-carga}
+	\caption{Nivel mínimo requerido de las competencias técnicas para jugar roles en la asignatura $y_2$}\label{mct2-carga}
 	\begin{tabular}{|l|c|c|c|c|c|c|}
 		\hline
 		\thead{$Q(t,r,y_2)$}                & $C$ & $CP$ & $S$ & $L$ & $T$ & $JA$ \\ \hline
@@ -641,7 +656,7 @@ Cada asignatura tiene sus propias características, al igual que los profesores.
 	\item $Y=\{y_1=RA,y_2=IA\}$: Conjunto de asignaturas, $y = 1\ldots |Y|$, $|Y|=2$
 \end{itemize}
 
-Del conjunto de roles que puede ejercer un profesor dentro de un colectivo de asignatura, es necesario definir por cada una de ellas, cuáles roles serán planificados (ver Tabla \ref{cpr-carga}) y cuántos profesores se necesitan en cada uno de ellos (ver Tabla \ref{cpnr-carga}). Por ejemplo, en el caso de la asignatura $RA$, se necesitan los roles de conferencia, clase práctica, laboratorio y jefe de asignatura, y se requieren 1, 2, 2 y 1 profesor(es), respectivamente.
+Del conjunto de roles que puede ejercer un profesor dentro de un colectivo de asignatura, es necesario definir por cada una de ellas, cuáles roles serán planificados (ver Tabla \ref{cpr-carga}) y cuántos profesores se necesitan en cada uno de ellos (ver Tabla \ref{cpnr-carga}). Por ejemplo, en el caso de la asignatura $RA$, se necesitan los roles de profesor de conferencia, clase práctica, laboratorio y jefe de asignatura, y se requieren 1, 2, 2 y 1 profesor(es), respectivamente.
 \begin{table}[H]
 	\centering
 	\caption{Roles necesarios por asignatura}\label{cpr-carga}
@@ -664,22 +679,7 @@ Del conjunto de roles que puede ejercer un profesor dentro de un colectivo de as
 	\end{tabular}
 \end{table}
 
-
-
-%\begin{table}[H]
-%	\centering
-%	\caption{Número de grupos asociados por rol por asignatura}\label{gra-carga}
-%	\begin{tabular}{|c|c|c|c|c|c|}
-%		\hline
-%		$T(r,y)$ & $C$ & $CP$ & $S$ & $L$ & $T$   \\ \hline
-%		$RA$  &  2  &   3  &  0  &  3  &  0    \\ \hline
-%		$IA$  &  1  &   2  &  2  &  0  &  0    \\ \hline
-%	\end{tabular}
-%\end{table}
-
-%------------fin nuevo---------------
-
-Este modelo no presenta restricciones en cuanto a la incompatibilidad de los roles. Sin embargo, es posible definir incompatibilidades entre los roles. Esto se establece por el jefe de departamento, que es el encargado de realizar la planificación. Un ejemplo de esto se muestra en las Tablas \ref{ier1-carga} y \ref{ier2-carga}, donde se expresa que el profesor asignado a impartir conferencia no debe estar asignado para impartir clase práctica.
+Este modelo no presenta restricciones en cuanto a la incompatibilidad entre roles. Sin embargo, es posible definir incompatibilidades entre los roles. Esto se establece por el jefe de departamento, que es el encargado de realizar la planificación. Un ejemplo de esto se muestra en las Tablas \ref{ier1-carga} y \ref{ier2-carga}, donde se expresa que el profesor asignado a impartir conferencia no debe estar asignado para impartir clase práctica.
 
 \begin{table}[H]
 	\centering
@@ -709,11 +709,11 @@ Este modelo no presenta restricciones en cuanto a la incompatibilidad de los rol
 	\end{tabular}
 \end{table}
 
-En dependencia de la asignatura, el tiempo que conlleva desempeñar los roles varía. Por ejemplo en la Tabla \ref{tr-carga} para que un profesor ocupe el rol de Conferencia en la asignatura $RA$, es necesario que tenga libre el 30\% de su tiempo.
+En dependencia de la asignatura, la carga que conlleva desempeñar los roles varía. Por ejemplo, en la Tabla \ref{tr-carga} para que un profesor ocupe el rol de Conferencia en la asignatura, es necesario que tenga una carga menor o igual a 0.7.
 
 \begin{table}[H]
 	\centering
-	\caption{Tiempo necesario para jugar un rol en una asignatura}\label{tr-carga}
+	\caption{Carga que implica desempeñar un rol en una asignatura}\label{tr-carga}
 	\begin{tabular}{|c|c|c|c|c|c|c|}
 		\hline
 		$T(r,y)$ & $C$ & $CP$ & $S$ & $L$ & $T$ & $JA$   \\ \hline
@@ -722,7 +722,7 @@ En dependencia de la asignatura, el tiempo que conlleva desempeñar los roles va
 	\end{tabular}
 \end{table}
 
-Las incompatibilidades entre las personas se ven reflejadas en la Tabla \ref{iep-carga}. Es importante destacar que la relación de incompatibilidad no es la misma en los dos sentidos, por ejemplo, en la Tabla \ref{iep-carga}, $ p_1 $ es medianamente compatible con $ p_2 $, sin embargo, $ p_2 $ es casi incompatible por completo con $ p_1 $.
+Un ejemplo ficticio de incompatibilidades entre las personas, se muestra en la Tabla \ref{iep-carga}. Es importante destacar que la relación de incompatibilidad no es la misma en los dos sentidos, por ejemplo, en la Tabla \ref{iep-carga}, $ p_1 $ es medianamente compatible con $ p_2 $, sin embargo, $ p_2 $ es casi incompatible por completo con $ p_1 $. 
 
 \begin{table}[H]
 	\centering
@@ -778,7 +778,7 @@ La Tabla \ref{pr-carga} refleja el valor de preferencia de las personas por cada
 
 \begin{table}[H]
 	\centering
-	\caption{Valor de adecuación de las personas a las competencias genéricas}\label{pcg-carga}
+	\caption{Nivel que poseen las personas en las competencias genéricas}\label{pcg-carga}
 	\begin{tabular}{|l|c|c|c|c|}
 		\hline
 		\thead{$F_g(p,g)$} & $p_1$ & $p_2$ & $p_3$ & $p_4$ \\ \hline
@@ -788,10 +788,10 @@ La Tabla \ref{pr-carga} refleja el valor de preferencia de las personas por cada
 		$g_4=responsabilidad$  	   &  0.5  &  0.7  &  0.8 & 0.9 \\ \hline
 	\end{tabular}
 \end{table}
-
+	
 \begin{table}[H]
 	\centering
-	\caption{Valor de adecuación de las personas a las competencias técnicas}\label{pct-carga}
+	\caption{Nivel que poseen las personas en las competencias técnicas}\label{pct-carga}
 	\begin{tabular}{|l|c|c|c|c|}
 		\hline
 		\thead{$F_t(p,t)$} & $p_1$ & $p_2$ & $p_3$ & $p_4$ \\ \hline
@@ -806,7 +806,7 @@ La Tabla \ref{pr-carga} refleja el valor de preferencia de las personas por cada
 
 \subsection{Transformación de los datos}\label{sec:tran_docencia}
 
- En esta sección se propone un método para a partir de los datos almacenados en el sistema de gestión PANDORA identificar cuáles tributan al modelo descrito en la sección anterior. Las Figuras \ref{info-gen-prof} y \ref{horas-prof} son algunas capturas de pantalla del sitio funcionando, y de la información que en él se gestiona. En la Figura \ref{info-gen-prof} se hace referencia a los datos generales de los profesores, como el departamento al que pertenecen, la categoría docente, científica, entre otros. En la Figura \ref{horas-prof} se observa la carga docente acumulada de los profesores, en un año, específicamente en un semestre, expresadas en horas.
+ En esta sección se propone un método para a partir de los datos almacenados en el sistema de gestión PANDORA identificar cuáles tributan al modelo descrito en la Sección \ref{sec:ejemplo-doc}. Las Figuras \ref{info-gen-prof} y \ref{horas-prof} son algunas capturas de pantalla del sitio funcionando, y de la información que en él se gestiona. En la Figura \ref{info-gen-prof} se hace referencia a los datos generales de los profesores, como el departamento al que pertenecen, la categoría docente, científica, entre otros. En la Figura \ref{horas-prof} se observa la carga docente acumulada de los profesores, en un año, específicamente en un semestre, expresadas en horas.
 
 \begin{figure} [H]
 	\centering
@@ -817,7 +817,7 @@ La Tabla \ref{pr-carga} refleja el valor de preferencia de las personas por cada
 \begin{figure} [H]
 	\centering
 	\includegraphics[width=0.7\textwidth]{figuras/HorasProfesor.png}
-	\caption{Carga docente} \label{horas-prof}
+	\caption{Carga docente de los profesores ofrecida por el sistema PANDORA} \label{horas-prof}
 \end{figure}
 
 Además de los datos mostrados anteriormente, se almacenan los años de experiencia y la evaluación anual del profesor. Esta evaluación incluye seis dimensiones: docente, metodológico, investigación, superación, extensión universitaria y política. En dependencia de las evaluaciones en estas dimensiones se le otorga al profesor una evaluación general a criterio del jefe de departamento. Los resultados de las evaluaciones se expresan en cuatro categorías: Excelente, Bien, Regular, Mal y No Evaluar. \\
@@ -830,39 +830,40 @@ En la Tabla \ref{norm-datos-carga} se muestra el proceso de normalización de lo
 	\begin{tabular}{|c|c|c|}
 		\cline{2-3}
 		             \multicolumn{1}{c|}{}               &    \textbf{Categorías}     & \textbf{Puntuación} \\ \hline
-		 \multirow{5}{3cm}{\textbf{Categoría Docente}}   &      Profesor titular      &         1.0         \\ \cline{2-3}
+		 \multirow{5}{3cm}{\textbf{Categoría Docente}}   &      Profesor Titular      &         1.0         \\ \cline{2-3}
 		                                                 &     Profesor Auxiliar      &         0.8         \\ \cline{2-3}
 		                                                 &         Asistente          &         0.6         \\ \cline{2-3}
 		                                                 &         Instructor         &         0.4         \\ \cline{2-3}
 		                                                 & Instructor recién graduado &         0.2         \\ \hline\hline
-		\multirow{3}{3cm}{\textbf{Categoría Científica}} &  Doctor en Ciencias(DrC.)  &         1.0         \\ \cline{2-3}
-		                                                 & Máster en Ciencias (MsC.)  &         0.5         \\ \cline{2-3}
+		\multirow{3}{3cm}{\textbf{Categoría Científica}} &  Doctor en Ciencia (Dr. C.)  &         1.0         \\ \cline{2-3}
+		                                                 & Máster en Ciencia (MSc.)  &         0.5         \\ \cline{2-3}
 		                                                 &          Ninguna           &         0.0         \\ \hline\hline
 		     \multirow{5}{3cm}{\textbf{Evaluación}}      &         Excelente          &         1.0         \\ \cline{2-3}
 		                                                 &            Bien            &         0.8         \\ \cline{2-3}
 		                                                 &          Regular           &         0.6         \\ \cline{2-3}
 		                                                 &            Mal             &         0.4         \\ \cline{2-3}
-		                                                 &       No Evaluación        &         0.0         \\ \hline
+		                                                 &       No Evaluado        &         0.0         \\ \hline
 	\end{tabular}
 \end{table}
 
-Se propone entonces, a partir de lo planteado en la la Tabla \ref{norm-datos-carga}, las siguientes formulaciones para el cálculo de las competencias técnicas establecidas en las sección \ref{conjuntos-docente}:
+Se propone entonces, a partir de lo planteado en la la Tabla \ref{norm-datos-carga}, las siguientes formulaciones para el cálculo de las competencias técnicas establecidas en las Sección \ref{conjuntos-docente}:
 
 \begin{flalign}
 t_1 = c_d&& \label{ec:cat-doc}\\
 t_2 = c_c&&\label{ec:cat-cient}\\
-t_3 = \dfrac{A_i}{T}&&\label{ec:exp-prof}\\
+%t_3 = \dfrac{A_i}{T}&&\label{ec:exp-prof}\\
 t_4 = e_d&&\label{ec:eval-doc}\\
 t_5 = e_m&&\label{ec:eval-met}\\
 t_6 = e_i&&\label{ec:eval-inv}
 \end{flalign}
 
-\vspace{0.3cm}
+\vspace{3cm}
 Donde:
 \begin{description}
+	\setlength\itemsep{0em}
 	\item[(\ref{ec:cat-doc})] $c_d$ corresponde al valor de la categoría docente normalizado.
 	\item[(\ref{ec:cat-cient})] $c_c$ corresponde al valor de la categoría  científica normalizado.
-	\item[(\ref{ec:exp-prof})] $A_i$ años de experiencia del profesor y $T$ es una constante que sería en máximo número de años de experiencia que puede tener una persona.
+%	\item[(\ref{ec:exp-prof})] $A_i$ años de experiencia del profesor y $T$ es una constante que sería en máximo número de años de experiencia que puede tener una persona.
 	\item[(\ref{ec:eval-doc})] $ e_d $ es el valor normalizado de la evaluación docente.
 	\item[(\ref{ec:eval-met})] $ e_m $ es el valor normalizado de la evaluación metodológica.
 	\item[(\ref{ec:eval-inv})] $ e_i $ es el valor normalizado de la evaluación investigativa.
@@ -875,14 +876,23 @@ Donde:
 %(\ref{ec:eval-inv}) $ e_i $ es el valor normalizado de la evaluación investigativa.\\
 
 \vspace{0.3cm}
-Además se propone para calcular el grado de preferencia hacia los roles la siguiente fórmula:\\
-%$P_i = \displaystyle{\frac{E_i}{A}}$ \\
+{\color{red}Además, se propone para calcular la experiencia de los profesores en los roles la Fórmula \ref{ec:exp-pers}, mientras que para calcular la preferencia de los profesores por los roles la Fórmula \ref{ec:pref-pers}. Es importante resaltar que  el valor de $X$ en la Fórmula \ref{ec:pref-pers} es un valor configurable por el usuario, al cual se le llamará punto de corte.}
+\begin{flalign}\label{ec:exp-pers}
+C_i= \left\{ 
+\begin{array}{lcl}
+\displaystyle{\frac{E_i}{T_i}} & \mbox{ si } & E_i < T_i \\
+&             &  \\
+1.0 & \mbox{ si } & E_i >=10
+\end{array}
+\right.&&
+\end{flalign}
+
 \begin{flalign}\label{ec:pref-pers}
 P_i= \left\{ 
 \begin{array}{lcl}
-\displaystyle{\frac{E_i}{10}} & \mbox{ si } & E_i < 10 \\
+1 & \mbox{ si } & \displaystyle{\frac{E_i}{T_i}} >= X \\
 &             &  \\
-1.0 & \mbox{ si } & E_i >=10
+0 & \mbox{ si } & \displaystyle{\frac{E_i}{T_i}} < X
 \end{array}
 \right.&&
 \end{flalign}
@@ -890,8 +900,12 @@ P_i= \left\{
 \vspace{0.3cm}
 Donde:
 \begin{itemize}
-	\item $P_i$ el valor de preferencia de la personas por el rol $i$.
+	\setlength\itemsep{0em}
+	\item $C_i$ el valor de experiencia del profesor en el rol  $i$.
+	\item $P_i$ el valor de preferencia del profesor por el rol $i$.
 	\item $E_i$ años de experiencia del profesor en el rol $i$.
+	\item $T$ años de experiencia del profesor.
+	\item $X$ valor definido por el usuario.
 \end{itemize}
 
 \vspace{0.5cm}
@@ -902,6 +916,7 @@ Para probar las formulaciones planteadas anteriormente, se utilizarán datos fic
 	\centering
 	\caption{Datos de los profesores}\label{datos-prof1}
 %	\{-2cm}
+\scalebox{.9}{
 		\begin{tabular}{l c c c }
 			\toprule[1.7pt]
 		Profesor(a) & Categoría Docente  & Categoría Científica & Años experiencia \\ \midrule
@@ -910,12 +925,14 @@ Para probar las formulaciones planteadas anteriormente, se utilizarán datos fic
 			Alejandro Rosete                          & Profesor Titular   & Doctor               & 25               \\
 			\bottomrule[1pt]            
 		\end{tabular}
+	}
 \end{table}
 
 \begin{table}[H]
 	\caption{Evaluación de los profesores}\label{datos-prof2}
 	\centering
 %	\hspace{-2cm}
+\scalebox{.9}{
 	\begin{tabular}{l c c c}
 		\toprule[1.7pt]
 		Profesor(a) & Trabajo docente & Trabajo metodológico & Trabajo investigativo \\ \midrule
@@ -924,6 +941,7 @@ Para probar las formulaciones planteadas anteriormente, se utilizarán datos fic
 		Alejandro Rosete                          & Excelente       & Excelente            & Excelente             \\
 	\bottomrule[1pt]        
 	\end{tabular}
+		}
 \end{table}
 
 
@@ -933,6 +951,7 @@ Para probar las formulaciones planteadas anteriormente, se utilizarán datos fic
 	\centering
 	\caption{Resultado de la transformación de las competencias técnicas de los profesores}\label{result-prof}
 %	\hspace{-2cm}
+\scalebox{.9}{
 	\begin{tabular}{l c c c}
 		\toprule[1.7pt]
 		Competencias técnicas & Raisa Socorro & Joaquín Pina & Alejandro Rosete \\ \midrule
@@ -943,11 +962,13 @@ Para probar las formulaciones planteadas anteriormente, se utilizarán datos fic
 		$t_6=trabajo\;investigativo$                        & 0.8           & 0.8          & 1.0              \\
 		\bottomrule[1pt]                     
 	\end{tabular}
+}
 \end{table}
 
 \begin{table}[H]
 	\centering
 	\caption{Años de experiencia de los profesores}\label{exp-prof}
+	\scalebox{.9}{
 	\begin{tabular}{l c c c c c c}
 		\toprule[1.7pt]
 		Profesor(a) & C  & CP & S  & L  & T & JA \\ \midrule
@@ -956,14 +977,16 @@ Para probar las formulaciones planteadas anteriormente, se utilizarán datos fic
 		Alejandro Rosete                          & 19 & 14 & 7  & 0  & 1 & 10 \\
 		\bottomrule[1pt]            
 	\end{tabular}
+}
 \end{table}
 
-A continuación se explica, cómo se pueden calcular las preferencias de las profesores por los roles utilizando la fórmula \ref{ec:pref-pers} y los datos de los profesores presentados en las Tablas \ref{datos-prof1} y \ref{exp-prof}. Por ejemplo, en el caso del profesor Joaquín Pina (resaltados en gris sus datos en dichas tablas), al tener diez años de experiencia o más en los roles: C, CP, S, y L, el grado de preferencia por cada uno de ellos es el mismo: 1.0. Sin embargo, su experiencia en los roles T y JA es menor de diez años, por lo que al normalizarlos, se obtienen los valores para el grado de preferencia para estos roles de $0.2$ y $0.5$. En la Tabla \ref{trans-prof} se muestran los resultados para todos los profesores cuyos datos están disponibles en las Tablas \ref{datos-prof1} y \ref{exp-prof}.
+A continuación se explica, cómo se pueden calcular las preferencias de las profesores por los roles utilizando la Fórmula \ref{ec:pref-pers} y los datos de los profesores presentados en las Tablas \ref{datos-prof1} y \ref{exp-prof}. Por ejemplo, en el caso del profesor Joaquín Pina (cuyos datos están resaltados en gris en las tablas), al tener diez años de experiencia o más en los roles: C, CP, S, y L, el grado de preferencia por cada uno de ellos es el mismo: 1.0. Sin embargo, su experiencia en los roles T y JA es menor de diez años, por lo que al normalizarlos, se obtienen los valores para el grado de preferencia para estos roles de $0.2$ y $0.5$. En la Tabla \ref{trans-prof} se muestran los resultados para todos los profesores cuyos datos están disponibles en las Tablas \ref{datos-prof1} y \ref{exp-prof}.
 
 
 \begin{table}[H]
 	\centering
 	\caption{Transformación de los años de experiencia a la preferencia de los profesores por los roles}\label{trans-prof}
+	\scalebox{.9}{
 	\begin{tabular}{l c c c c c c}
 		\toprule[1.7pt]
 		Profesor(a) & C   & CP  & S   & L   & T   & JA  \\ \midrule
@@ -972,6 +995,7 @@ A continuación se explica, cómo se pueden calcular las preferencias de las pro
 		Alejandro Rosete                          & 1.0 & 1.0 & 0.7 & 0.0 & 0.1 & 1.0 \\
 		\bottomrule[1pt]          
 	\end{tabular}
+}
 \end{table}
 
 \section{Diseño de la solución propuesta} \label{sec:diseno-solucion}
@@ -979,13 +1003,13 @@ A continuación se explica, cómo se pueden calcular las preferencias de las pro
 Esta sección tiene como objetivo, describir la propuesta para la importación de los datos provenientes de un fichero, en datos que gestiona la herramienta TEAMSOFT$^+$. Para lograr esto, se muestran los artefactos de ingeniería de software necesarios para entender su funcionamiento, como son: diagrama de casos de uso del sistema y diagrama de paquetes.
 
 
-\subsection{Proceso de importación propuesto}
+\subsection{Proceso propuesto para importar datos desde la herramienta TEAMSOFT$^+$}
 Esta sección se comprueba el correcto funcionamiento de las nuevas funcionalidades incorporadas a la herramienta TEAMSOFT$^+$ vinculadas con el proceso de importación de personas. En la Figura \ref{fig:diagrama-flujo-importar} se presenta el diagrama de flujo asociado a este proceso. 
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=.83\textwidth]{figuras/diagramas-teamsoft-Flujo-Importar.png}
-	\caption{Diagrama de flujo importar} \label{fig:diagrama-flujo-importar}
+	\includegraphics[width=.85\textwidth]{figuras/diagramas-teamsoft-Flujo-Importar.png}
+	\caption{Diagrama de flujo para representar la importación de datos	} \label{fig:diagrama-flujo-importar}
 \end{figure}
 
 El proceso comienza cuando el usuario \textbf{selecciona un fichero} a importar. Este fichero tiene que cumplir las características que se listan en la Tabla \ref{table:especificaciones-fichero}. Este formato permite que la información almacenada en el fichero se adapte a diferentes tipos de problemas.
@@ -995,7 +1019,7 @@ El proceso comienza cuando el usuario \textbf{selecciona un fichero} a importar.
 	\caption{Especificaciones del fichero a importar}\label{table:especificaciones-fichero}
 	\begin{tabular} {l | p{10cm}}
 		\toprule
-		Formato & Valores separados por comas o \textit{CSV} por sus siglas en inglés (\textit{.csv}) \\ \midrule
+		Formato & Valores separados por comas o \textit{CSV}, por sus siglas en inglés (\textit{.csv}) \\ \midrule
 		Composición & Cada columna representa un atributo de las personas. Mientras que cada fila representa los valores de las personas en cada atributo. \\ \hline
 		Campos obligatorios & La experiencia y el nombre de las personas \\ \hline
 		Campos adicionales & Todos los atributos relacionados con el problema en cuestión \\ \hline 
@@ -1003,7 +1027,7 @@ El proceso comienza cuando el usuario \textbf{selecciona un fichero} a importar.
 	\end{tabular}
 \end{table}
 
-En el paso entrar nombre del grupo de personas el usuario selecciona de los grupos disponibles, a cuál de ellos incorporar las personas a importar. En caso de no existir el grupo deseado, este se crea al finalizar el proceso, justo antes de insertar a las personas. A continuación es necesario asociar las características de las personas disponibles en el fichero de entrada a los atributos de las personas definidos, para esto deben coincidir los tipos de datos. De forma similar, se definen los atributos del fichero a partir de los cuáles se calculan los valores de las competencias utilizando las ecuaciones definidas en las secciones \ref{sec:tran_pel} y \ref{sec:tran_docencia}. En el siguiente paso es necesario establecer los pesos asociados a cada una de las categorías de las competencias. Existen diferentes criterios para determinar estos pesos, en función del tipo de dato de los atributos en el fichero de entrada que influyen en la competencia definidos en el paso anterior. Antes de finalizar el proceso, se mapean los atributos del fichero con los roles correspondientes. En este momento es posible comprobar las configuraciones realizadas, y decidir entonces finalizar el proceso de importación o modificar alguno de los pasos anteriores. \\
+En el paso entrar nombre del grupo de personas, el usuario selecciona de los grupos disponibles, a cuál de ellos incorporar las personas a importar. En caso de no existir el grupo deseado, este se crea al finalizar el proceso, justo antes de insertar a las personas. A continuación es necesario asociar las características de las personas disponibles en el fichero de entrada a los atributos de las personas definidos, para esto deben coincidir los tipos de datos. De forma similar, se definen los atributos del fichero a partir de los cuáles se calculan los valores de las competencias utilizando las ecuaciones definidas en las secciones \ref{sec:tran_pel} y \ref{sec:tran_docencia}. En el siguiente paso es necesario establecer los pesos asociados a cada una de las categorías de las competencias. Existen diferentes criterios para determinar estos pesos, en función del tipo de dato de los atributos en el fichero de entrada que influyen en las competencias definidas en el paso anterior. Antes de finalizar el proceso, se mapean los atributos del fichero con los roles correspondientes. En este momento es posible comprobar las configuraciones realizadas, y decidir entonces finalizar el proceso de importación o modificar alguno de los pasos anteriores. \\
 
 Durante todo el proceso es posible además, establecer una configuración que se tiene en cuenta a la hora de importar. En esta, se le permite al usuario decidir qué acción realizar ante la existencia en el sistema de personas que ya fueron importadas. Para esta opción, el usuario debe decidir si desea ignorar las personas existentes (no las inserta) o actualizar sus valores (dígase niveles en las competencias y preferencias por los roles). En adición, si se marca la opción de actualización de los datos, aparece una nueva opción. Esta nueva opción permite decidir entre mantener los valores viejos que no se actualizan y añadir los nuevos o, simplemente, borrar los viejos y añadir los nuevos. Otros parámetros configurables son: el número de años de experiencia de una persona para considerar que tiene el máximo y, el punto de corte para determinar la preferencia de la persona por un rol. \\
 
@@ -1016,17 +1040,17 @@ En función de las configuraciones establecidas, durante el proceso de importaci
 	\item[role\_experience:] almacena la experiencia de la persona en los roles.
 \end{description}
 
-\subsection{Artefactos de ingeniería de software}
+\subsection{Descripción del diseño de la solución propuesta}
 
 En esta sección se muestran los artefactos de ingeniería de software necesarios para entender y explicar el funcionamiento de la funcionalidad de importar el fichero.
 
 \subsubsection{Diagrama de casos de uso}
 
-La funcionalidad a incorporar se relaciona con la inserción de nuevas personas personas, competencias y roles. Es por este motivo que se decide que el responsable de llevarlas a cabo sea el rol \textbf{Gestor de recursos humanos}. Debido a la gran número de CU que posee el sistema, se decide mostrar solamente aquellos que fueron modificados o creados por el autor. En la Figura \ref{fig:CU_nuevo} se muestra el diagrama el diagrama de CU correspondiente. El color verde corresponde a los CU no modificados, el amarillo a los modificados y el color rojo corresponde a los CU incorporados.
+La funcionalidad a implementar se relaciona con la incorporación de personas, roles y competencias. Es por este motivo que se decide que el responsable de llevarlas a cabo sea el rol \textbf{Gestor de recursos humanos}. Debido a la gran número de CU que posee el sistema, se decide mostrar solamente aquellos que fueron modificados o creados por el autor. En la Figura \ref{fig:CU_nuevo} se muestra el diagrama el diagrama de CU correspondiente. El color verde corresponde a los CU no modificados, el amarillo a los modificados y el color rojo corresponde a los CU incorporados.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\textwidth]{figuras/diagrama_CUTeamSoftImportar.png}
+	\includegraphics[width=.81\textwidth]{figuras/diagrama_CUTeamSoftImportar.png}
 	\caption{Ampliación de diagrama de CU} \label{fig:CU_nuevo}
 \end{figure}
 
@@ -1041,7 +1065,7 @@ La Tabla \ref{table:descripcion-alto-nivel-importar} muestra la descripción de 
 	\begin{tabular}{ | l | p{10cm} |}
 		\toprule
 		Nombre & Importar Personas \\ \midrule
-		Descripción & Este es el CU principal del la funcionalidad propuesta. Para importar las personas el usuario debe seleccionar la opción de importar, luego el sistema le muestra una ventana donde debe localizar el archivo que desea importar. Si el fichero posee las características correctas se procede a leer el fichero. Además debe seleccionar (o crear) un grupo al cual asociar las personas a importar.\\ \hline
+		Descripción & Este es el CU principal de la funcionalidad propuesta. Para importar las personas el usuario debe seleccionar la opción de importar, luego el sistema le muestra una ventana donde debe localizar el archivo que desea importar. Si el fichero posee las características correctas se procede a leer el fichero. Además debe seleccionar (o crear) un grupo al cual asociar las personas a importar.\\ \hline
 		CU relacionados & Asociar atributos de las personas, Asociar atributos de las competencias, Asociar atributos de los roles.\\ \bottomrule
 	\end{tabular}
 \end{table}
@@ -1099,7 +1123,7 @@ La Tabla \ref{table:descripcion-alto-nivel-imp-comp} muestra la descripción de 
 		\begin{tabular}{ | l | p{10cm} |}
 			\toprule
 			Nombre          & Importar competencias                                                                                                                          \\ \midrule
-			Descripción     &  Para importar las competencias el usuario debe seleccionar la opción de importar, luego el sistema le muestra una ventana donde debe localizar el archivo que desea importar. Si el fichero posee las características correctas se procede a leer el fichero.\\ \hline
+			Descripción     &  Para importar las competencias el usuario debe seleccionar la opción de importar, luego el sistema le muestra una ventana donde debe localizar el archivo que desea importar. Si el fichero posee las características correctas, se procede a leer el fichero.\\ \hline
 			CU relacionados &  \\ \bottomrule
 		\end{tabular}
 	}
@@ -1114,7 +1138,7 @@ La Tabla \ref{table:descripcion-alto-nivel-atr-role} muestra la descripción de 
 		\begin{tabular}{ | l | p{10cm} |}
 			\toprule
 			Nombre          & Asociar atributos de los roles                                                                                                                              \\ \midrule
-			Descripción     & En este CU el usuario debe asociar aquellos atributos del fichero que tengan relación con los roles. Debe especificar para cada atributo seleccionado el rol que le corresponde. \\ \hline
+			Descripción     & En este CU el usuario debe asociar aquellos atributos del fichero que tengan relación con los roles. Debe especificar para cada atributo seleccionado, el rol que le corresponde. \\ \hline
 			CU relacionados & Importar roles \\ \bottomrule
 		\end{tabular}
 	}
@@ -1167,7 +1191,7 @@ La Tabla \ref{table:descripcion-alto-nivel-restricciones} muestra la descripció
 \end{table}
 
 
-En la Figura \ref{fig:diagrama-paquetes-modificado} se muestra una ampliación del diagrama de de estructuración en capas de TEAMSOFT$^+$, mostrando solamente los paquetes que  fueron modificados por el autor.
+En la Figura \ref{fig:diagrama-paquetes-modificado} se muestra una ampliación del diagrama de estructuración en capas de TEAMSOFT$^+$, mostrando solamente los paquetes que  fueron modificados por el autor.
 
 \begin{figure}[H]
 	\centering
@@ -1177,26 +1201,228 @@ En la Figura \ref{fig:diagrama-paquetes-modificado} se muestra una ampliación d
 
 En el paquete de \textbf{Presentación} se incorporan todos las páginas \textit{XHTML (Facelets)} insertadas para la incorporación de la funcionalidad. Además, en el paquete \textbf{Lógica de negocio} se añaden las clases controladoras, útiles y, las clases relacionadas con la solución al modelo de formación de múltiples equipos con la biblioteca BiCIAM. Mientras que en el paquete \textbf{Acceso a datos} se insertaron algunas clases y métodos relacionadas con el acceso a los datos (creación/modificación/eliminación) relacionados con el proceso de importación.\\
 
-Las modificaciones al realizadas al CU descrito en la Tabla \ref{table:descripcion-alto-nivel-restricciones}, implicó añadir nuevas restricciones al modelo de formación de equipos múltiples. Estas modificaciones se relacionan con las características propias de cada problema y las limitaciones detectadas cuando se trataba de adapatar cada uno de ellos. Se añadieron dos clases: \textit{BossNeedToAssignedToAnotherRole} y \textit{MinimumRoles}. La Figura \ref{fig:diagrama-clases-modificado} muestra una ampliación del diagrama de clases de TEAMSOFT$^+$ al cual se le incorporan las dos nuevas clases añadidas. La clase \textit{BossNeedToAssignedToAnotherRole} modela que la persona que ocupa el rol de Líder tiene que desempeñar al menos otro rol. Mientras que \textit{MinimumRoles} se encarga de que todos los miembros del equipo juegue una cantidad mínima obligatoria de roles. 
+Las modificaciones realizadas al CU descrito en la Tabla \ref{table:descripcion-alto-nivel-restricciones}, implicó añadir nuevas restricciones al modelo de formación de equipos múltiples. Estas modificaciones se relacionan con las características propias de cada problema y las limitaciones detectadas cuando se trataba de adapatar cada uno de ellos. Se añadieron dos clases: \textit{BossNeedToBeAssignedToAnotherRole} y \textit{MinimumRoles}. La Figura \ref{fig:diagrama-clases-modificado} muestra un fragmento del diagrama de clases de TEAMSOFT$^+$ al cual se le incorporan dos nuevas clases. La clase \textit{BossNeedToBeAssignedToAnotherRole} modela que la persona que ocupa el rol de Líder tiene que desempeñar al menos otro rol. Mientras que \textit{MinimumRoles} se encarga de que todos los miembros del equipo juegue una cantidad mínima obligatoria de roles. 
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=.7\textwidth]{figuras/diagramas-clases-a-incorporar.png}
-	\caption{Ampliación diagrama de clases} \label{fig:diagrama-clases-modificado}
+	\caption{Fragmento del Diagrama de clase de TEAMSOFT$^+$ para incorporar nuevas restricciones} \label{fig:diagrama-clases-modificado}
 \end{figure}
 
-La construcción de la solución inicial es la forma en que la herramienta accede al espacio de búsqueda y selecciona las personas para asignarlas a los equipos. Es importante recordar que se parte de la solución inicial creada, lo que implica formar los equipos requeridos, para después buscar mejorarlos aplicando operadores. Así, la calidad de la solución de un problema heurístico depende en gran parte de la construcción de la solución inicial y de qué tan buenos sean los operadores empleados. \\
+{\color{red}
+Se plantea añadir la restricción \textit{MinimumRoles} ya que en el béisbol, los jugadores tienen obligatoriamente un rol a la ofensiva y otro a la defensiva. El Algoritmo \ref{alg:rest-min-roles} muestra el pseudocódigo utilizado para la construcción de esta restricción. En cada equipo se verifica que una persona asignada a un rol, también esté asignada a otro rol compatible con este. Se exceptúa de esta restricción al Capitán del equipo (Líder) ya que este puede no formar parte de la alineación inicial. \\
+
+En los equipos docentes es común que el Jefe de asignatura (Líder) forme parte del claustro que la imparte. La restricción \textit{BossNeedToBeAssignedToAnotherRole} verifica que se cumpla esta condición. El Algoritmo \ref{alg:restr-lider-rol} muestra el pseudocódigo utilizado para implementar esta restricción. En este caso para cada equipo se verifica que el Líder esté presente en al menos otro rol. } \vspace{1cm}
+
+\begin{algorithm}[H]
+	\caption{Restricción que verifica que una persona no pueda desempeñar menos roles que los definidos}
+	%	\SetKwProg{Sol}{Restricci}{}{}
+	\label{alg:rest-min-roles}
+	%\Sol{($projects$)}{
+	\KwIn {$state$ \tcp*[l]{estado que contiene los proyectos a verificar}
+		\hspace{1.7cm}        $minRoles$ \tcp*[l]{Número obligatorio de roles a desempeñar} }
+	\KwOut {$isRight$ \tcp*[l]{si todos los proyectos cumplen con la restricción}}
+	%\LinesNumbered
+	$projects = state$.getCode()\;
+	$isRight = true$\;
+	
+	\ForEach{$project \in projects$}
+	{$projectRoles = project$.getRoles() \tcp*[l]{roles del proyecto}
+		projectRoles.remove(projectRoles.getBoss()) \tcp*[l]{se elimina al jefe}
+		\ForEach{$rol \in projectRoles$}
+		{
+			$roleWorkers = rol$.getWorkers() \tcp*[l]{personas asociadas al rol}
+			\ForEach{$worker \in roleWorkers$}
+			{
+				\If{$project$.getCantOccurenceWorker($worker$) $< minRoles$}{
+					$isRight = false$ \tcp*[l]{no cumple con la restricción}
+					\Break
+				}
+			}
+			\If{$!isRight$} \Break
+		}
+		\If{$!isRight$} \Break
+	}
+	\Return $isRight$
+	%}
+\end{algorithm} \vspace{1cm}
+
+En la Sección \ref{sec:teamsoft} se mencionó que TEAMSOFT$^+$ utiliza los algoritmos metaheurísticos implementados en la biblioteca de  BiCIAM para dar solución al problema de formación de equipos. Para que estos algoritmos trabajen, deben partir de una solución inicial del problema. La construcción de la solución inicial es la forma en que la herramienta accede al espacio de búsqueda y selecciona las personas para asignarlas a los equipos. Es importante recordar que se parte de la solución inicial creada, lo que implica formar los equipos requeridos, para después buscar mejorarlos aplicando operadores. Así, la calidad de la solución de un problema heurístico depende en gran parte de la construcción de la solución inicial y de qué tan buenos sean los operadores empleados.\\
 
 
-En la versión actual de la herramienta la solución inicial se construye: de forma aleatoria, teniendo en cuenta las competencias y teniendo en cuenta los roles de Belbin. Estas últimas se añaden debido a que eran las que más se incumplían en la formación de equipos de software \cite{Duran2019}. Al realizar la selección de las personas utilizando las construcciones actuales, dado que el problema exige cumplir con varios tipos de restricciones, sucede que se crean muchas soluciones no son factibles, o sea, que no cumplen con las restricciones descritas anteriormente. \\
+\begin{algorithm}[H]
+	\caption{Restricción que verifica que el Líder del equipo ocupa otro rol como mínimo en el mismo equipo}
+	\label{alg:restr-lider-rol}
+	\KwIn {$state$ \tcp*[l]{estado que contiene los proyectos a verificar}}
+	\KwOut {$isRight$ \tcp*[l]{si todos los proyectos cumplen con la restricción}}
+	%\LinesNumbered
+	$projects = state$.getCode()\;
+	$isBossAssignedMoreThanOnce = false$\;
+	\ForEach{$project \in projects$}
+	{
+		$isBossAssignedMoreThanOnce = false$\;
+		$projectRoles = project$.getRols() \tcp*[l]{roles del proyecto}
+		$roleBoss = project$.getProjectBoss()\;
+		$projectRoles$.remove($roleBoss$)\;
+		\ForEach{$rol \in projectRoles$}
+		{
+			$roleWorkers = rol$.getWorkers() \tcp*[l]{personas asociadas al rol}
+			\ForEach{$worker \in roleWorkers$}
+			{
+				\If{$worker$.equals($roleBoss$.getWorkers().get(0))}{ \tcp*[l]{si el worker actual es igual al líder}
+					$isBossAssignedMoreThanOnce = true$ \tcp*[l]{si cumple la restricción}
+					\Break
+				}
+			}
+			\If{$isBossAssignedMoreThanOnce$} \Break
+		}
+		\If{$!isBossAssignedMoreThanOnce$} \Break
+	}
+	\Return $isBossAssignedMoreThanOnce$
+	%}
+\end{algorithm} \vspace{1cm}
 
-Se hace necesario implementar otros métodos para construir la solución inicial, en particular para los casos en que se tenga en cuenta las restricciones \textit{BossNeedToAssignedToAnotherRole} y \textit{MinimumRoles}. Se incorporan dos nuevos métodos. Estos métodos se añaden a la clase \textit{SubstitutionOperator}. En esta misma clase también añade un nuevo operador de mutación. Este nuevo operador garantiza que las soluciones generadas cumplan con ambas restricciones. Se pueden consultar los Anexos \ref{alg:rest-min-roles}, \ref{alg:restr-lider-rol}, \ref{alg:const-lider-rol}, \ref{alg:2} y \ref{alg:operador-sustitucion}, para profundizar en la implementación de las restricciones, las soluciones iniciales y el operador de mutación implementado.
+{\color{red}En sus inicios, la herramienta construía la solución inicial de forma aleatoria y utilizaba la estrategia de rechazo para dar tratamiento a las restricciones. Teniendo en cuenta que la formación de equipos puede incluir muchas restricciones, una gran cantidad de soluciones se rechazaban porque resultaban no factibles (incumplir al menos una restricción). Esto implicaba pérdida de tiempo en la construcción de una solución inicial. En \cite{Duran2019} se incorporan a la herramienta dos formas de construcción de la solución inicial tomando en cuenta las restricciones más incumplidas hasta ese momento: las competencias y los roles de Belbin.}\\
+
+{\color{red}En la formación de equipos docentes, al utilizar las construcciones iniciales incorporadas, se generan una gran cantidad de soluciones no factibles si se tienen en cuenta la restricción de que el jefe de la asignatura debe formar parte del claustro. Ante esta situación, se agrega una nueva construcción inicial que tenga en cuenta esta restricción. El Algoritmo \ref{alg:const-lider-rol} se presenta el pseudocódigo propuesto, donde después de realizada la asignación de las personas a los roles de forma aleatoria, se selecciona una persona entre las ya asignadas para ocupar el rol de Líder.} \\
+
+\scalebox{.88}{
+	\begin{algorithm}[H]
+		\caption{Asignar personas de forma aleatoria a los roles, estableciendo que el líder juega más de un rol en los equipos}
+		\label{alg:const-lider-rol}
+		%\Sol{($projects$)}{
+		\KwIn {$projects$ \tcp*[l]{Lista de proyectos sin asignación inicial}
+			\hspace{1.7cm}        $limitPersonTries$ \tcp*[l]{Número de intentos de poner una persona en un rol} }
+		\KwOut {$projects$ \tcp*[l]{Lista de proyectos con asignación inicial}}
+		%\LinesNumbered
+		\ForEach{$project \in projects$}
+		{$rols = project$.getRoles() \tcp*[l]{roles del proyecto}
+			$rols$.remove($boss = project$.getProjectBoss()\;
+			\ForEach{$rol \in rols$}
+			{$needs=rol$.getNeedWorked()\tcp*[l]{trabajadores necesarios en el rol}
+				$count = 0$\;
+				\While{$(needs > 0) \And (count < limitPersonTries)$}
+				{
+					$chosenPerson=$randomPersons()\tcp*[l]{seleccionar aleatoriamente una persona}
+					\If{checkIndividualRestrictions($chosePerson,rol$)}
+					{$rol=$.getWorkers().add(chosenPerson)\tcp*[l]{se añade si cumple las restricciones}
+						$needs--$\;}
+					\Else
+					{
+						$count++$\;}
+				}
+			}
+			$rol$ = getRandomRol($rols$)\tcp*[l]{selecciona un Rol aleatoriamente}
+			$worker$=getRandomWorker($rol$.getWorkers())\tcp*[l]{selecciona aleatoriamente un trabajador asignado a ese Rol}
+			$boss$.getWorkers().add($worker$)\tcp*[l]{A ese trabajador se asigna el rol de Líder}
+			$rols$.add($boss$)\;
+		}
+	\end{algorithm} \vspace{1cm}
+}
+
+En el caso del béisbol las soluciones iniciales generadas aún utilizando las soluciones iniciales incorporadas por \cite{Duran2019} generan un gran número de soluciones no factibles, ya que no tienen en cuenta las incompatibilidades entre los roles ni la restricción \textit{MinimumRoles}. En este trabajo se propone la construcción de una solución inicial como la descrita en el Algoritmo \ref{alg:2}. En este algoritmo se asignan todas las personas hasta satisfacer las demandas de los roles teniendo en cuenta las incompatibilidades entre estos. Una vez cubiertos los roles, se elige una personas aleatoria y se establece como Líder. \\
+
+En TEAMSOFT$^+$, con vistas a mejorar las soluciones generadas se utilizan dos operadores de mutación: \textit{performMutation} y \textit{performPermutation}. En el primer caso se realiza un intercambio entre una persona asignada a un rol seleccionado de forma aleatoria y otra persona no asignada. Mientras que en \textit{performPermutation} se realiza la permutación entre dos personas asignadas a dos roles diferentes dentro del equipo, estos roles son seleccionados de forma aleatoria. \\
+
+En los problemas de formación de equipos docentes y de béisbol, el uso de ambos operadores de mutación generan muchas soluciones no factibles. Esto sucede porque no tienen en cuenta las restricciones \textit{MinimumRoles} y \textit{BossNeedToBeAssignedToAnotherRole}. Se incorpora un nuevo operador de mutación \textit{performExternalSubtitution} en el cual se selecciona un rol de forma aleatoria, del cual se sustituye aleatoriamente una persona A por otra B que aún no ha sido asignada. Esta sustitución se realiza además en todos los roles en que ha sido asignada la persona A. En el Algoritmo \ref{alg:operador-sustitucion} se muestra el pseudocódigo para este operador.
+
+\newgeometry{left=1.5cm,right=1.5cm,top=2cm,bottom=.5cm} 
+\scalebox{.9}{
+	\begin{algorithm}[H]
+		\caption{Asignar personas aleatoriamente a roles con la restricción de 2 roles mínimos.}
+		%  \SetKwProg{Sol}{SolucionInicial2}{}{}
+		\label{alg:2}
+		%  %\Sol{($projects$)}{
+		\KwIn {$projects$ \tcp*[l]{Lista de proyectos sin asignación inicial}
+			\hspace{1.7cm}$limitPersonTries$ \tcp*[l]{Intentos de poner una persona en un rol} 
+			%\hspace{1.7cm} $minRolePerson$  \tcp*[l]{Número mínimo de roles que desempeña una persona en un proyecto}
+		}
+		\KwOut {$projects$ \tcp*[l]{Lista de proyectos con asignación inicial}}
+		%\LinesNumbered
+		$allWorkers=$getWorkerAvailable()\tcp*[l]{Obtener trabajadores disponibles} 
+		\ForEach{$project \in projects$}
+		{$rols = project$.GetRols() \tcp*[l]{roles del proyecto}
+			$assignedWorkers = {}$\tcp*[l]{ workers asignados con el número mínimo de roles}
+			$assignedRoleWorkers= {}$\tcp*[l]{ roles con todos los trabajadores asignados}
+			$existWorkers = true$ \tcp*[l]{existen trabajadores disponibles}
+			$existCompatibleRole = true$ \tcp*[l]{existen roles compatibles disponibles}
+			\tcc{mientras existan disponibilides}		
+			\While{$\mbox{\rm existAvailableRoles}(allProjectRoles,assignedRoleWorkers) \And existWorkers$} {
+				\tcc{selecciona aleatoriamente un trabajador disponible}
+				$workerToAssign =$ getRandomNotAssignedWorker($allWorkers$, $assignedWorkers$)\;
+				\If{ $workerToAssign \neq null$} 
+				{\tcc{existe un trabajador disponible}
+					$roleToAssign = $getRandomAvailableRole($allProjectRoles$, $assignedRoleWorkers$\tcp*[l]{rol con trabajadores por asignar}
+					$compatibleRole =$ getRandomCompatibleRole($rols$, $roleToAssign$, $assignedRoleWorkers$)\tcp*[l]{roles compatibles con $roleToAssign$ no asignados}
+					\If{$compatibleRole \neq null$} { 
+						\tcc{si hay rol compatible asigna el worker a los roles}
+						$roleToAssign.$getWorkers().add($workerToAssign$)\;
+						$compatibleRole.$getWorkers().add($workerToAssign$)\;
+						$assignedWorkers.$add($workerToAssign$)\tcp*[l]{worker asignado}
+						\tcc*{los roles satisfacen su demanda de trabajadores})
+						\If {$roleToAssign.$getWorkers().size() =$roleToAssign.$getNeededWorkers()}{ 
+							$assignedRoleWorkers.$add(roleToAssign)\;}
+						\If{$compatibleRole.$getWorkers().size() == $compatibleRole.$getNeededWorkers()} {
+							$assignedRoleWorkers.$add($compatibleRole$)\;
+						}
+					} 
+					\Else{$existCompatibleRole = false$\;
+					}
+				} 
+				\Else{$existWorkers = false$\;}
+			}
+			
+			\If{$existWorkers \And existCompatibleRole$} {
+				$projectBoss=rol$.getProjectBoss()\;
+				
+				$boss=$getRandomPerson($allWorkers$)\;
+				$projectBoss$.getWorkers().add($boss$);
+			}
+		}
+	\end{algorithm}
+}
+\restoregeometry 
+
+
+
+
+\begin{algorithm}[H]
+	\caption{Operador de sustitución}
+	\label{alg:operador-sustitucion}
+	\KwIn {$projects$ \tcp*[l]{listado de equipos} \hspace{1.7cm} $codificacion$ \tcp*[l]{configuración del problema}
+	}
+	\KwOut {lista de proyectos actualizada}
+	$randomProject = getRandomProject(projects)$  \tcp*[l]{obtener equipo aleatorio}
+	$allProjectRoles = randomProject$.getRoleWorkers()  \tcp*[l]{escoger un rol aleatorio}
+	$allWorkers = codification$.getSearchArea()  \tcp*[l]{workers disponibles}
+	
+	\If{$!allProjectRoles.isEmpty()$}{ 
+		$randomRole = getRandomRole(allProjectRoles)$ \;
+		$randomWorkerOfSelectedRole = getRandomWorkerByRole(randomRole)$\;
+		$workerToSwap=getRandomWorker(allWorkers)$ \;
+		\ForEach{$roleWorker \in allProjectRoles$}
+		{
+			\ForEach{$worker \in roleWorker.getWorkers()$}
+			{
+				\If{$worker$.equals($randomWorkerOfSelectedRole$)}{
+					$roleWorker$.getWorkers().replace(worker, randomWorkerOfSelectedRole)			\;			
+				}			
+			}	
+		}
+	}
+\end{algorithm}
+ 
 
 \section{Conclusiones parciales}
+Asignar personas de forma aleatoria a los roles, estableciendo que el líder juega más de un rol en los equipos
+
+Asignar personas aleatoriamente a roles con la restricción de 2 roles mínimos
+
 
 Con la culminación de este capítulo, se arribaron a las siguientes conclusiones:
 \begin{enumerate}
-	\item Es posible aplicar el modelo de formación de equipos múltiples para formar equipos docentes y de béisbol incorporándole nuevas restricciones.
-	\item La herramienta TEAMSOFT$^+$ presenta algunas limitaciones para adaptar los problemas de béisbol y docencia, debido a que no se tienen en cuenta las características específicas de ambos problemas. (mencionar cuales)
-	\item La incorporación de la funcionalidad de importar implicó modificar y añadir nuevos casos de uso en la herramienta, así como nuevas clases.
+	\item Al incorporar a la herramienta la funcionalidad de importación de datos facilita incorporar de forma rápida los datos almacenados en ficheros externos para dar solución al problemas de formación de equipos.
+	\item La herramienta TEAMSOFT$^+$ presenta algunas limitaciones para adaptar los problemas de béisbol y docencia. En el caso del béisbol no se tiene en cuenta que un jugador tiene que jugar dos posiciones compatibles entre sí (una ofensiva y otra defensiva). Mientras que para el caso de la docencia no se tiene en cuenta que en algunas ocasiones el Líder debe formar parte del claustro de la asignatura.
+	\item Al incorporar la restricción \textit{BossNeedToBeAssignedToAnotherRole} y la construcción de la solución inicial que asegura que el Líder del equipo ocupe otro rol, es posible aplicar el modelo de formación de  equipos múltiples para formar equipos docentes.
+	\item Al incorporar la restricción \textit{MinimumRoles} y la construcción de la solución inicial que asegura que todos los jugadores (excepto el Líder) jueguen dos roles dentro del equipo, es posible aplicar el modelo de formación de  equipos múltiples para formar equipos de béisbol.
 \end{enumerate}

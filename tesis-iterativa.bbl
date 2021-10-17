@@ -21,15 +21,6 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
-\bibitem{Duran2019}
-A.~Dur\'an~Enr\'iquez, ``Nueva versi\'on de la herramienta teamsoft+ para la
-  formaci\'on de m\'ultiples equipos de desarrollo de software,'' Tesis de
-  Pregrado, Universidad Tecnol\'ogica de La Habana, Jun. 2019.
-
-\bibitem{INDER2020}
-INDER, ``Sitio oficial de la serie nacional de b\'eisbol,''
-  \url{http://www.beisbolcubano.cu}, 2020.
-
 \bibitem{Mayi09}
 M.~Andr\'e~Ampuero, ``Un modelo para la asignaci\'on de recursos humanos a
   equipos de proyectos de software,'' Tesis Doctoral, Universidad Tecnol\'ogica
@@ -47,6 +38,11 @@ A.~L. Infante~Abreu, D.~Hern\'andez, M.~Andr\'e~Ampuero, A.~Rosete~Su\'arez,
   conformaci\'on de equipos de proyectos de software utilizando la biblioteca
   de clases biciam,'' \emph{Revista Cubana de Ciencias Inform\'aticas}, vol.~9,
   pp. 126--140, 2015.
+
+\bibitem{Duran2019}
+A.~Dur\'an~Enr\'iquez, ``Nueva versi\'on de la herramienta teamsoft+ para la
+  formaci\'on de m\'ultiples equipos de desarrollo de software,'' Tesis de
+  Pregrado, Universidad Tecnol\'ogica de La Habana, Jun. 2019.
 
 \bibitem{Smith1995}
 R.~E. Smith and D.~S. Christensen, ``Psychological skills as predictors of
@@ -79,6 +75,10 @@ B.~Domenech and A.~Lusa~Garc\'ia, ``A milp model for the teacher assignment
   Institute of Industrial and Control Engineering (IOC) Universitat
   Polit\'ecnica de Catalunya (UPC), Av. Diagonal 647 – floor 11, 08029,
   Barcelona (Spain), techreport, 2014.
+
+\bibitem{INDER2020}
+INDER, ``Sitio oficial de la serie nacional de b\'eisbol,''
+  \url{http://www.beisbolcubano.cu}, 2020.
 
 \bibitem{DISERTIC2020}
 DISERTIC and VRIC, ``Sistema de planificaci\'on de planes de resultados,''
@@ -216,5 +216,19 @@ MES, ``Resoluci\'on no. 85 reglamento de categor\'ias docentes,'' 2016,
 \bibitem{Ansola2020}
 E.~S\'anchez~Ansola, ``Entrevista sobre el sistema de gesti\'on pandora,'' Nov.
   2020.
+
+\bibitem{SN21}
+\BIBentryALTinterwordspacing
+``Snb scoreboard,'' Oct. 2021, [Online; accessed 16. Oct. 2021]. [Online].
+  Available:
+  \url{http://www.beisbolcubano.cu/general/ScoreBoard?fecha=2021-04-04}
+\BIBentrySTDinterwordspacing
+
+\bibitem{RofesPerez2016}
+\BIBentryALTinterwordspacing
+R.~Rofes~P\'erez, ``Reaparecer\'an l\'azaro herrera y yariel duque con otro
+  equipo,'' May 2016, [Online; accessed 16. Oct. 2021]. [Online]. Available:
+  \url{https://martindihigoelmejor2013.cubava.cu/2016/06/05/reapareceran-lazaro-herrera-y-yariel-duque-con-otro-equipo/}
+\BIBentrySTDinterwordspacing
 
 \end{thebibliography}

@@ -1,19 +1,19 @@
 \BOOKMARK [0][-]{chapter*.5}{Introducci\363n}{}% 1
 \BOOKMARK [0][-]{chapter.1}{Marco te\363rico referencial de la investigaci\363n}{}% 2
-\BOOKMARK [1][-]{section.1.1}{Marco te\363rico referencial de la investigaci\363n}{chapter.1}% 3
+\BOOKMARK [1][-]{section.1.1}{Elementos b\341sicos asociados a la formaci\363n de equipos en diferentes \341mbitos}{chapter.1}% 3
 \BOOKMARK [2][-]{subsection.1.1.1}{Conceptos fundamentales}{section.1.1}% 4
-\BOOKMARK [2][-]{subsection.1.1.2}{Formaci\363n de equipos de proyectos de software}{section.1.1}% 5
-\BOOKMARK [2][-]{subsection.1.1.3}{Formaci\363n de equipos en \341mbitos docentes}{section.1.1}% 6
-\BOOKMARK [2][-]{subsection.1.1.4}{Formaci\363n de equipos de deportes}{section.1.1}% 7
-\BOOKMARK [2][-]{subsection.1.1.5}{Formaci\363n de equipos en diferentes \341reas}{section.1.1}% 8
-\BOOKMARK [1][-]{section.1.2}{An\341lisis de los factores del modelo y la herramienta que le da soporte para la formaci\363n de m\372ltiples equipos}{chapter.1}% 9
+\BOOKMARK [2][-]{subsection.1.1.2}{Investigaciones relacionadas con equipos de proyectos de software}{section.1.1}% 5
+\BOOKMARK [2][-]{subsection.1.1.3}{Investigaciones relacionadas con la formaci\363n de equipos docentes}{section.1.1}% 6
+\BOOKMARK [2][-]{subsection.1.1.4}{Investigaciones relacionadas con la formaci\363n de equipos deportivos}{section.1.1}% 7
+\BOOKMARK [2][-]{subsection.1.1.5}{Investigaciones relacionadas con la formaci\363n de equipos en diferentes \341reas}{section.1.1}% 8
+\BOOKMARK [1][-]{section.1.2}{Modelo de formaci\363n de m\372ltiples equipos. An\341lisis de los factores considerados y de la herramienta que le brinda soporte.}{chapter.1}% 9
 \BOOKMARK [2][-]{subsection.1.2.1}{Modelo de formaci\363n de m\372ltiples equipos}{section.1.2}% 10
 \BOOKMARK [2][-]{subsection.1.2.2}{Ejemplo simple para el problema de formaci\363n de equipos de desarrollo de software utilizando el modelo usado en TEAMSOFT+}{section.1.2}% 11
-\BOOKMARK [2][-]{subsection.1.2.3}{Caracter\355sticas de TEAMSOFT+ como herramienta}{section.1.2}% 12
-\BOOKMARK [1][-]{section.1.3}{Formaci\363n de equipos de b\351isbol}{chapter.1}% 13
-\BOOKMARK [1][-]{section.1.4}{Formaci\363n de equipos docentes}{chapter.1}% 14
+\BOOKMARK [2][-]{subsection.1.2.3}{Caracterizaci\363n de la herramienta TEAMSOFT+}{section.1.2}% 12
+\BOOKMARK [1][-]{section.1.3}{Descripci\363n del problema del b\351isbol}{chapter.1}% 13
+\BOOKMARK [1][-]{section.1.4}{Descripci\363n del problema de formaci\363n de equipos docentes}{chapter.1}% 14
 \BOOKMARK [1][-]{section.1.5}{Conclusiones parciales}{chapter.1}% 15
-\BOOKMARK [0][-]{chapter.2}{Modelo para formar equipos de b\351isbol y docentes basado en el modelo al que le da soporte TEAMSOFT+}{}% 16
+\BOOKMARK [0][-]{chapter.2}{Factibilidad de aplicar TEAMSOFT+ en equipos docentes y de b\351isbol}{}% 16
 \BOOKMARK [1][-]{section.2.1}{Ejemplo simple para el problema de formaci\363n de equipos de b\351isbol}{chapter.2}% 17
 \BOOKMARK [2][-]{subsection.2.1.1}{Conjuntos que intervienen en la modelaci\363n}{section.2.1}% 18
 \BOOKMARK [2][-]{subsection.2.1.2}{Elementos generales}{section.2.1}% 19
@@ -25,21 +25,21 @@
 \BOOKMARK [2][-]{subsection.2.2.3}{Elementos espec\355ficos}{section.2.2}% 25
 \BOOKMARK [2][-]{subsection.2.2.4}{Transformaci\363n de los datos}{section.2.2}% 26
 \BOOKMARK [1][-]{section.2.3}{Dise\361o de la soluci\363n propuesta}{chapter.2}% 27
-\BOOKMARK [2][-]{subsection.2.3.1}{Proceso de importaci\363n propuesto}{section.2.3}% 28
-\BOOKMARK [2][-]{subsection.2.3.2}{Artefactos de ingenier\355a de software}{section.2.3}% 29
+\BOOKMARK [2][-]{subsection.2.3.1}{Proceso propuesto para importar datos desde la herramienta TEAMSOFT+}{section.2.3}% 28
+\BOOKMARK [2][-]{subsection.2.3.2}{Descripci\363n del dise\361o de la soluci\363n propuesta}{section.2.3}% 29
 \BOOKMARK [1][-]{section.2.4}{Conclusiones parciales}{chapter.2}% 30
 \BOOKMARK [0][-]{chapter.3}{Validaci\363n de la soluci\363n}{}% 31
-\BOOKMARK [1][-]{subsection.3.0.1}{Importaci\363n de los datos de los docentes}{chapter.3}% 32
-\BOOKMARK [2][-]{subsection.3.0.2}{Importaci\363n de los datos de b\351isbol}{subsection.3.0.1}% 33
-\BOOKMARK [1][-]{section.3.1}{Generaci\363n de soluciones a los problemas de docencia y b\351isbol}{chapter.3}% 34
-\BOOKMARK [2][-]{subsection.3.1.1}{Soluci\363n al problema de docencia}{section.3.1}% 35
-\BOOKMARK [2][-]{subsection.3.1.2}{Soluci\363n al problema de b\351isbol}{section.3.1}% 36
-\BOOKMARK [1][-]{section.3.2}{Limitaciones de la herramienta TEAMSOFT+ para la soluci\363n de los problemas de formaci\363n de equipos de b\351isbol y docentes}{chapter.3}% 37
-\BOOKMARK [1][-]{section.3.3}{Conclusiones}{chapter.3}% 38
-\BOOKMARK [0][-]{Item.93}{Conclusiones}{}% 39
-\BOOKMARK [0][-]{Item.93}{Recomendaciones}{}% 40
-\BOOKMARK [0][-]{Item.93}{Referencias bibliogr\341ficas}{}% 41
-\BOOKMARK [0][-]{chapter*.17}{Anexo}{}% 42
+\BOOKMARK [1][-]{section.3.1}{Importaci\363n de los datos de los docentes}{chapter.3}% 32
+\BOOKMARK [1][-]{section.3.2}{Importaci\363n de los datos de b\351isbol}{chapter.3}% 33
+\BOOKMARK [1][-]{section.3.3}{Limitaciones de la herramienta TEAMSOFT+ para la soluci\363n de los problemas de formaci\363n de equipos de b\351isbol y docentes}{chapter.3}% 34
+\BOOKMARK [1][-]{section.3.4}{Generaci\363n de soluciones en los problemas de docencia y b\351isbol}{chapter.3}% 35
+\BOOKMARK [2][-]{subsection.3.4.1}{Soluci\363n al problema de docencia}{section.3.4}% 36
+\BOOKMARK [2][-]{subsection.3.4.2}{Soluci\363n al problema de b\351isbol}{section.3.4}% 37
+\BOOKMARK [1][-]{section.3.5}{Conclusiones}{chapter.3}% 38
+\BOOKMARK [0][-]{Item.117}{Conclusiones}{}% 39
+\BOOKMARK [0][-]{Item.117}{Recomendaciones}{}% 40
+\BOOKMARK [0][-]{Item.117}{Referencias bibliogr\341ficas}{}% 41
+\BOOKMARK [0][-]{chapter*.15}{Anexo}{}% 42
 \BOOKMARK [0][-]{appendix.Alph1}{Ejemplo de fichero para la importaci\363n de datos}{}% 43
 \BOOKMARK [0][-]{appendix.Alph2}{Pantalla de seleccionar el fichero y establecer grupo}{}% 44
 \BOOKMARK [0][-]{appendix.Alph3}{Pantalla mapeo datos de las personas}{}% 45
@@ -56,4 +56,4 @@
 \BOOKMARK [0][-]{appendix.Alph14}{Preferencia de las personas por los roles}{}% 56
 \BOOKMARK [0][-]{appendix.Alph15}{Configuraci\363n de un proyecto de b\351isbol}{}% 57
 \BOOKMARK [0][-]{appendix.Alph16}{Diagrama f\355sico de la base de datos}{}% 58
-\BOOKMARK [0][-]{appendix.Alph17}{Algoritmos incorporados}{}% 59
+\BOOKMARK [0][-]{appendix.Alph17}{Soluci\363n de los problemas}{}% 59

@@ -1,69 +1,70 @@
 \babel@toc {spanish}{}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Diagrama de Caso de Uso del Sistema de TEAMSOFT$^+$. Recreado a partir de \cite {Duran2019}}}{22}{figure.1.1}
-\contentsline {figure}{\numberline {1.2}{\ignorespaces Opciones de TEAMSOFT$^+$}}{22}{figure.1.2}
-\contentsline {figure}{\numberline {1.3}{\ignorespaces Paso en el que se elige al Jefe del equipo}}{23}{figure.1.3}
-\contentsline {figure}{\numberline {1.4}{\ignorespaces Diagrama de clases de TEAMSOFT$^+$}}{25}{figure.1.4}
-\contentsline {figure}{\numberline {1.5}{\ignorespaces Diagrama de estructuraci\IeC {\'o}n en capas basado en reutilizaci\IeC {\'o}n. Recreado a partir de \cite {Duran2019}.}}{26}{figure.1.5}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Diagrama de casos de uso del sistema}}{22}{figure.1.1}
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Opciones de TEAMSOFT$^+$}}{23}{figure.1.2}
+\contentsline {figure}{\numberline {1.3}{\ignorespaces Paso en el que se elige al Jefe del equipo}}{24}{figure.1.3}
+\contentsline {figure}{\numberline {1.4}{\ignorespaces Diagrama de clases de TEAMSOFT$^+$}}{26}{figure.1.4}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Informaci\IeC {\'o}n almacenada de los peloteros en el sitio web beisbolcubano \cite {INDER2020}}}{42}{figure.2.1}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Informaci\IeC {\'o}n almacenada de los peloteros en el sitio web beisbolcubano.}}{41}{figure.2.1}
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Informaci\IeC {\'o}n general de los profesores ofrecida por el sistema PANDORA}}{53}{figure.2.2}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Carga docente}}{54}{figure.2.3}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Diagrama de flujo importar}}{58}{figure.2.4}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Ampliaci\IeC {\'o}n de diagrama de CU}}{61}{figure.2.5}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Diagrama de estructuraci\IeC {\'o}n en capas basado en reutilizaci\IeC {\'o}n}}{65}{figure.2.6}
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Ampliaci\IeC {\'o}n diagrama de clases}}{66}{figure.2.7}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Carga docente de los profesores ofrecida por el sistema PANDORA}}{53}{figure.2.3}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Diagrama de flujo para representar la importaci\IeC {\'o}n de datos }}{58}{figure.2.4}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Ampliaci\IeC {\'o}n de diagrama de CU}}{60}{figure.2.5}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Diagrama de estructuraci\IeC {\'o}n en capas basado en reutilizaci\IeC {\'o}n}}{64}{figure.2.6}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Fragmento del Diagrama de clase de TEAMSOFT$^+$ para incorporar nuevas restricciones}}{65}{figure.2.7}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Error al crear estructura sin Jefe de Proyecto}}{85}{figure.3.1}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Apariciones del texto \textit {Jefe de Proyecto}}}{85}{figure.3.2}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces C\IeC {\'o}digo utilizado para validar la presencia del rol Jefe de Proyecto}}{86}{figure.3.3}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Error al crear estructura sin Jefe de Proyecto}}{80}{figure.3.1}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Apariciones del texto \textit {Jefe de Proyecto}}}{80}{figure.3.2}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces C\IeC {\'o}digo utilizado para validar la presencia del rol Jefe de Proyecto}}{81}{figure.3.3}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Fichero importar docencia}}{94}{figure.Alph1.1}
-\contentsline {figure}{\numberline {A.2}{\ignorespaces Fichero importar b\IeC {\'e}isbol}}{94}{figure.Alph1.2}
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Fichero a importar para el contexto Formaci\IeC {\'o}n de equipos de profesores para impartir docencia}}{100}{figure.Alph1.1}
+\contentsline {figure}{\numberline {A.2}{\ignorespaces Fichero a importar para el contexto Formaci\IeC {\'o}n de un equipo de b\IeC {\'e}isbol}}{101}{figure.Alph1.2}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {B.1}{\ignorespaces Pantalla cargar despu\IeC {\'e}s de seleccionado el fichero y establecido el grupo (docencia)}}{95}{figure.Alph2.1}
-\contentsline {figure}{\numberline {B.2}{\ignorespaces Pantalla cargar despu\IeC {\'e}s de seleccionado el fichero y establecido el grupo (b\IeC {\'e}isbol)}}{96}{figure.Alph2.2}
+\contentsline {figure}{\numberline {B.1}{\ignorespaces Pantalla cargar despu\IeC {\'e}s de seleccionado el fichero y establecido el grupo (docencia)}}{102}{figure.Alph2.1}
+\contentsline {figure}{\numberline {B.2}{\ignorespaces Pantalla cargar despu\IeC {\'e}s de seleccionado el fichero y establecido el grupo (b\IeC {\'e}isbol)}}{103}{figure.Alph2.2}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {C.1}{\ignorespaces Asociar atributos del fichero a las personas (com\IeC {\'u}n para los dos problemas)}}{97}{figure.Alph3.1}
+\contentsline {figure}{\numberline {C.1}{\ignorespaces Asociar atributos del fichero a las personas (com\IeC {\'u}n para los dos problemas)}}{104}{figure.Alph3.1}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {D.1}{\ignorespaces Asociar peso a los valores del atributo cc (docencia)}}{98}{figure.Alph4.1}
-\contentsline {figure}{\numberline {D.2}{\ignorespaces Asociar peso a los valores del atributo trabdoc (docencia)}}{98}{figure.Alph4.2}
-\contentsline {figure}{\numberline {D.3}{\ignorespaces Asociar peso a los valores del atributo trabinv (docencia)}}{99}{figure.Alph4.3}
-\contentsline {figure}{\numberline {D.4}{\ignorespaces Asociar peso a los valores del atributo cc (b\IeC {\'e}isbol)}}{99}{figure.Alph4.4}
-\contentsline {figure}{\numberline {D.5}{\ignorespaces Asociar peso a los valores del atributo trabdoc (b\IeC {\'e}isbol)}}{100}{figure.Alph4.5}
-\contentsline {figure}{\numberline {D.6}{\ignorespaces Asociar peso a los valores del atributo trabinv (b\IeC {\'e}isbol)}}{100}{figure.Alph4.6}
+\contentsline {figure}{\numberline {D.1}{\ignorespaces Asociar peso a los valores del atributo cc (docencia)}}{105}{figure.Alph4.1}
+\contentsline {figure}{\numberline {D.2}{\ignorespaces Asociar peso a los valores del atributo trabdoc (docencia)}}{105}{figure.Alph4.2}
+\contentsline {figure}{\numberline {D.3}{\ignorespaces Asociar peso a los valores del atributo trabinv (docencia)}}{106}{figure.Alph4.3}
+\contentsline {figure}{\numberline {D.4}{\ignorespaces Asociar peso a los valores del atributo cc (b\IeC {\'e}isbol)}}{106}{figure.Alph4.4}
+\contentsline {figure}{\numberline {D.5}{\ignorespaces Asociar peso a los valores del atributo trabdoc (b\IeC {\'e}isbol)}}{107}{figure.Alph4.5}
+\contentsline {figure}{\numberline {D.6}{\ignorespaces Asociar peso a los valores del atributo trabinv (b\IeC {\'e}isbol)}}{107}{figure.Alph4.6}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {E.1}{\ignorespaces Pantalla verificaci\IeC {\'o}n de los datos (docencia)}}{101}{figure.Alph5.1}
-\contentsline {figure}{\numberline {E.2}{\ignorespaces Pantalla verificaci\IeC {\'o}n de los datos (b\IeC {\'e}isbol)}}{102}{figure.Alph5.2}
+\contentsline {figure}{\numberline {E.1}{\ignorespaces Pantalla verificaci\IeC {\'o}n de los datos (docencia)}}{108}{figure.Alph5.1}
+\contentsline {figure}{\numberline {E.2}{\ignorespaces Pantalla verificaci\IeC {\'o}n de los datos (b\IeC {\'e}isbol)}}{109}{figure.Alph5.2}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {F.1}{\ignorespaces Mensaje de informaci\IeC {\'o}n despu\IeC {\'e}s de importar (docencia)}}{103}{figure.Alph6.1}
-\contentsline {figure}{\numberline {F.2}{\ignorespaces Mensaje de informaci\IeC {\'o}n despu\IeC {\'e}s de importar (b\IeC {\'e}isbol)}}{103}{figure.Alph6.2}
+\contentsline {figure}{\numberline {F.1}{\ignorespaces Mensaje de informaci\IeC {\'o}n despu\IeC {\'e}s de importar (docencia)}}{110}{figure.Alph6.1}
+\contentsline {figure}{\numberline {F.2}{\ignorespaces Mensaje de informaci\IeC {\'o}n despu\IeC {\'e}s de importar (b\IeC {\'e}isbol)}}{110}{figure.Alph6.2}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {G.1}{\ignorespaces Listado de personas importadas (docencia)}}{104}{figure.Alph7.1}
-\contentsline {figure}{\numberline {G.2}{\ignorespaces Listado de personas importadas (b\IeC {\'e}isbol)}}{105}{figure.Alph7.2}
+\contentsline {figure}{\numberline {G.1}{\ignorespaces Listado de personas importadas (docencia)}}{111}{figure.Alph7.1}
+\contentsline {figure}{\numberline {G.2}{\ignorespaces Listado de personas importadas (b\IeC {\'e}isbol)}}{112}{figure.Alph7.2}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {H.1}{\ignorespaces Competencias gen\IeC {\'e}ricas de Milton (docencia)}}{106}{figure.Alph8.1}
-\contentsline {figure}{\numberline {H.2}{\ignorespaces Competencias gen\IeC {\'e}ricas de Santoya (b\IeC {\'e}isbol)}}{107}{figure.Alph8.2}
+\contentsline {figure}{\numberline {H.1}{\ignorespaces Competencias gen\IeC {\'e}ricas de Milton (docencia)}}{113}{figure.Alph8.1}
+\contentsline {figure}{\numberline {H.2}{\ignorespaces Competencias gen\IeC {\'e}ricas de Santoya (b\IeC {\'e}isbol)}}{114}{figure.Alph8.2}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {I.1}{\ignorespaces Competencias t\IeC {\'e}cnicas de Milton (docencia)}}{108}{figure.Alph9.1}
-\contentsline {figure}{\numberline {I.2}{\ignorespaces Competencias t\IeC {\'e}cnicas de Santoya (b\IeC {\'e}isbol)}}{109}{figure.Alph9.2}
+\contentsline {figure}{\numberline {I.1}{\ignorespaces Competencias t\IeC {\'e}cnicas de Milton (docencia)}}{115}{figure.Alph9.1}
+\contentsline {figure}{\numberline {I.2}{\ignorespaces Competencias t\IeC {\'e}cnicas de Santoya (b\IeC {\'e}isbol)}}{116}{figure.Alph9.2}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {J.1}{\ignorespaces Preferencia de Milton por los roles (docencia)}}{110}{figure.Alph10.1}
-\contentsline {figure}{\numberline {J.2}{\ignorespaces Preferencia de Santoya por los roles (b\IeC {\'e}isbol)}}{111}{figure.Alph10.2}
+\contentsline {figure}{\numberline {J.1}{\ignorespaces Preferencia de Milton por los roles (docencia)}}{117}{figure.Alph10.1}
+\contentsline {figure}{\numberline {J.2}{\ignorespaces Preferencia de Santoya por los roles (b\IeC {\'e}isbol)}}{118}{figure.Alph10.2}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {K.1}{\ignorespaces Configuraci\IeC {\'o}n de la importaci\IeC {\'o}n}}{112}{figure.Alph11.1}
+\contentsline {figure}{\numberline {K.1}{\ignorespaces Configuraci\IeC {\'o}n de la importaci\IeC {\'o}n}}{119}{figure.Alph11.1}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {L.1}{\ignorespaces Configuraci\IeC {\'o}n de las competenicas para todas las asignaturas}}{113}{figure.Alph12.1}
-\contentsline {figure}{\numberline {L.2}{\ignorespaces Configuraci\IeC {\'o}n de las competencias en los roles (b\IeC {\'e}isbol)}}{114}{figure.Alph12.2}
-\contentsline {figure}{\numberline {L.3}{\ignorespaces Configuraci\IeC {\'o}n de las competencias en los roles (b\IeC {\'e}isbol)}}{114}{figure.Alph12.3}
-\contentsline {figure}{\numberline {L.4}{\ignorespaces Configuraci\IeC {\'o}n de las competencias en los roles (b\IeC {\'e}isbol)}}{114}{figure.Alph12.4}
+\contentsline {figure}{\numberline {L.1}{\ignorespaces Configuraci\IeC {\'o}n de las competencias para todas las asignaturas}}{120}{figure.Alph12.1}
+\contentsline {figure}{\numberline {L.2}{\ignorespaces Configuraci\IeC {\'o}n de las competencias en los roles 1ra parte (b\IeC {\'e}isbol)}}{121}{figure.Alph12.2}
+\contentsline {figure}{\numberline {L.3}{\ignorespaces Configuraci\IeC {\'o}n de las competencias en los roles 2da parte (b\IeC {\'e}isbol)}}{121}{figure.Alph12.3}
+\contentsline {figure}{\numberline {L.4}{\ignorespaces Configuraci\IeC {\'o}n de las competencias en los roles 3ra parte (b\IeC {\'e}isbol)}}{121}{figure.Alph12.4}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {\~N.1}{\ignorespaces Trabajadores por rol y m\IeC {\'\i }nimo de competencias para desempe\IeC {\~n}ar el rol}}{119}{figure.Alph15.1}
-\contentsline {figure}{\numberline {\~N.2}{\ignorespaces Trabajadores por rol y m\IeC {\'\i }nimo de competencias para desempe\IeC {\~n}ar el rol}}{120}{figure.Alph15.2}
-\contentsline {figure}{\numberline {\~N.3}{\ignorespaces Trabajadores por rol y m\IeC {\'\i }nimo de competencias para desempe\IeC {\~n}ar el rol}}{121}{figure.Alph15.3}
-\contentsline {figure}{\numberline {\~N.4}{\ignorespaces Trabajadores por rol y m\IeC {\'\i }nimo de competencias para desempe\IeC {\~n}ar el rol}}{121}{figure.Alph15.4}
+\contentsline {figure}{\numberline {\~N.1}{\ignorespaces Trabajadores por rol y m\IeC {\'\i }nimo de competencias para desempe\IeC {\~n}ar el rol}}{126}{figure.Alph15.1}
+\contentsline {figure}{\numberline {\~N.2}{\ignorespaces Trabajadores por rol y m\IeC {\'\i }nimo de competencias para desempe\IeC {\~n}ar el rol}}{127}{figure.Alph15.2}
+\contentsline {figure}{\numberline {\~N.3}{\ignorespaces Trabajadores por rol y m\IeC {\'\i }nimo de competencias para desempe\IeC {\~n}ar el rol}}{128}{figure.Alph15.3}
+\contentsline {figure}{\numberline {\~N.4}{\ignorespaces Trabajadores por rol y m\IeC {\'\i }nimo de competencias para desempe\IeC {\~n}ar el rol}}{128}{figure.Alph15.4}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {O.1}{\ignorespaces Diagrama f\IeC {\'\i }sico de la base de datos de TEAMSOFT$^+$}}{122}{figure.Alph16.1}
+\contentsline {figure}{\numberline {O.1}{\ignorespaces Diagrama f\IeC {\'\i }sico de la base de datos de TEAMSOFT$^+$}}{129}{figure.Alph16.1}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {P.1}{\ignorespaces Captura de pantalla que muestra la soluci\IeC {\'o}n al problema de la docencia}}{130}{figure.Alph17.1}
+\contentsline {figure}{\numberline {P.2}{\ignorespaces Captura de pantalla que muestra la soluci\IeC {\'o}n al problema de b\IeC {\'e}isbol}}{131}{figure.Alph17.2}
